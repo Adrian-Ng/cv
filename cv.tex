@@ -1,0 +1,192 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1\\}{ #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\Large Adrian Ng MSc.}} & Email: \href{mailto:adrian.j.ng@gmail.com}{adrian.j.ng@gmail.com} \\
+ \textbf{Graduate Data Engineer} & Mob: +447766336972 \\
+ \textbf{} & Website: \href{https://adrian.ng}{https://adrian.ng} \\
+\end{tabular*}
+
+\section{Summary}
+Computer Science graduate seeking junior-level Data Engineering roles. In particular: opportunities that may apply and grow my \textit{Java} skillset, which I used to build my dissertation project and have been working with ever since. Prior to postgraduate study, my technical expertise was in \textit{SQL development}. My recent role as a \textit{Data Analyst} proved to be a brief but beneficial learning experience in which I found that problems of a technical nature are far more stimulating than analytical ones. Thus naturally follows a career in programming.
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Master of Science in Data Science and Analytics}{with Distinction}
+      {Department of Computer Science, Royal Holloway, University of London}{Sept. 2016 -- Dec. 2017}
+    \resumeSubheading
+     {Bachelor of Engineering in Mechanical Engineering}{Upper Second Class with Honours}
+     { School of Engineering, King's College London, University of London}{Sept. 2007 -- July 2010}
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Java Projects}
+  \resumeSubHeadingListStart
+	\resumeSubItem
+	{Dissertation: Implementation of Value at Risk (VaR) measures in Java (\href{https://adrian.ng/java/var/}{link})}
+	{Assuming a portfolio of stocks and options, this is the implementation of three approaches to estimating VaR: Model Building, Historical Simulation, and Monte Carlo Simulation. My Java program would fetch market data via the Google Finance API and compute the VaR estimates. Back-testing compared our estimates against real-life losses over 1000 days of history. Hypothesis testing was conducted via Coverage tests.}
+	\resumeSubItem{Option Pricing in Java (\href{https://adrian.ng/java/options/}{link})}
+	{This Java project implments three approaches to estimating option prices: Monte Carlo simulation, Black-Scholes equations, Binomial Trees. Interfaces ensured each subclass implemented getCall() and getPut() methods. Abstract classes were utilised when implementing different ways of estimating the same thing (e.g. European vs American vs Asian payoff).}  	
+	\resumeSubItem{Data Mining with Apache Hadoop}
+      		{With the Enron Email Corpus (a large dataset of 600,000 emails), this project used \textit{MapReduce} to extract the communication graph and aggregate it to reveal the topography of the network at different points in time. \textit{Gephi} was then used to produce visualisations of the underlying hierarchies within the network. This project has since been translated to \textit{Apache Spark} as a mini-exercise.}      		
+	\resumeSubItem{Google PageRank}
+		{This project involved the implementation in Java of Google's \textit{PageRank} algorithm which simulates the behaviour of someone browsing a series of webpages by computing a transition matrix from an input graph and mixing a Markov Chain.}		
+  \resumeSubHeadingListEnd
+
+
+
+%-----------COURSEWORK-----------------
+\section{Postgraduate Coursework}
+  \resumeSubHeadingListStart
+	\resumeSubItem{Machine Learning Algorithms (R Language)}
+	{k-Nearest Neighbours, LDA/QDA, Kernel Methods, regression Neural Network (1 hidden layer), Decision Stumps, Hierarchical Clustering}
+	\resumeSubItem{Online Machine Learning (MATLAB)}
+	{Hidden Markov Models, Aggregating Algorithm}
+  \resumeSubHeadingListEnd
+  
+  
+\newpage
+%-----------EXPERIENCE-----------------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Manchester City Football Club}{London}
+      {Data Analyst}{Jan. - July 2018}
+      \resumeItemListStart
+      
+      \resumeItem{NYCFC Project}
+      {This SQL data engineering project involved the implementation of processes to automate the ingress of external data sources (transactional data from Ticketmaster, customer data from NYCFC). Conferencing with stakeholders (New York City FC) and partners (Major League Soccer) was necessary to understand the \textit{data situation}.}
+      \resumeItem{GDPR Customer Preferences}
+      {This project involved the creation of a number of automated processes to \textit{MERGE} data regarding GDPR preferences with our database. }
+	\resumeItem{Tableau Dashboard Automation/Optimisation}
+	{Implemented \textit{Data Cubes} to pre-aggregate data along all possible subset of categorical fields. Front-end dashboards retained their exploratory flexibility but removed real-time computational burden from front-end which improved UX. }	
+	\resumeItem{Guiding and Mentoring}
+	{Instructing junior colleagues on SQL Server Management Studio best practices and fundamentals. E.g. understanding DDL \& DML for writing SQL queries and creating database objects; when to return a \href{https://adrian.ng/SQL/joins/cartesian/}{\textit{product join}} vs \href{https://adrian.ng/SQL/joins/semi/}{\textit{semi-join}}; making use of \textit{information\_schema}; utilising \textit{SQL Agent} to schedule jobs. Scheduled and ad-hoc workshop sessions were scheduled to provide this instruction.}
+	\resumeItemListEnd
+    \resumeSubheading
+      {ITG Creator}{Westminster}
+      {Senior CRM Campaign Executive}{Dec. 2013 - Sept. 2016}
+      \resumeItemListStart
+        \resumeItem{Virgin Media Processes}
+          {Built an automated segmentation process using SQL stored procedures for other members of the team to utilise. Recipient data were imported via \textit{BULK INSERT}, stored in DB tables and indexed. The output being segmentation data to be linked to HTML content and broadcast to recipients.}
+          \resumeItem{Advanced Queries}
+          {Used recursive queries (CTEs) to clean data e.g. removing $n$-number of leading zeros from mobile phone numbers in order to prefix with dialling codes. Or splitting delimited strings into table format.}
+          
+          \resumeItem{Query Execution}
+          {Improved cross-server query execution speeds by using \textit{OPENQUERY}, which transmits a SQL query in string format to the remote server. Dynamic SQL was utilised to include XML data in the string. Using a \textit{CTE}, this XML could be represented as relational object. Effectively this allowed us to join and filter on the remote server using data from the local sever. As a result, only a small data set was returned via the \textit{OPENQUERY}. Details \href{https://adrian.ng/SQL/misc/openquery-xml/}{on website}.}
+          
+	\resumeItem{Soft Skills}
+	{Attended inter-departmental work assessment groups and advised on job specifications. As senior team member, served as point of contact for clients and colleagues looking to resource our team. Jira was used to monitor workload and queue work to team members.}
+      \resumeItemListEnd
+      
+% seatwave stuff      
+\if
+\resumeSubheading
+      {Seatwave}{London}
+      {Marketing Analyst}{May 2013 - Dec. 2013}
+      \resumeItemListStart
+        \resumeItem{SQL Management Studio}
+          {Looked at sales data to conduct price projections that, due to the volatility of the market, were otherwise unobtainable by the commercial team. This was done by attempting to model this data as exponential decay using Excel VBA.}
+	\resumeItem{Spatial Analysis}
+	{Conducted a spatial analysis of customer postcodes, which I used to provide visualisations of the areas where our customers lived in relation to the location of the concerts they bought tickets for. These visualisations enabled the commercial team to gain a better picture of where they needed to best target their marketing campaigns.}
+      \resumeItemListEnd
+\fi      
+      
+% seatwave end      
+  \resumeSubHeadingListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section{}
+  \resumeSubHeadingListStart
+    \item{
+      \textbf{Languages}{: Java 8, T-SQL}
+      \hfill
+      
+    }
+    \item{
+    \textbf{Software}{: IntelliJ IDEA, SQL Server Management Studio, Sublime, Git, Jira}
+    }
+    
+    \item{
+    \textbf{GitHub}{: https://github.com/Adrian-Ng}
+    }
+    
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
