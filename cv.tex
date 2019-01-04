@@ -177,15 +177,15 @@
 	}
 	\resumeItem{GDPR Customer Preferences}
 	{
-		This project involved the creation of a number of automated processes to \textit{MERGE} GDPR preference data with the analytical database.
+		This project involved the creation of a number of automated processes to merge GDPR preference data with the analytical database. To accomplish this, SQL DML such as \textit{merge} were utilised.
 	}
 	\resumeItem{Tableau Dashboard Automation/Optimisation}
 	{
-		Implemented \textit{Data Cubes} to pre-aggregate data along all possible subset of categorical fields. Front-end dashboards retained their exploratory flexibility but removed real-time computational burden from front-end which improved user-experience. 
+		Implemented \textit{Data Cubes} to pre-aggregate data along all possible subset of categorical fields. That is, every possible drill-down and roll-up was computed in advance. As a result, front-end dashboards retained their exploratory flexibility but removed real-time computational burden. Thus improving user-experience. 
 	}	
 	\resumeItem{Guiding and Mentoring}
 	{
-		Instructing junior colleagues on SQL Server Management Studio best practices and fundamentals. E.g. understanding DDL \& DML for writing SQL queries and creating database objects; when to return a \href{https://adrian.ng/SQL/joins/cartesian/}{\textit{product join}} vs \href{https://adrian.ng/SQL/joins/semi/}{\textit{semi-join}}; making use of \textit{information\_schema}; utilising \textit{SQL Agent} to schedule jobs. Scheduled and ad-hoc workshop sessions were scheduled to provide this instruction.
+		Instructing junior colleagues on SQL Server Management Studio best practices and fundamentals. E.g. understanding DDL \& DML for writing SQL queries and creating database objects; when to return a \href{https://adrian.ng/SQL/joins/cartesian/}{\textit{product join}} vs \href{https://adrian.ng/SQL/joins/semi/}{\textit{semi-join}}; making use of \textit{information\_schema}; utilising \textit{SQL Agent} to schedule jobs. Both regular and ad-hoc workshop sessions were held in order to provide this instruction.
 	}
 	\resumeItemListEnd
 	\resumeSubheading
@@ -194,16 +194,22 @@
 	\resumeItemListStart
 	\resumeItem{Virgin Media Processes}
 	{
-		Built an automated segmentation process using SQL stored procedures for other members of the team to utilise. Recipient data were imported via \textit{BULK INSERT}, stored in DB tables and indexed. The output being segmentation data to be linked to HTML content and broadcast to recipients.
+		Built an automated segmentation process using SQL stored procedures for other members of the team to utilise. Recipient data were imported via \textit{BULK INSERT}, stored in database tables and indexed (clustered). Segmentation data was output and linked to HTML content to be broadcast to recipients.
 	}
-	\resumeItem{Advanced Queries}
+	\resumeItem{Recursion}
 	{
-		Used recursive queries (CTEs) to clean data e.g. removing $n$-number of leading zeros from mobile phone numbers in order to prefix with dialling codes. Or splitting delimited strings into table format.
+		\tiny {\href{https://adrian.ng/SQL/cte/Recursion/}{https://adrian.ng/SQL/cte/Recursion/}}
+		\newline
+		\small
+		Used recursive queries (CTEs) to clean data e.g. removing $n$-number of leading zeros from mobile phone numbers in order to prefix with dialling codes; or splitting strings and mapping into relational format.
 	}
 	
 	\resumeItem{Query Execution}
 	{
-		Improved cross-server query execution speeds by using \textit{OPENQUERY}, which transmits a SQL query in string format to the remote server. Dynamic SQL was utilised to include XML data in the string. Using a \textit{CTE}, this XML could be represented as relational object. Effectively this allowed us to join and filter on the remote server using data from the local sever. As a result, only a small data set was returned via the \textit{OPENQUERY}. Details \href{https://adrian.ng/SQL/misc/openquery-xml/}{on website}.
+		\tiny (\href{https://adrian.ng/SQL/misc/openquery-xml}{https://adrian.ng/SQL/misc/openquery-xml})
+		\newline
+		\small
+		Improved cross-server query execution speeds by using \textit{OPENQUERY}, which transmits a SQL query in string format to the remote server. Dynamic SQL was utilised to include XML data in the string. Using a \textit{CTE}, this XML could be represented as relational object. Effectively this allowed us to join and filter on the remote server using data from the local sever. As a result, only a small data set was returned via the \textit{OPENQUERY}.
 	}
 	
 	\resumeItem{Soft Skills}
@@ -215,19 +221,18 @@
 	% seatwave stuff      
 
 	\resumeSubheading
-	{Seatwave}{London}
+	{Seatwave (now Ticketmaster)}{London}
 	{Marketing Analyst}{May 2013 - Dec. 2013}
 	\resumeItemListStart
 	\resumeItem{Pricing Analysis}
 	{
-		Looked at sales data to conduct price projections that, due to the volatility of the market, were otherwise unobtainable by the commercial team. This was done by attempting to model this data via exponential decay.
+		Looked at sales data to conduct price projections that, due to the volatility of the market, were otherwise unobtainable by the commercial team. This was done by attempting to model this data via exponential decay in \textit{Excel VBA}.
 	}
 	\resumeItem{Spatial Analysis}
 	{
 		Conducted a spatial analysis of customer postcodes, which I used to provide visualisations of the areas where our customers lived in relation to the location of the concerts they bought tickets for. These visualisations enabled the commercial team to gain a better picture of where they needed to best target their marketing campaigns.
 	}
-	\resumeItemListEnd
-   
+	\resumeItemListEnd   
 	
 	% seatwave end      
 	\resumeSubHeadingListEnd
