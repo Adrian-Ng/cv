@@ -74,9 +74,9 @@
 	
 	%----------HEADING-----------------
 	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-		\textbf{{\Large Adrian Ng MSc.}} & Email: \href{mailto:adrian.j.ng@gmail.com}{adrian.j.ng@gmail.com} \\
+		\textbf{{\Large Adrian Ng MSc.}} & Email: \href{mailto:contact@adrian.ng}{contact@adrian.ng} \\
 		\textbf{Graduate Data Engineer} & Mobile: +447766336972 \\
-		\textbf{} & Website: \href{https://adrian.ng}{https://adrian.ng} \\
+%		\textbf{} & Website: \href{https://adrian.ng}{https://adrian.ng} \\
 	\end{tabular*}
 	
 	\section{Summary}
@@ -101,22 +101,22 @@
 		\newline
 		\small
 		This project implements various approaches to estimating \textit{VaR}, a measure of risk. These are: \textit{Model Building}, \textit{Historical Simulation}, and \textit{Monte Carlo Simulation}.		
-		In addition, the following approaches to estimating market variance- are implemented: \textit{Equal Weighted}, \textit{Exponentially Weighted Moving Average}, and \textit{GARCH(1,1)}.
+		In addition, the following approaches to estimating market variance were implemented: \textit{Equal Weighted}, \textit{Exponentially Weighted Moving Average}, and \textit{GARCH(1,1)}.
 	}			
 	\resumeItemListStart		
 	\resumeItem{Object Oriented Design}
 	{
-		As we have a number of approaches to estimating both \textit{VaR} and \textit{variance}, abstract methods \textit{getVariance()} and \textit{getVaR()} are defined in abstract classes but implemented in child classes. Instantiation of these child classes is handled via the \textit{factory method}.
+		As we have a number of approaches to estimating both \textit{VaR} and \textit{variance}, abstract methods \texttt{getVariance()} and \texttt{getVaR()} were defined in abstract classes but implemented in child classes. Instantiation of these child classes is handled via the \textit{factory method}.
 	}	
 	\resumeItem{Concurrency}
 	{
-		The \textit{Monte Carlo} approach generates a large number of random walks, which can take a long time to fully execute. Therefore execution is parallelized using \textit{java.util.concurrent} for which \textit{Callable} and \textit{Future} lambdas are implemented.
+		The \textit{Monte Carlo} approach generates a large number of random walks, which can take a long time to fully execute. Therefore execution is parallelized using \texttt{java.util.concurrent} for which \texttt{Callable} and \texttt{Future} lambdas were implemented.
 	}			
 	\resumeItem{Data Ingress}
 	{
-		Real-world market data is sourced using the \textit{Yahoo Finance API}, which returns an iterable collection of \textit{BigDecimal}. These daily closing prices are transformed into daily price changes of type \textit{Double[]}. Thus sacrificing accuracy for computational performance. 
+		Real-world market data was sourced using the \textit{Yahoo Finance API}, which returns an iterable collection of \texttt{BigDecimal}. These daily closing prices are transformed into daily price changes of type \texttt{Double[]}. Thus sacrificing accuracy for computational performance. 
 		\newline
-		The hypothetical portfolio with a number of stocks and options was defined locally across a number of text-files.
+		A hypothetical portfolio with a number of stocks and options was defined locally.
 	}		
 	\resumeItemListEnd	
 	
@@ -125,19 +125,22 @@
 		\tiny (\href{https://adrian.ng/java/options/}{https://adrian.ng/java/options/}) \quad (\href{https://github.com/Adrian-Ng/OptionPricer}{https://github.com/Adrian-Ng/OptionPricer})
 		\newline
 		\small
-		This project implements three approaches to estimating option prices in Java: \textit{Monte Carlo simulation}, \textit{Black-Scholes equations}, and\textit{Binomial Trees}. Option prices for each of these approaches were retrieved through the interface methods \textit{getCall()} and \textit{getPut()}.		
-		Abstract classes were also used to facilitate the implementation of various real-world option types, which each differ in how pay-off is calculated.
+		This project implements three approaches to estimating option prices in Java: \textit{Monte Carlo simulation}, \textit{Black-Scholes equations}, and\textit{Binomial Trees}. 
+		\newline
+		Option prices for each of these approaches were retrieved through the interface methods \texttt{getCall()} and \texttt{getPut()}.		
+		Abstract classes were also used to facilitate the implementation of various real-world option types, which each differ in how \textit{pay-off} is calculated.
 	}  	
 	
 	\resumeSubItem{Data Mining with Hadoop MapReduce}
-
 	{	
 		\tiny (\href{https://github.com/Adrian-Ng/HadoopEnron}{https://github.com/Adrian-Ng/HadoopEnron})
 		\newline
 		\small
 		A number of \textit{MapReduce} applications were written in Java with a variety of purposes: e.g. extracting the communications network from the \textit{Enron Corpus} or aggregation of Twitter data in \textit{JSON} format. 
 		\newline
-		These applications extended \textit{Mapper} and \textit{Reduce}. Methods \textit{map()} and \textit{reduce()} were overridden with bespoke implementation.
+		These applications extended \texttt{Mapper} and \texttt{Reduce} classes. Methods \texttt{map()} and \texttt{reduce()} were overridden with bespoke implementation.
+		\newline 
+		Java artifacts were exported and ran on Hadoop clusters (both single node and distributed). Input/Output data were stored in HDFS and accessed via \texttt{hadoop fs} syntax.
 		\newline 
 		A subsequent exercise was undertaken to minimise the verbosity of these \textit{Hadoop MapReduce} applications by translating them to \textit{Scala} for use in a \textit{Spark REPL}.
 	}
@@ -147,7 +150,7 @@
 		\tiny (\href{https://adrian.ng/java/yahoofinance/\#stream}{https://adrian.ng/java/yahoofinance/\#stream})
 		\newline
 		\small
-		A small exercise involving the use of \textit{Java 8 Streams}. Processing real-world financial data to return mean and variance by defining input functinos to \textit{map()} and \textit{reduce()} methods.
+		A small exercise involving the use of \textit{Java 8 Streams}. Processing real-world financial data to return \textit{mean} and \textit{equal-weighted variance} of some market asset by defining input-functions to \texttt{map()} and \texttt{reduce()} methods.
 	}
 		
 %	\resumeSubItem{Google PageRank}
@@ -155,20 +158,6 @@
 %		This is the implementation of Google's \textit{PageRank} algorithm. We simulate the behaviour of someone browsing a series of webpages by computing a transition matrix from an input graph and mixing a Markov Chain.
 %	}		
 	\resumeSubHeadingListEnd
-	
-	
-	
-	%-----------COURSEWORK-----------------
-	\section{Postgraduate Coursework: Implementation of Machine Learning Algorithms}
-	\resumeSubHeadingListStart  
-	\item{
-		\textbf{R Language}{: \\ \quad k-Nearest Neighbours \quad\quad\quad LDA/QDA\quad\quad\quad Kernel Methods \\ \quad Neural Network regression \quad Decision Trees \quad Hierarchical Clustering}
-	} 
-	\item{
-		\textbf{MATLAB}{: \\ \quad Hidden Markov Models \quad\quad Aggregating Algorithm}
-	} 
-	\resumeSubHeadingListEnd
-	
 	
 
 	%-----------EXPERIENCE-----------------
@@ -181,11 +170,13 @@
 	
 	\resumeItem{NYCFC Project}
 	{
-		This SQL data engineering project involved the implementation of processes to automate the ingress of external data sources (transactional data from Ticketmaster, customer data from NYCFC). Conferencing with stakeholders (New York City FC) and partners (Major League Soccer) was necessary to understand the \textit{data situation}.
+		This data engineering project involved the implementation of SQL \textit{stored procedures} to automate the ingress of data from external sources (transactional data from Ticketmaster, customer data from NYCFC). 
+		\newline
+		Conference calls with stakeholders (New York City FC) and partners (Major League Soccer) were regularly hosted/attended to understand the \textit{data situation}.
 	}
 	\resumeItem{GDPR Customer Preferences}
 	{
-		This project involved the creation of a number of automated processes to merge GDPR preference data with the analytical database. To accomplish this, SQL DML such as \textit{merge} were utilised.
+		This project involved the creation of a number of automated processes to merge GDPR preference data with the analytical database. To accomplish this, SQL DML such as \texttt{merge} were utilised.
 	}
 	\resumeItem{Tableau Dashboard Automation/Optimisation}
 	{
@@ -193,7 +184,7 @@
 	}	
 	\resumeItem{Guiding and Mentoring}
 	{
-		Instructing junior colleagues on SQL Server Management Studio best practices and fundamentals. E.g. understanding DDL \& DML for writing SQL queries and creating database objects; when to return a \href{https://adrian.ng/SQL/joins/cartesian/}{\textit{product join}} vs \href{https://adrian.ng/SQL/joins/semi/}{\textit{semi-join}}; making use of \textit{information\_schema}; utilising \textit{SQL Agent} to schedule jobs. Both regular and ad-hoc workshop sessions were held in order to provide this instruction.
+		Instructing junior colleagues on SQL Server Management Studio best practices and fundamentals. E.g. understanding DDL \& DML for writing SQL queries and creating database objects; when to return a \href{https://adrian.ng/SQL/joins/cartesian/}{\textit{product join}} vs \href{https://adrian.ng/SQL/joins/semi/}{\textit{semi-join}}; making use of \texttt{information\_schema}; utilising \textit{SQL Agent} to schedule jobs. Both regular and ad-hoc workshop sessions were held in order to provide this instruction.
 	}
 	\resumeItemListEnd
 	\resumeSubheading
@@ -202,7 +193,7 @@
 	\resumeItemListStart
 	\resumeItem{Virgin Media Processes}
 	{
-		Built an automated segmentation process using SQL stored procedures for other members of the team to utilise. Recipient data were imported via \textit{BULK INSERT}, stored in database tables and indexed (clustered). Segmentation data was output and linked to HTML content to be broadcast to recipients.
+		Built an automated segmentation process using SQL stored procedures for other members of the team to utilise. Recipient data were imported via \texttt{BULK INSERT}, stored in database tables and indexed (clustered). Segmentation data was output and linked to HTML content to be broadcast to recipients.
 	}
 	\resumeItem{Recursion}
 	{
@@ -216,11 +207,15 @@
 		\tiny (\href{https://adrian.ng/SQL/misc/openquery-xml}{https://adrian.ng/SQL/misc/openquery-xml})
 		\newline
 		\small
-		Improved cross-server query execution speeds by using \textit{OPENQUERY}, which transmits a SQL query in string format to the remote server. Dynamic SQL was utilised to include XML data in the string. Using a \textit{CTE}, this XML could be represented as relational object. Effectively this allowed us to join and filter on the remote server using data from the local sever. As a result, only a small data set was returned via the \textit{OPENQUERY}.
+		Improved cross-server query execution speeds by using \texttt{OPENQUERY}, which transmits a SQL query in string format to the remote server. Dynamic SQL was utilised to include XML data in the string. Using a \textit{CTE}, this XML could be represented as relational object. Effectively this allowed us to join and filter on the remote server using data from the local sever. As a result, only a small data set was returned via the \texttt{OPENQUERY}.
 	}	
 	\resumeItem{Soft Skills}
 	{
-		Attended inter-departmental work assessment groups and advised on job specifications. As senior team member, served as point of contact for clients and colleagues looking to resource our team. Jira was used to monitor workload and queue work to team members.
+		Attended inter-departmental work assessment groups and advised on work specifications. 
+		\newline
+		As senior team member, served as point of contact for clients and colleagues looking to resource our team. 
+		\newline
+		On occasion I held responsibility for resourcing and managing the team's workload in Jira.
 	}
 	\resumeItemListEnd
 	
@@ -243,19 +238,37 @@
 %	% seatwave end      
 	\resumeSubHeadingListEnd
 	
+	
+%	%-----------COURSEWORK-----------------
+%	\section{Postgraduate Coursework: Implementation of Machine Learning Algorithms}
+%	\resumeSubHeadingListStart  
+%	\item{
+%		\textbf{R Language}{: \\ \quad k-Nearest Neighbours \quad\quad\quad LDA/QDA\quad\quad\quad Kernel Methods \\ \quad Neural Network regression \quad Decision Trees \quad Hierarchical Clustering}
+%	} 
+%	\item{
+%		\textbf{MATLAB}{: \\ \quad Hidden Markov Models \quad\quad Aggregating Algorithm}
+%	} 
+%	\resumeSubHeadingListEnd
+	
 	%--------PROGRAMMING SKILLS------------
 	\section{}
 	\resumeSubHeadingListStart
 	\item{
-		\textbf{Languages}{: Java 8, T-SQL}
+		\textbf{Languages:}{\quad\quad\quad
+			Java 8, T-SQL}
 		\hfill      
 	}
 	\item{
-		\textbf{Software}{: IntelliJ IDEA, SQL Server Management Studio, Sublime, Git, Jira, Maven}
+		\textbf{Software:}{\quad\quad\quad\quad 
+			IntelliJ IDEA, SQL Server Management Studio, Sublime, Git, Jira, Maven}
 	}
 	
 	\item{
-		\textbf{GitHub}{: https://github.com/Adrian-Ng}
+		\textbf{GitHub:}{\quad\quad\quad\quad\quad
+			\href{https://github.com/Adrian-Ng}{https://github.com/Adrian-Ng}}		
+	}
+	\item{
+		\textbf{Website:}{\quad\quad\quad\quad\quad \href{https://adrian.ng}{https://adrian.ng}} 	
 	}
 	
 	\resumeSubHeadingListEnd
