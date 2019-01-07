@@ -140,7 +140,7 @@
 		\newline
 		These applications extended \texttt{Mapper} and \texttt{Reduce} classes. Methods \texttt{map()} and \texttt{reduce()} were overridden with bespoke implementation.
 		\newline 
-		Java artifacts were exported and ran on Hadoop clusters (both single node and distributed). Input/Output data were stored in HDFS and accessed via \texttt{hadoop fs} syntax.
+		Java artifacts were exported and ran on Hadoop clusters (both single node and distributed). Input/Output data were stored in HDFS and accessed via \texttt{hadoop fs} commands.
 		\newline 
 		A subsequent exercise was undertaken to minimise the verbosity of these \textit{Hadoop MapReduce} applications by translating them to \textit{Scala} for use in a \textit{Spark REPL}.
 	}
@@ -176,7 +176,7 @@
 	}
 	\resumeItem{GDPR Customer Preferences}
 	{
-		This project involved the creation of a number of automated processes to merge GDPR preference data with the analytical database. To accomplish this, SQL DML such as \texttt{merge} were utilised.
+		This project involved the creation of a number of automated processes to merge GDPR preference data with the analytical database. To accomplish this, SQL DML such as \texttt{merge} was utilised.
 	}
 	\resumeItem{Tableau Dashboard Automation/Optimisation}
 	{
@@ -221,10 +221,17 @@
 	
 	% seatwave stuff      
 
-%	\resumeSubheading
-%	{Seatwave (now Ticketmaster)}{London}
-%	{Marketing Analyst}{May 2013 - Dec. 2013}
-%	\resumeItemListStart
+	\resumeSubheading
+	{Seatwave (now Ticketmaster)}{London}
+	{Marketing Analyst}{May 2013 - Dec. 2013}
+	\resumeItemListStart
+	
+	\resumeItem{Summary}
+	{
+		{
+			In this position I gained my first experience with writing \textit{SQL} code in SQL Server Management Studio. Using rudimentary DML \& DDL, I was able to query the ticketing database to pull data. For instance, I pulled sales data for use in pricing analyses, and customer postcodes for conducting spatial analyses which would produce visual representations of customer regional density.
+		}
+	}
 %	\resumeItem{Pricing Analysis}
 %	{
 %		Looked at sales data to conduct price projections that, due to the volatility of the market, were otherwise unobtainable by the commercial team. This was done by attempting to model this data via exponential decay in \textit{Excel VBA}.
@@ -233,9 +240,9 @@
 %	{
 %		Conducted a spatial analysis of customer postcodes, which I used to provide visualisations of the areas where our customers lived in relation to the location of the concerts they bought tickets for. These visualisations enabled the commercial team to gain a better picture of where they needed to best target their marketing campaigns.
 %	}
-%	\resumeItemListEnd   
+	\resumeItemListEnd   
 %	
-%	% seatwave end      
+	% seatwave end      
 	\resumeSubHeadingListEnd
 	
 	
