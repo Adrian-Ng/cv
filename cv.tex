@@ -43,11 +43,12 @@
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[2]{
+\newcommand{\resumeItem}[3]{
 	\item\small{
-		\textbf{#1\\}{ #2 \vspace{-2pt}}
+		\textbf{#1}\hfill\tiny{#2\\}\small{ #3 \vspace{-2pt}}
 	}
 }
+
 
 \newcommand{\resumeSubheading}[4]{
 	\vspace{-1pt}\item
@@ -57,7 +58,7 @@
 	\end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[3]{\resumeItem{#1}{#2}{#3}\vspace{-4pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
@@ -96,23 +97,24 @@
 	\section{Java Projects}
 	\resumeSubHeadingListStart
 	\resumeSubItem
-	{Dissertation: Implementation of Value at Risk (VaR) measures in Java}
-	{ \tiny (\href{https://adrian.ng/java/var/}{https://adrian.ng/java/var/}) \quad (\href{https://github.com/Adrian-Ng/VaR}{https://github.com/Adrian-Ng/VaR})
-		\newline
-		\small
-		This project implements various approaches to estimating \textit{VaR}, a measure of risk. These are: \textit{Model Building}, \textit{Historical Simulation}, and \textit{Monte Carlo Simulation}.
+	{Implementation of Value at Risk (VaR) measures in Java}
+	{
+		(\href{https://adrian.ng/java/var/}{https://adrian.ng/java/var/}) \quad (\href{https://github.com/Adrian-Ng/VaR}{https://github.com/Adrian-Ng/VaR})
+	}
+	{  
+		This dissertation project implements various approaches to estimating \textit{VaR}, a measure of risk. These are: \textit{Model Building}, \textit{Historical Simulation}, and \textit{Monte Carlo Simulation}.
 		In addition, the following approaches to estimating market variance were implemented: \textit{Equal Weighted}, \textit{Exponentially Weighted Moving Average}, and \textit{GARCH(1,1)}.
 	}
 	\resumeItemListStart
-	\resumeItem{Object Oriented Design}
+	\resumeItem{Object Oriented Design}{}
 	{
 		As we have a number of approaches to estimating both \textit{VaR} and \textit{variance}, abstract methods \texttt{getVariance()} and \texttt{getVaR()} were defined in abstract classes but implemented in child classes. Instantiation of these child classes is handled via the \textit{factory method}.
 	}
-	\resumeItem{Concurrency}
+	\resumeItem{Concurrency}{}
 	{
 		The \textit{Monte Carlo} approach generates a large number of random walks, which can take a long time to fully execute in series. Therefore execution is parallelized using \texttt{java.util.concurrent} for which \texttt{Callable} and \texttt{Future} lambdas were implemented.
 	}
-	\resumeItem{Data Ingress}
+	\resumeItem{Data Ingress}{}
 	{
 		Real-world market data was sourced using the \textit{Yahoo Finance API}, which returns a collection of \texttt{BigDecimal}. These daily closing prices are transformed into daily price changes of type \texttt{Double[]}. Thus sacrificing accuracy for computational performance.
 		\newline
@@ -150,7 +152,7 @@
 		\tiny (\href{https://adrian.ng/java/yahoofinance/\#stream}{https://adrian.ng/java/yahoofinance/\#stream})
 		\newline
 		\small
-		A small exercise involving the use of \textit{Java 8 Streams}. Processing real-world financial data to return \textit{mean} and \textit{equal-weighted variance} of some market asset by defining input-functions to \texttt{map()} and \texttt{reduce()} methods.
+		A small exercise involving the use of \textit{Java 8 Streams}. Processing real-world financial data to return \textit{mean} and \textit{equal-weighted variance} of some market asset by defining functions to \texttt{map()} and \texttt{reduce()} methods.
 	}
 	
 	% \resumeSubItem{Google PageRank}
@@ -168,21 +170,21 @@
 	{Data Analyst}{Jan. - July 2018}
 	\resumeItemListStart
 	
-	\resumeItem{NYCFC Project}
+	\resumeItem{NYCFC Project}{}
 	{
 		This data engineering project involved the implementation of SQL \textit{stored procedures} to automate the ingress of data from external sources (transactional data from Ticketmaster, customer data from NYCFC).
 		\newline
 		Conference calls with stakeholders (New York City FC) and partners (Major League Soccer) were regularly hosted/attended to understand the \textit{data situation}.
 	}
-	\resumeItem{GDPR Customer Preferences}
+	\resumeItem{GDPR Customer Preferences}{}
 	{
 		This project involved the creation of a number of automated processes to merge GDPR preference data with the analytical database. To accomplish this, SQL DML such as \texttt{merge} was utilised.
 	}
-	\resumeItem{Tableau Dashboard Automation/Optimisation}
+	\resumeItem{Tableau Dashboard Automation/Optimisation}{}
 	{
 		Implemented \textit{Data Cubes} to pre-aggregate data along all possible subset of categorical fields. That is, every possible drill-down and roll-up was computed in advance. As a result, front-end dashboards retained their exploratory flexibility but removed real-time computational burden. Thus improving user-experience.
 	}
-	\resumeItem{Guiding and Mentoring}
+	\resumeItem{Guiding and Mentoring}{}
 	{
 		Guiding junior colleagues on SQL Server Management Studio best practices and fundamentals. E.g. understanding DDL \& DML for writing SQL queries and creating database objects; when to return a \href{https://adrian.ng/SQL/joins/cartesian/}{\textit{product join}} vs \href{https://adrian.ng/SQL/joins/semi/}{\textit{semi-join}}; making use of \texttt{information\_schema}; utilising \textit{SQL Agent} to schedule jobs. 
 		\newline
@@ -193,31 +195,25 @@
 	{ITG Creator}{Westminster}
 	{Senior CRM Campaign Executive}{Dec. 2013 - Sept. 2016}
 	\resumeItemListStart
-	\resumeItem{Segmentation Processes}
+	\resumeItem{Segmentation Processes}{}
 	{
 		Built a number of automated segmentation process using SQL stored procedures for other members of the team to utilise. Recipient data were imported via \texttt{BULK INSERT}, stored in database tables and indexed (clustered). Segmentation data was output and linked to HTML content to be broadcast to recipients.
 	}
-	\resumeItem{Recursion}
-	{
-		\tiny {\href{https://adrian.ng/SQL/cte/Recursion/}{https://adrian.ng/SQL/cte/Recursion/}}
-		\newline
-		\small
+	\resumeItem{Recursion}{(\href{https://adrian.ng/SQL/cte/Recursion/}{https://adrian.ng/SQL/cte/Recursion/})}
+	{		
 		Used recursive queries (CTEs) to clean data e.g. removing $n$-number of leading zeros from mobile phone numbers in order to prefix with dialling codes; or splitting strings and mapping into relational format.
 	}
-	\resumeItem{Query Execution}
+	\resumeItem{Cross-Server Query Optimisation}{(\href{https://adrian.ng/SQL/misc/openquery-xml}{https://adrian.ng/SQL/misc/openquery-xml})}
 	{
-		\tiny (\href{https://adrian.ng/SQL/misc/openquery-xml}{https://adrian.ng/SQL/misc/openquery-xml})
-		\newline
-		\small
-		Improved cross-server query execution speeds by using \texttt{OPENQUERY}, which transmits a SQL query in string format to the remote server. Dynamic SQL was utilised to include XML data in the string. Using a \textit{CTE}, this XML could be represented as relational object. Effectively this allowed us to join and filter on the remote server using data from the local sever. As a result, only a small data set was returned via the \texttt{OPENQUERY}.
+		Improved cross-server query execution speeds by using \texttt{OPENQUERY}, which transmits a string of SQL for execution on the remote (a live database under constant heavy load). Futher, \textit{Dynamic SQL} was utilised to include XML data in the string. Mapping via a \textit{CTE}, this XML could be transformed into a relational object capable of joining to remote objects. As a result, filtering via join occurs remotely and only a small data set is returned via the \texttt{OPENQUERY}.
 	}
-	\resumeItem{Soft Skills}
+	\resumeItem{Soft Skills}{}
 	{
-		Attended inter-departmental work assessment groups and advised on work specifications.
+		- Attended inter-departmental work assessment groups and advised on work specifications.
 		\newline
-		As senior team member, served as point of contact for clients and colleagues looking to resource our team.
+		- As senior team member, served as point of contact for clients and colleagues looking to resource our team.
 		\newline
-		On occasion I held responsibility for resourcing and managing the team's workload in Jira.
+		- On occasion I held responsibility for resourcing and managing the team's workload using \textit{Jira}.
 	}
 	\resumeItemListEnd
 	
@@ -228,10 +224,10 @@
 	{Marketing Analyst Intern}{May 2013 - Dec. 2013}
 	\resumeItemListStart
 	
-	\resumeItem{Summary}
+	\resumeItem{Summary}{}
 	{
 		{
-			In this position I gained my first experience with writing \textit{SQL} code in SQL Server Management Studio. Using rudimentary DML \& DDL, I was able to query the ticketing database to pull data. For instance, I pulled sales data for use in pricing analyses, and customer postcodes for conducting spatial analyses which would produce visual representations of customer regional density.
+			In this position I gained my first experience with writing \textit{SQL} code in SQL Server Management Studio. Using rudimentary \textit{DML} \& \textit{DDL}, I was able to query the ticketing and customer databases to extract data for warehousing/analysis/segmentation. 
 		}
 	}
 	% \resumeItem{Pricing Analysis}
@@ -263,22 +259,23 @@
 	\section{General}
 	\resumeSubHeadingListStart
 	\item{
-		\textbf{Languages:}{\hfill
-			Java 8, T-SQL}		
+		\textbf{Languages:}{\hfill Java 8, T-SQL}	
+		\vspace{-5pt}	
 	}
 
 	\item{
-		\textbf{Software:}{\hfill
-			IntelliJ IDEA, SQL Server Management Studio, Sublime, Git, Jira, Maven}		
+		\textbf{Software:}{\hfill IntelliJ IDEA, SQL Server Management Studio, Sublime, Git, Jira, Maven}
+		\vspace{-5pt}		
 	}
 	
 	\item{
-		\textbf{Look at my code:}{\hfill
-			\href{https://github.com/Adrian-Ng}{https://github.com/Adrian-Ng}}		
+		\textbf{Look at my code:}{\hfill \href{https://github.com/Adrian-Ng}{https://github.com/Adrian-Ng}}
+		\vspace{-5pt}	
 	}
 
 	\item{
 		\textbf{Discussion of my code:}{\hfill \href{https://adrian.ng}{https://adrian.ng}}
+		\vspace{-5pt}
 	}
 	
 	\resumeSubHeadingListEnd
