@@ -58,7 +58,7 @@
 	\end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubItem}[3]{\resumeItem{#1}{#2}{#3}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[3]{\resumeItem{#1}{#2}{#3}\vspace{-2pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
@@ -76,12 +76,15 @@
 	%----------HEADING-----------------
 	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 		\textbf{{\Large Adrian Ng MSc.}} & Email: \href{mailto:contact@adrian.ng}{contact@adrian.ng} \\
-		\textbf{Seeking Junior-Level Data Engineering Roles} & Mobile: +447766336972 \\
+		\textbf{Seeking Junior-Level Data Engineering Opportunities} & Mobile: +44-77-66-33-6972 \\
 		%   \textbf{} & Website: \href{https://adrian.ng}{https://adrian.ng} \\
 	\end{tabular*}
 	
 	\section{Summary}
-	I am a Computer Science graduate passionate about Data Engineering. I seek opportunities that further my growing experience in \textit{Java}. A language which I have used in numerous projects ranging from implementing financial models to processing data in \textit{Apache Hadoop MapReduce}. Prior to postgraduate study, my expertise was in \textit{SQL development}, writing segmentation processes. My recent role as a \textit{Data Analyst} at Manchester City FC was a brief but beneficial learning experience: I am no analyst; am uninterested in generating insights or business recommendations. Rather, I thrive when writing code, building things, and solving technical problems. Examples of my code can be found on my Github page and further discussion can be found on my website. Details overleaf.
+	\quad I am a Computer Science graduate passionate about Data Engineering. I seek opportunities that further my growing experience in \textit{Java} -- a language which I have used in numerous projects ranging from the implementation of financial models to processing data in \textit{Apache Hadoop MapReduce}. 
+	
+	\quad Prior to postgraduate study, my expertise was in \textit{SQL development}, mainly writing segmentation processes. My recent role at Manchester City FC was a brief but beneficial learning experience: that I am no analyst and that I am uninterested in generating insights or making business recommendations. Rather, I thrive when writing code, building things, and solving technical problems. 
+	 
 	%-----------EDUCATION-----------------
 	\section{Education}
 	\resumeSubHeadingListStart
@@ -108,7 +111,7 @@
 	\resumeItemListStart
 	\resumeItem{Object Oriented Design}{}
 	{
-		As we have a number of approaches to estimating both \textit{VaR} and \textit{variance}, abstract methods \texttt{getVariance()} and \texttt{getVaR()} were defined in abstract classes but implemented in child classes. Instantiation of these child classes is handled via the \textit{factory method}.
+		As we have a number of approaches to estimating both \textit{VaR} and \textit{variance}, abstract methods \texttt{getVariance()} and \texttt{getVaR()} were each defined in abstract an class but implemented in numerous child classes. Instantiation of these was handled via the \textit{factory method}.
 	}
 	\resumeItem{Concurrency}{}
 	{
@@ -116,9 +119,9 @@
 	}
 	\resumeItem{Data Ingress}{}
 	{
-		Real-world market data was sourced using the \textit{Yahoo Finance API}, which returns a collection of \texttt{BigDecimal}. These daily closing prices are transformed into daily price changes of type \texttt{Double[]}. Thus sacrificing accuracy for computational performance.
+		Real-world market data was sourced using the \textit{Yahoo Finance API}, which returns a collection of \texttt{BigDecimal}. These daily closing prices are transformed into daily price changes of type \texttt{Double[]} -- thus sacrificing accuracy for computational performance.
 		\newline
-		A hypothetical portfolio with a number of stocks and options was defined locally.
+		Other inputs, such as the make-up of our hypothetical investment portfolio were defined locally in text files to be read via \texttt{Scanner in}.
 	}
 	\resumeItemListEnd
 	
@@ -182,11 +185,11 @@
 	}
 	\resumeItem{Tableau Dashboard Automation/Optimisation}{}
 	{
-		Implemented \textit{Data Cubes} to pre-aggregate data along all possible subset of categorical fields. That is, every possible drill-down and roll-up was computed in advance. As a result, front-end dashboards retained their exploratory flexibility but removed real-time computational burden. Thus improving user-experience.
+		Implemented \textit{Data Cubes} to pre-aggregate data along all combinations of categorical fields. That is, every possible drill-down and roll-up was computed in advance. As a result, front-end dashboards retained their exploratory flexibility but removed real-time computational burden. Thus improving user-experience.
 	}
 	\resumeItem{Guiding and Mentoring}{}
 	{
-		Guiding junior colleagues on SQL Server Management Studio best practices and fundamentals. E.g. understanding DDL \& DML for writing SQL queries and creating database objects; when to return a \href{https://adrian.ng/SQL/joins/cartesian/}{\textit{product join}} vs \href{https://adrian.ng/SQL/joins/semi/}{\textit{semi-join}}; making use of \texttt{information\_schema}; utilising \textit{SQL Agent} to schedule jobs. 
+		Instructing junior colleagues on SQL best practices and fundamentals. E.g. understanding DDL \& DML for writing SQL queries and creating database objects; when to return a \href{https://adrian.ng/SQL/joins/cartesian/}{\textit{product join}} vs \href{https://adrian.ng/SQL/joins/semi/}{\textit{semi-join}}; making use of \texttt{information\_schema}; utilising \textit{SQL Agent} to schedule jobs. 
 		\newline
 		Both regular and ad-hoc workshop sessions were held in order to provide this instruction.
 	}
@@ -224,10 +227,10 @@
 	{Marketing Analyst Intern}{May 2013 - Dec. 2013}
 	\resumeItemListStart
 	
-	\resumeItem{Summary}{}
+	\resumeItem{Basic SQL}{}
 	{
 		{
-			In this position I gained my first experience with writing \textit{SQL} code in SQL Server Management Studio. Using rudimentary \textit{DML} \& \textit{DDL}, I was able to query the ticketing and customer databases to extract data for warehousing/analysis/segmentation. 
+			In this position I gained my first experience with writing \textit{SQL} code in SQL Server Management Studio. With basic understanding of \textit{DML} \& \textit{DDL}, I was able to query the ticketing and customer databases to extract data for warehousing, analysis, and CRM segmentation. 
 		}
 	}
 	% \resumeItem{Pricing Analysis}
