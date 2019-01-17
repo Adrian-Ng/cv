@@ -49,7 +49,6 @@
 	}
 }
 
-
 \newcommand{\resumeSubheading}[4]{
 	\vspace{-1pt}\item
 	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -75,15 +74,20 @@
 	
 	%----------HEADING-----------------
 	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-		\textbf{{\Large Adrian Ng MSc.}} & Email: \href{mailto:contact@adrian.ng}{contact@adrian.ng} \\
-		\textbf{Seeking Junior-Level Data Engineering Opportunities} & Mobile: +44-77-66-33-6972 \\
-		%   \textbf{} & Website: \href{https://adrian.ng}{https://adrian.ng} \\
+		\textbf{{\Large Adrian Ng MSc.}} & \textbf{Email:} \href{mailto:contact@adrian.ng}{contact@adrian.ng} \\
+		Seeking Junior-Level Data Engineering Opportunities & \textbf{Website}: \href{https://adrian.ng}{adrian.ng} \\
 	\end{tabular*}
 	
 	\section{Summary}
-	\quad I am a Computer Science graduate passionate about Data Engineering. I thrive when writing code, building things, and solving technical problems.  I seek opportunities that further my growing experience in \textit{Java} -- a language which I used in numerous academic projects ranging from the implementation of financial models to large-scale data processing with applications written for \textit{Apache Hadoop MapReduce}. 
+	I am a Computer Science graduate passionate about Data Engineering. I thrive when writing code, building things, and solving technical problems.  I seek opportunities that further my growing experience in \textit{Java} -- a language which I used in numerous academic projects ranging from the implementation of financial models to large-scale data processing with \textit{Apache Hadoop MapReduce}. 
+	\newline
+		
+	Prior to postgraduate study, my expertise was in \textit{SQL development}. At \textit{ITG Creator} I primarily focused on the implementation of data segmentation processes for CRM communication for a number of clients: \textit{Virgin Media}, \textit{TUI}, \textit{UPC}, \textit{MSD}, \textit{KwikFit}. 
+	\newline
 	
-	\quad Prior to postgraduate study, my expertise was in \textit{SQL development}, primarily focused on the implementation of data segmentation processes for digital marketing communications. My recent role as a Data Analyst at \textit{Manchester City FC} was a brief but beneficial learning experience: confirmation that my abilities lay more in the technical than the analytical. Thus naturally I persue a career in programming.	
+	My recent role as a Data Analyst at \textit{Manchester City FC} was a beneficial learning experience. I implemented data pipelines, data cubes, and other technical miscellany. My abilities are more technical than analytical -- which now leads me to pursue a career in programming.	
+	
+%	My recent role as a Data Analyst at \textit{Manchester City FC} was a brief but beneficial learning experience: confirmation that my abilities lay more in the technical than the analytical -- which leads me to persue a career in programming.	
 	 
 	%-----------EDUCATION-----------------
 	\section{Education}
@@ -93,75 +97,84 @@
 	{Department of Computer Science, Royal Holloway, University of London}{Sept. 2016 -- Dec. 2017}
 	\resumeSubheading
 	{Bachelor of Engineering in Mechanical Engineering}{Upper Second Class with Honours}
-	{ School of Engineering, King's College London, University of London}{Sept. 2007 -- July 2010}
+	{School of Engineering, King's College London, University of London}{Sept. 2007 -- July 2010}
 	\resumeSubHeadingListEnd
+	
+%	\section{Postgraduate Modules}
+%	\resumeSubHeadingListStart
+%		\resumeSubheading
+%		{Programming for Data Analysis}{}
+%		{Java -- Eclipse etc}{}
+%		\resumeSubheading
+%		{Large Scale Data Storage and Processing}{}
+%		{Java -- Apache Hadoop}{}
+%		\resumeSubheading
+%		{Methods of Financial Computation}{}
+%		{Java, MATLAB}{}
+%	\resumeSubHeadingListEnd
+	
+	
 	
 	%-----------PROJECTS-----------------
 	\section{Java Projects}
 	\resumeSubHeadingListStart
-	\resumeSubItem
-	{Implementation of Value at Risk (VaR) measures in Java}
-	{
-		(\href{https://adrian.ng/java/var/}{https://adrian.ng/java/var/}) \quad (\href{https://github.com/Adrian-Ng/VaR}{https://github.com/Adrian-Ng/VaR})
-	}
-	{  
-		This dissertation project implements various approaches to estimating \textit{VaR}, a measure of risk. These are: \textit{Model Building}, \textit{Historical Simulation}, and \textit{Monte Carlo Simulation}.
-		In addition, the following approaches to estimating market variance were implemented: \textit{Equal Weighted}, \textit{Exponentially Weighted Moving Average}, and \textit{GARCH(1,1)}.
-	}
-	\resumeItemListStart
-	\resumeItem{Object Oriented Design}{}
-	{
-		As we have a number of approaches to estimating both \textit{VaR} and \textit{variance}, abstract methods \texttt{getVariance()} and \texttt{getVaR()} were each defined in abstract an class but implemented in numerous child classes. Instantiation of these was handled via the \textit{factory method}.
-	}
-	\resumeItem{Concurrency}{}
-	{
-		The \textit{Monte Carlo} approach generates a large number of random walks, which can take a long time to fully execute in series. Therefore execution is parallelized using \texttt{java.util.concurrent} for which \texttt{Callable} and \texttt{Future} lambdas were implemented.
-	}
-	\resumeItem{Data Ingress}{}
-	{
-		Real-world market data was sourced using the \textit{Yahoo Finance API}, which returns a collection of \texttt{BigDecimal}. These daily closing prices are transformed into daily price changes of type \texttt{Double[]} -- thus sacrificing accuracy for computational performance.
-		\newline
-		Other inputs, such as the make-up of our hypothetical investment portfolio were defined locally in text files to be read via \texttt{Scanner in}.
-	}
-	\resumeItemListEnd
-	
-	\resumeSubItem{Option Pricing}
-	{
-		\tiny (\href{https://adrian.ng/java/options/}{https://adrian.ng/java/options/}) \quad (\href{https://github.com/Adrian-Ng/OptionPricer}{https://github.com/Adrian-Ng/OptionPricer})
-		\newline
-		\small
-		This project implements three approaches to estimating option prices in Java: \textit{Monte Carlo simulation}, \textit{Black-Scholes equations}, and \textit{Binomial Trees}.
-		\newline
-		Option prices for each of these approaches were retrieved through the interface methods \texttt{getCall()} and \texttt{getPut()}.
-		Abstract classes were also used to facilitate the implementation of various real-world option types, which each differ in how \textit{pay-off} is calculated.
-	}
-	
-	\resumeSubItem{Data Mining with Hadoop MapReduce}
-	{
-		\tiny (\href{https://github.com/Adrian-Ng/HadoopEnron}{https://github.com/Adrian-Ng/HadoopEnron})
-		\newline
-		\small
-		A number of \textit{MapReduce} applications were written in Java with a variety of purposes: e.g. extracting the communications network from the \textit{Enron Corpus} or aggregation of Twitter data in \textit{JSON} format.
-		\newline
-		These applications extended \texttt{Mapper} and \texttt{Reduce} classes. Methods \texttt{map()} and \texttt{reduce()} were overridden with bespoke implementation.
-		\newline
-		Java artifacts were exported and executed on Hadoop clusters (both single node and distributed). Input/Output data were stored in HDFS and accessed via \texttt{hadoop fs} commands.
-		\newline
-		A subsequent exercise was undertaken to minimise the verbosity of these \textit{Hadoop MapReduce} applications by translating them to \textit{Scala} for use in a \textit{Spark REPL}.
-	}
-	
-	\resumeSubItem{Java 8 Streams with financial data}
-	{
-		\tiny (\href{https://adrian.ng/java/yahoofinance/\#stream}{https://adrian.ng/java/yahoofinance/\#stream})
-		\newline
-		\small
-		A small exercise involving the use of \textit{Java 8 Streams}. Processing real-world financial data to return \textit{mean} and \textit{equal-weighted variance} of some market asset by defining functions to \texttt{map()} and \texttt{reduce()} methods.
-	}
-	
-	% \resumeSubItem{Google PageRank}
-	% {
-	%   This is the implementation of Google's \textit{PageRank} algorithm. We simulate the behaviour of someone browsing a series of webpages by computing a transition matrix from an input graph and mixing a Markov Chain.
-	% }   
+		\resumeSubItem
+		{Implementation of Value at Risk (VaR) measures in Java}
+		{
+			(\href{https://adrian.ng/java/var/}{https://adrian.ng/java/var/}) \quad (\href{https://github.com/Adrian-Ng/VaR}{https://github.com/Adrian-Ng/VaR})
+		}
+		{  
+			This dissertation project implements various approaches to estimating \textit{VaR}, a measure of risk. These are: \textit{Model Building}, \textit{Historical Simulation}, and \textit{Monte Carlo Simulation}.
+			In addition, the following approaches to estimating market variance/volatility were implemented: \textit{Equal Weighted}, \textit{Exponentially Weighted Moving Average}, and \textit{GARCH(1,1)}.
+		}
+		\resumeItemListStart
+			\resumeItem{Object Oriented Design}{}
+			{
+				As we have a number of approaches to estimating both \textit{VaR}, \textit{variance} and \textit{volatility}, object oriented techniques and patterns were implemented.
+			}
+			\resumeItem{Concurrency}{}
+			{
+				The \textit{Monte Carlo} approach generates a large number of random walks, which can take a long time to fully execute in series. I used Java's concurrency API's to write a highly efficient solution.
+			}
+			\resumeItem{Data Ingress}{}
+			{
+				Real-world market data was sourced using the \textit{Yahoo Finance API}. These daily closing prices were transformed into daily price changes.
+				\newline
+				Other inputs included the parameters of our hypothetical investment portfolio (market assets, deltas).
+			}
+		\resumeItemListEnd
+		
+		\resumeSubItem{Option Pricing}
+		{
+			(\href{https://adrian.ng/java/options/}{https://adrian.ng/java/options/}) \quad (\href{https://github.com/Adrian-Ng/OptionPricer}{https://github.com/Adrian-Ng/OptionPricer})
+		}
+		{
+			This project implements three approaches to estimating option prices in Java: \textit{Monte Carlo simulation}, \textit{Black-Scholes equations}, and \textit{Binomial Trees}.
+			\newline
+			Apache Commons Math API was used to deal with some probabilistic assumptions.
+		}
+		
+		\resumeSubItem{Data Mining with Hadoop MapReduce}
+		{
+			(\href{https://github.com/Adrian-Ng/HadoopEnron}{https://github.com/Adrian-Ng/HadoopEnron})
+		}
+		{
+			A number of \textit{MapReduce} applications were written in Java with a variety of purposes including extracting the communications network from the \textit{Enron Corpus}, a large dataset of emails, or aggregation of Twitter data.
+			\newline
+			Applications were exported and executed on \textit{Hadoop} clusters (both single node and distributed). Input/Output datasets were stored in HDFS and accessed via \texttt{hadoop fs} commands.
+			\newline
+			A subsequent exercise was undertaken to minimise the verbosity of these \textit{Hadoop MapReduce} applications by translating them to \textit{Scala} for use in a \textit{Spark REPL}.
+		}
+		
+		\resumeSubItem{Java 8 Streams with financial data}
+		{(\href{https://adrian.ng/java/yahoofinance/\#stream}{https://adrian.ng/java/yahoofinance/\#stream})}
+		{
+			A small exercise involving the use of \textit{Java 8 Streams}. Processing real-world financial data to return \textit{mean} and \textit{equal-weighted variance} of some market asset.
+		}	
+		 \resumeSubItem{Google PageRank}{}
+		 {
+		   This is the implementation of Google's \textit{PageRank} algorithm. I simulate the behaviour of someone browsing a series of webpages by computing a transition matrix from an input graph and mixing a Markov Chain.
+		 }   
 	\resumeSubHeadingListEnd
 	
 	
@@ -173,25 +186,31 @@
 	{Data Analyst -- Fan Relationship Management}{Jan. - July 2018}
 	\resumeItemListStart
 	
-	\resumeItem{NYCFC Project}{}
+	\resumeItem{New York City FC Project}{}
 	{
-		This data engineering project involved the implementation of SQL \textit{stored procedures} to automate the ingress of data from external sources (transactional data from Ticketmaster, customer data from NYCFC).
+		Built a data pipeline to ingest data from \textit{Ticketmaster} and \textit{NYCFC}.
 		\newline
-		Conference calls with stakeholders (New York City FC) and partners (Major League Soccer) were regularly hosted/attended to understand the \textit{data situation}.
+%		This data engineering project involved the implementation of SQL \textit{stored procedures} to automate the ingress of data from external sources (transactional data from Ticketmaster, customer data from NYCFC).		
+		Liaised with stakeholders (New York City FC) and partners (Major League Soccer).
+	}
+	\resumeItem{Lifetime Customer Value}{}
+	{
+		
+		
+		
+		Churn, SQL data mining. Modeling of LCV via \textit{beta-gaussian, beta-binomial} 
 	}
 	\resumeItem{GDPR Customer Preferences}{}
 	{
-		This project involved the creation of a number of automated processes to merge GDPR preference data with the analytical database. To accomplish this, SQL DML such as \texttt{merge} was utilised.
+		This project involved the creation of a number of automated processes to merge GDPR preference data with the analytical database. To accomplish this, SQL DML such as \texttt{merge} was utilized.
 	}
-	\resumeItem{Tableau Dashboard Automation/Optimisation}{}
+	\resumeItem{Tableau Dashboard Automation/Optimization}{}
 	{
 		Implemented \textit{Data Cubes} to pre-aggregate data along all combinations of categorical fields. That is, every possible drill-down and roll-up was computed in advance. As a result, front-end dashboards retained their exploratory flexibility but removed real-time computational burden. Thus improving user-experience.
 	}
 	\resumeItem{Guiding and Mentoring}{}
 	{
-		Instructing junior colleagues on SQL best practices and fundamentals. E.g. understanding DDL \& DML for writing SQL queries and creating database objects; when to return a \href{https://adrian.ng/SQL/joins/cartesian/}{\textit{product join}} vs \href{https://adrian.ng/SQL/joins/semi/}{\textit{semi-join}}; making use of \texttt{information\_schema}; utilising \textit{SQL Agent} to schedule jobs. 
-		\newline
-		Both regular and ad-hoc workshop sessions were held in order to provide this instruction.
+		Instructing junior colleagues on SQL best practices and fundamentals. E.g. understanding DDL \& DML for writing SQL queries and creating database objects; when to return a \href{https://adrian.ng/SQL/joins/cartesian/}{\textit{product join}} vs \href{https://adrian.ng/SQL/joins/semi/}{\textit{semi-join}}; making use of \texttt{information\_schema}; utilizing \textit{SQL Agent} to schedule jobs. 
 	}
 	\resumeItemListEnd
 	\resumeSubheading
@@ -200,22 +219,15 @@
 	\resumeItemListStart
 	\resumeItem{Segmentation Processes}{}
 	{
-		Built a number of automated segmentation process using SQL stored procedures for team members to utilise. Recipient data were imported via \texttt{BULK INSERT}, stored in database tables and indexed (clustered). Segmentation data was output and linked to HTML content to be broadcast to recipients.
-	}
-	\resumeItem{Debugging}{}
-	{
-		Try/Catch blocks
-		Logging
-		Error printing (if erroring while attempted to execute dynamic sql, print SQL)
-	}
-	
+		Built a number of automated segmentation process using SQL stored procedures for team members to use. Recipient data were imported via \texttt{BULK INSERT}, stored in database tables and indexed (clustered). Segmentation data was output and linked to HTML content to be broadcast to recipients.
+	}	
 	\resumeItem{Recursion}{(\href{https://adrian.ng/SQL/cte/Recursion/}{https://adrian.ng/SQL/cte/Recursion/})}
 	{		
 		Used recursive queries (CTEs) to clean data e.g. removing $n$-number of leading zeros from mobile phone numbers in order to prefix with dialling codes; or splitting strings and mapping into relational format.
 	}
 	\resumeItem{Cross-Server Query Optimisation}{(\href{https://adrian.ng/SQL/misc/openquery-xml}{https://adrian.ng/SQL/misc/openquery-xml})}
 	{
-		Improved cross-server query execution speeds by using \texttt{OPENQUERY}, which transmits a string of SQL for execution on the remote (a live database under constant heavy load). Futher, \textit{Dynamic SQL} was utilised to include XML data in the string. Mapping via a \textit{CTE}, this XML could be transformed into a relational object capable of joining to remote objects. As a result, filtering via join occurs remotely and only a small data set is returned via the \texttt{OPENQUERY}.
+		Improved cross-server query execution speeds by using \texttt{OPENQUERY}, which transmits a string of SQL for execution on the remote (a live database under constant heavy load). Futher, \textit{Dynamic SQL} was utilized to include XML data in the string. Mapping via a \textit{CTE}, this XML could be transformed into a relational object capable of joining to remote objects. As a result, filtering via join occurs remotely and only a small data set is returned via the \texttt{OPENQUERY}.
 	}
 	\resumeItem{Soft Skills}{}
 	{
@@ -240,14 +252,14 @@
 			In this position I gained my first experience writing database queries in \textit{SQL Server Management Studio}. With basic understanding of \textit{DML} and \textit{DDL}, I was able to query the ticketing and customer databases to extract data for warehousing, analysis, and CRM segmentation. 
 		}
 	}
-	% \resumeItem{Pricing Analysis}
-	% {
-	%   Looked at sales data to conduct price projections that, due to the volatility of the market, were otherwise unobtainable by the commercial team. This was done by attempting to model this data via exponential decay in \textit{Excel VBA}.
-	% }
-	% \resumeItem{Spatial Analysis}
-	% {
-	%   Conducted a spatial analysis of customer postcodes, which I used to provide visualisations of the areas where our customers lived in relation to the location of the concerts they bought tickets for. These visualisations enabled the commercial team to gain a better picture of where they needed to best target their marketing campaigns.
-	% }
+%	 \resumeItem{Pricing Analysis}{}
+%	 {
+%	   Looked at sales data to conduct price projections that, due to the volatility of the market, were otherwise unobtainable by the commercial team. This was done by attempting to model this data via exponential decay in \textit{Excel VBA}.
+%	 }
+%	 \resumeItem{Spatial Analysis}{}
+%	 {
+%	   Conducted a spatial analysis of customer postcodes, which I used to provide visualisations of the areas where our customers lived in relation to the location of upcoming events. These visualisations enabled the commercial team to gain a better picture of where they needed to best target their marketing campaigns.
+%	 }
 	\resumeItemListEnd
 	% 
 	% seatwave end      
@@ -266,27 +278,26 @@
 	% \resumeSubHeadingListEnd
 	
 	%--------PROGRAMMING SKILLS------------
-	\section{General}
+	\section{Technologies}
 	\resumeSubHeadingListStart
 	\item{
 		\textbf{Languages:}{\hfill Java 8, T-SQL}	
 		\vspace{-5pt}	
 	}
-
 	\item{
-		\textbf{Software:}{\hfill IntelliJ IDEA, SQL Server Management Studio, Sublime, Git, Jira, Maven}
+		\textbf{Software:}{\hfill IntelliJ IDEA, SQL Server Management Studio,, Git, Jira, Maven}
 		\vspace{-5pt}		
 	}
 	
-	\item{
-		\textbf{Look at my code:}{\hfill \href{https://github.com/Adrian-Ng}{https://github.com/Adrian-Ng}}
-		\vspace{-5pt}	
-	}
-
-	\item{
-		\textbf{Discussion of my code:}{\hfill \href{https://adrian.ng}{https://adrian.ng}}
-		\vspace{-5pt}
-	}
+%	\item{
+%		\textbf{Look at my code:}{\hfill \href{https://github.com/Adrian-Ng}{https://github.com/Adrian-Ng}}
+%		\vspace{-5pt}	
+%	}
+%
+%	\item{
+%		\textbf{Discussion of my code:}{\hfill \href{https://adrian.ng}{https://adrian.ng}}
+%		\vspace{-5pt}
+%	}
 	
 	\resumeSubHeadingListEnd
 	
