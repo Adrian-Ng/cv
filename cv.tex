@@ -80,10 +80,10 @@
 	
 	\section{Summary}
 	
-	I am a Computer Science graduate passionate about Data Engineering. I seek opportunities that further my growing experience in \textit{Java} -- a language which I have used in numerous academic projects ranging from the implementation of financial models to large-scale data processing with \textit{Apache Hadoop MapReduce}. 
+	I am a Computer Science graduate passionate about Data Engineering. I seek opportunities that further my growing experience in \textit{Java} -- which I have used in numerous academic projects ranging from the implementation of financial models to large-scale data processing with \textit{Apache Hadoop MapReduce}. 
 	\newline
 			
-	Prior to postgraduate study, my expertise was in \textit{SQL development} focusing on the implementation of CRM segmentation processes for a number of clients including: \textit{Virgin Media}, \textit{TUI}, \textit{UPC}, \textit{MSD}, and \textit{KwikFit}. 
+	Prior to postgraduate study, my expertise was in \textit{SQL development} focusing on the implementation of CRM segmentation processes for a number of clients including: \textit{Virgin Media}, \textit{TUI}, \textit{UPC}, \textit{MSD}, \textit{Volkswagen}, and \textit{KwikFit}. 
 	\newline
 		
 	In my role as a Data Analyst at \textit{Manchester City FC}, I implemented end-to-end data pipelines (ingress, ETL, data cubes) for use in reporting dashboards. My strengths in this role were more technical than analytical -- which leads me now to pursue a career in programming.	
@@ -111,8 +111,6 @@
 %		{Methods of Financial Computation}{}
 %		{Java, MATLAB}{}
 %	\resumeSubHeadingListEnd
-	
-	
 	
 	%-----------PROJECTS-----------------
 	\section{Java Projects}
@@ -187,19 +185,51 @@
 	
 	\resumeItem{New York City FC Project}{}
 	{
-		Built a data pipeline to ingest data from \textit{Ticketmaster} and \textit{NYCFC}.
-		\newline
-%		This data engineering project involved the implementation of SQL \textit{stored procedures} to automate the ingress of data from external sources (transactional data from Ticketmaster, customer data from NYCFC).		
-		Liaised with stakeholders (New York City FC) and partners (Major League Soccer).
+		
+%		This project was a complete mess. I had to work with people from NYCFC who didn't really know where the data was coming from. So I had to talk to uh some third party contractor. What were they called... ? I think they were called \texttt{KORE}.
+%		\newline
+%		They had all the Ticketmaster data. But we had been given access to one of their remote databases. For some reason, we were using \texttt{Informatica} to query this database, export to some flat file on an FTP and then execute a process (stored procedure) to import this file (spreadsheet) into some staging table in SQL where it was NOT transformed into relational tables.
+%		\newline
+%		Everything was just a god damn spreadsheet. I've never seen a more disturbing use of SQL in my life.
+%		\newline
+%		While there was nothing I could do about the structure of the database, I was able to replace the entire \texttt{Informatica} process with a single stored procedure that simply queryied the remote database with an \texttt{OPENQUERY} and a \texttt{MERGE}. Automating this would have been a matter of using \textit{SQL Sever Information Services} but for some reason it would just not work with SSMS 2008. By they time the database had been upgraded to a better version, I was long gone.
+		
+		A long-term project involving many phases: data-discovery, pipeline building, data aggregation, dashboarding.
+		
+	\resumeItemListStart
+		
+		\resumeItem{Data Pipeline}{}
+		{
+			Built a data pipeline which replaced existing \texttt{Informatica} solution to \texttt{OPENQUERY} remote servers and \texttt{MERGE} into local SQL server. The resulting solution was more efficient and was encapsulated in a stored procedure. 
+			\newline
+		}	
+		
+		\resumeItem{Salesforce Data}{}
+		{
+			Phone sales data also came from \textit{Salesforce}. I liaised with \texttt{KORE} to get this data over to us.
+			\newline
+		}	
+		\resumeItem{Data Hygiene}{}
+		{
+			Liaised with Major League Soccer who provided customer demographic data.
+			\newline
+			
+		}
+	
+	\resumeItemListEnd		
+		
+
+
 	}
-	\resumeItem{Lifetime Customer Value}{}
+
+	
+
+	\resumeItem{Customer Lifetime Value}{}
 	{
-		
-		
-		
+		Implementation of a discrete-time periodic sales model (blah blah)		
 		Churn, SQL data mining. Modeling of LCV via \textit{beta-gaussian, beta-binomial} 
 	}
-	\resumeItem{GDPR Customer Preferences}{}
+	\resumeItem{GDPR Overhaul}{}
 	{
 		This project involved the creation of a number of automated processes to merge GDPR preference data with the analytical database. To accomplish this, SQL DML such as \texttt{merge} was utilized.
 	}
@@ -216,18 +246,41 @@
 	{ITG Creator (Digital Marketing Agency)}{Westminster, London}
 	{Senior CRM Campaign Executive -- SQL Development}{Dec. 2013 - Sept. 2016}
 	\resumeItemListStart
-	\resumeItem{Segmentation Processes}{}
+	\resumeItem{Virgin Media Segmentation Process}{}
 	{
-		Built a number of automated segmentation process using SQL stored procedures for team members to use. Recipient data were imported via \texttt{BULK INSERT}, stored in database tables and indexed (clustered). Segmentation data was output and linked to HTML content to be broadcast to recipients.
-	}	
-	\resumeItem{Recursion}{(\href{https://adrian.ng/SQL/cte/Recursion/}{https://adrian.ng/SQL/cte/Recursion/})}
-	{		
-		Used recursive queries (CTEs) to clean data e.g. removing $n$-number of leading zeros from mobile phone numbers in order to prefix with dialling codes; or splitting strings and mapping into relational format.
+%		Built a number of automated segmentation process using SQL stored procedures for team members to use. Recipient data were imported via \texttt{BULK INSERT}, stored in database tables and indexed (clustered). Segmentation data was output and linked to HTML content to be broadcast to recipients.
+	Built an end-to-end segmentation process (data ingress + config file = segmentation data). 
+	Close coordination with account executives
+	Innovative use of \texttt{XML} + dynamic SQL + \texttt{OPENQUERY} resulted in efficient data fetching from remote server.
 	}
-	\resumeItem{Cross-Server Query Optimisation}{(\href{https://adrian.ng/SQL/misc/openquery-xml}{https://adrian.ng/SQL/misc/openquery-xml})}
+	\resumeItem{Volkswagen New Client Onboarding}{}
 	{
-		Improved cross-server query execution speeds by using \texttt{OPENQUERY}, which transmits a string of SQL for execution on the remote (a live database under constant heavy load). Futher, \textit{Dynamic SQL} was utilized to include XML data in the string. Mapping via a \textit{CTE}, this XML could be transformed into a relational object capable of joining to remote objects. As a result, filtering via join occurs remotely and only a small data set is returned via the \texttt{OPENQUERY}.
+		Work assessment group
+		Testing
+		Mobile and Email CRM
+		Efficient approach using recursive query for regex
+		
 	}
+	\resumeItem{TUI Content Redesign}{}
+	{
+		Three-month project. Close liasing with client.
+		Integration of new HTML from client into existing system.
+		Ensuring design is reactive.
+		Integrating \textit{SQL} table with \textit{HTML} content dynamically using robust \texttt{TCL} scripts to handle multiple design configurations.
+		
+		Efforts on this project were recognised by client.
+		
+	}
+
+	
+%	\resumeItem{Recursion}{(\href{https://adrian.ng/SQL/cte/Recursion/}{https://adrian.ng/SQL/cte/Recursion/})}
+%	{		
+%		Used recursive queries (CTEs) to clean data e.g. removing $n$-number of leading zeros from mobile phone numbers in order to prefix with dialling codes; or splitting strings and mapping into relational format.
+%	}
+%	\resumeItem{Cross-Server Query Optimisation}{(\href{https://adrian.ng/SQL/misc/openquery-xml}{https://adrian.ng/SQL/misc/openquery-xml})}
+%	{
+%		Improved cross-server query execution speeds by using \texttt{OPENQUERY}, which transmits a string of SQL for execution on the remote (a live database under constant heavy load). Futher, \textit{Dynamic SQL} was utilized to include XML data in the string. Mapping via a \textit{CTE}, this XML could be transformed into a relational object capable of joining to remote objects. As a result, filtering via join occurs remotely and only a small data set is returned via the \texttt{OPENQUERY}.
+%	}
 	\resumeItem{Soft Skills}{}
 	{
 		- Attended inter-departmental work assessment groups and advised on work specifications.
@@ -257,7 +310,7 @@
 %	 }
 %	 \resumeItem{Spatial Analysis}{}
 %	 {
-%	   Conducted a spatial analysis of customer postcodes, which I used to provide visualisations of the areas where our customers lived in relation to the location of upcoming events. These visualisations enabled the commercial team to gain a better picture of where they needed to best target their marketing campaigns.
+%	   Conducted a spatial analysis of customer postcodes, which I used to provide visualisations in \textit{QGIS} of the areas where our customers lived in relation to the location of upcoming events. These visualisations enabled the commercial team to gain a better picture of where they needed to best target their marketing campaigns.
 %	 }
 	\resumeItemListEnd
 	% 
