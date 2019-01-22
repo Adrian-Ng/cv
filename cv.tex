@@ -194,32 +194,27 @@
 %		\newline
 %		While there was nothing I could do about the structure of the database, I was able to replace the entire \texttt{Informatica} process with a single stored procedure that simply queryied the remote database with an \texttt{OPENQUERY} and a \texttt{MERGE}. Automating this would have been a matter of using \textit{SQL Sever Information Services} but for some reason it would just not work with SSMS 2008. By they time the database had been upgraded to a better version, I was long gone.
 		
-		A long-term project involving many phases: data-discovery, pipeline building, data aggregation, dashboarding.
+		A long-term project involving many phases including: data-discovery, pipeline building, data aggregation, and dashboarding.
+		\newline
+		As part of this project, I spent 8 hours per week mentoring a junior colleague remotely in New York.
 		
 	\resumeItemListStart
 		
 		\resumeItem{Data Pipeline}{}
 		{
-			Built a data pipeline which replaced existing \texttt{Informatica} solution to \texttt{OPENQUERY} remote servers and \texttt{MERGE} into local SQL server. The resulting solution was more efficient and was encapsulated in a stored procedure. 
+			Implemented a data pipeline to ingress data from a number of distributed \textit{SQL} databases.
+			This process was encapsulated in \textit{stored procedures} which used appropriate DML \& DDL (\texttt{OPENQUERY}, \texttt{MERGE}) for efficient ETL.
 			\newline
+			This process replaced the existing \textit{Informatica} solution.
 		}	
-		
-		\resumeItem{Salesforce Data}{}
+		\resumeItem{Data QA}{}
 		{
-			Phone sales data also came from \textit{Salesforce}. I liaised with \texttt{KORE} to get this data over to us.
+			Data came from multiple external sources (\textit{NYCFC}, \textit{Ticketmaster} \textit{Salesforce}, \textit{Major League Soccer}). 
+			For QA I built an aggregated view to compare the distribution of \texttt{NULL} values. I made use of \texttt{CUBE} to store these analyses in \textit{Data Cubes} which minimised bandwidth use across distributed databases and improved user experience when visualising these datasets in \textit{Tableau} as every combination of \textit{roll-up} and \textit{drill-down} was pre-computed.
 			\newline
-		}	
-		\resumeItem{Data Hygiene}{}
-		{
-			Liaised with Major League Soccer who provided customer demographic data.
-			\newline
-			
 		}
 	
 	\resumeItemListEnd		
-		
-
-
 	}
 
 	
@@ -232,11 +227,13 @@
 	\resumeItem{GDPR Overhaul}{}
 	{
 		This project involved the creation of a number of automated processes to merge GDPR preference data with the analytical database. To accomplish this, SQL DML such as \texttt{merge} was utilized.
+		\newline
+		I worked closely with the development team to test and produce an automated process to merge these new customer preferences seamlessly into the existing database.
 	}
-	\resumeItem{Tableau Dashboard Automation/Optimization}{}
-	{
-		Implemented \textit{Data Cubes} to pre-aggregate data along all combinations of categorical fields. That is, every possible drill-down and roll-up was computed in advance. As a result, front-end dashboards retained their exploratory flexibility but removed real-time computational burden. Thus improving user-experience.
-	}
+%	\resumeItem{Tableau Dashboard Automation/Optimization}{}
+%	{
+%		Implemented \textit{Data Cubes} to pre-aggregate data along all combinations of categorical fields. That is, every possible drill-down and roll-up was computed in advance. As a result, \textit{Tableau} our users would not experience delays due to real-time aggregation.
+%	}
 	\resumeItem{Guiding and Mentoring}{}
 	{
 		Instructing junior colleagues on SQL best practices and fundamentals. E.g. understanding DDL \& DML for writing SQL queries and creating database objects; when to return a \href{https://adrian.ng/SQL/joins/cartesian/}{\textit{product join}} vs \href{https://adrian.ng/SQL/joins/semi/}{\textit{semi-join}}; making use of \texttt{information\_schema}; utilizing \textit{SQL Agent} to schedule jobs. 
