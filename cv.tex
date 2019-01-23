@@ -194,7 +194,7 @@
 %		\newline
 %		While there was nothing I could do about the structure of the database, I was able to replace the entire \texttt{Informatica} process with a single stored procedure that simply queryied the remote database with an \texttt{OPENQUERY} and a \texttt{MERGE}. Automating this would have been a matter of using \textit{SQL Sever Information Services} but for some reason it would just not work with SSMS 2008. By they time the database had been upgraded to a better version, I was long gone.
 		
-		I took ownership of this project to integrate \textit{NYCFC's} transactional and demographic data with \textit{City Football Group's} data warehouse. This six-month project involved many phases including: data-discovery, architecture, and data processing. Data came from multiple external sources each with unique schema: (\textit{NYCFC}, \textit{Ticketmaster} \textit{Salesforce}, \textit{Major League Soccer}). 		
+		I took ownership of this project to integrate \textit{NYCFC's} transactional and demographic data with \textit{City Football Group's} data-warehouse. This six-month project involved many phases including: discovery, engineering, and analysis. Data came from multiple external sources each with unique schema: \textit{NYCFC}, \textit{Ticketmaster} \textit{Salesforce}, \textit{Major League Soccer}.		
 	\resumeItemListStart
 		
 		\resumeItem{Data Pipeline}{}
@@ -207,7 +207,7 @@
 		}	
 		\resumeItem{Data QA}{}
 		{
-			For QA I built an aggregated view to compare the distribution of \texttt{NULL} values. To store these analyses, I made use of \textit{Data Cubes} which minimised bandwidth use across \textit{CFG's} distributed databases and improved user experience when explorng these datasets in a \textit{Tableau} front-end as all necessary computations had been performed up-stream.
+			For QA I built an aggregated view to compare the distribution of \texttt{NULL} values. To store these analyses, I made use of \textit{Data Cubes} which minimised bandwidth use across \textit{CFG's} distributed databases and improved user experience when explorng these datasets in a \textit{Tableau} front-end as all possible  aggregation had been performed up-stream.
 			\newline
 		}
 		\resumeItem{Mentoring}{}
