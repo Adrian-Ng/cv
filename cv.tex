@@ -194,50 +194,50 @@
 %		\newline
 %		While there was nothing I could do about the structure of the database, I was able to replace the entire \texttt{Informatica} process with a single stored procedure that simply queryied the remote database with an \texttt{OPENQUERY} and a \texttt{MERGE}. Automating this would have been a matter of using \textit{SQL Sever Information Services} but for some reason it would just not work with SSMS 2008. By they time the database had been upgraded to a better version, I was long gone.
 		
-		A long-term project involving many phases including: data-discovery, pipeline building, data aggregation, and dashboarding.
-		\newline
-		As part of this project, I spent 8 hours per week mentoring a junior colleague remotely in New York.
-		
+		I took ownership of this project to integrate \textit{NYCFC's} transactional and demographic data with \textit{City Football Group's} data warehouse. This six-month project involved many phases including: data-discovery, architecture, and data processing. Data came from multiple external sources each with unique schema: (\textit{NYCFC}, \textit{Ticketmaster} \textit{Salesforce}, \textit{Major League Soccer}). 		
 	\resumeItemListStart
 		
 		\resumeItem{Data Pipeline}{}
 		{
-			Implemented a data pipeline to ingress data from a number of distributed \textit{SQL} databases.
+			I implemented a data pipeline to ingress data from a number of distributed \textit{SQL} databases.
 			This process was encapsulated in \textit{stored procedures} which used appropriate DML \& DDL (\texttt{OPENQUERY}, \texttt{MERGE}) for efficient ETL.
 			\newline
-			This process replaced the existing \textit{Informatica} solution.
+			This pipeline replaced the slower and more complex \textit{Informatica} solution.
+			\newline
 		}	
 		\resumeItem{Data QA}{}
 		{
-			Data came from multiple external sources (\textit{NYCFC}, \textit{Ticketmaster} \textit{Salesforce}, \textit{Major League Soccer}). 
-			For QA I built an aggregated view to compare the distribution of \texttt{NULL} values. I made use of \texttt{CUBE} to store these analyses in \textit{Data Cubes} which minimised bandwidth use across distributed databases and improved user experience when visualising these datasets in \textit{Tableau} as every combination of \textit{roll-up} and \textit{drill-down} was pre-computed.
+			For QA I built an aggregated view to compare the distribution of \texttt{NULL} values. To store these analyses, I made use of \textit{Data Cubes} which minimised bandwidth use across \textit{CFG's} distributed databases and improved user experience when explorng these datasets in a \textit{Tableau} front-end as all necessary computations had been performed up-stream.
+			\newline
+		}
+		\resumeItem{Mentoring}{}
+		{
+			As part of this project, I was dedicated to mentoring a junior colleague remotely in New York. I organised weekly workshops to teach basic DML and more advanced DDL involving process encapsulation and automation. Additional material on my website helped supplement these workshops.
 			\newline
 		}
 	
 	\resumeItemListEnd		
 	}
-
-	
-
+	\resumeItem{GDPR Overhaul}{}
+	{
+		This project involved the refactoring and streamlining of several critical existing production processes to merge GDPR preference data with the analytical database. To accomplish this, SQL DML such as \texttt{merge} was utilized.
+		\newline
+		I worked closely with the development team to test and produce an automated process to merge these new customer preferences seamlessly into the existing database.
+	}
 	\resumeItem{Customer Lifetime Value}{}
 	{
 		Implementation of a discrete-time periodic sales model (blah blah)		
-		Churn, SQL data mining. Modeling of LCV via \textit{beta-gaussian, beta-binomial} 
-	}
-	\resumeItem{GDPR Overhaul}{}
-	{
-		This project involved the creation of a number of automated processes to merge GDPR preference data with the analytical database. To accomplish this, SQL DML such as \texttt{merge} was utilized.
-		\newline
-		I worked closely with the development team to test and produce an automated process to merge these new customer preferences seamlessly into the existing database.
+		Churn, SQL data mining. Modeling of LCV via \textit{beta-gaussian, beta-binomial} model.
+		Worked closely with data analysts to ensure optimal feature selection.
 	}
 %	\resumeItem{Tableau Dashboard Automation/Optimization}{}
 %	{
 %		Implemented \textit{Data Cubes} to pre-aggregate data along all combinations of categorical fields. That is, every possible drill-down and roll-up was computed in advance. As a result, \textit{Tableau} our users would not experience delays due to real-time aggregation.
 %	}
-	\resumeItem{Guiding and Mentoring}{}
-	{
-		Instructing junior colleagues on SQL best practices and fundamentals. E.g. understanding DDL \& DML for writing SQL queries and creating database objects; when to return a \href{https://adrian.ng/SQL/joins/cartesian/}{\textit{product join}} vs \href{https://adrian.ng/SQL/joins/semi/}{\textit{semi-join}}; making use of \texttt{information\_schema}; utilizing \textit{SQL Agent} to schedule jobs. 
-	}
+%	\resumeItem{Guiding and Mentoring}{}
+%	{
+%		Instructing junior colleagues on SQL best practices and fundamentals. E.g. understanding DDL \& DML for writing SQL queries and creating database objects; when to return a \href{https://adrian.ng/SQL/joins/cartesian/}{\textit{product join}} vs \href{https://adrian.ng/SQL/joins/semi/}{\textit{semi-join}}; making use of \texttt{information\_schema}; utilizing \textit{SQL Agent} to schedule jobs. 
+%	}
 	\resumeItemListEnd
 	\resumeSubheading
 	{ITG Creator (Digital Marketing Agency)}{Westminster, London}
@@ -249,6 +249,7 @@
 	Built an end-to-end segmentation process (data ingress + config file = segmentation data). 
 	Close coordination with account executives
 	Innovative use of \texttt{XML} + dynamic SQL + \texttt{OPENQUERY} resulted in efficient data fetching from remote server.
+	\newline
 	}
 	\resumeItem{Volkswagen New Client Onboarding}{}
 	{
@@ -256,7 +257,7 @@
 		Testing
 		Mobile and Email CRM
 		Efficient approach using recursive query for regex
-		
+		\newline
 	}
 	\resumeItem{TUI Content Redesign}{}
 	{
@@ -266,7 +267,7 @@
 		Integrating \textit{SQL} table with \textit{HTML} content dynamically using robust \texttt{TCL} scripts to handle multiple design configurations.
 		
 		Efforts on this project were recognised by client.
-		
+		\newline
 	}
 
 	
@@ -334,7 +335,7 @@
 		\vspace{-5pt}	
 	}
 	\item{
-		\textbf{Software:}{\hfill IntelliJ IDEA, SQL Server Management Studio,, Git, Jira, Maven}
+		\textbf{Software:}{\hfill IntelliJ IDEA, SQL Server Management Studio, Git, Jira, Maven}
 		\vspace{-5pt}		
 	}
 	
