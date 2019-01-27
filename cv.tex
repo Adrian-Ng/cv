@@ -134,7 +134,6 @@
 			\resumeItem{Data Ingress}{}
 			{
 				To test a hypothetical investment portfolio (stocks, options, deltas), real-world market data was sourced using the \textit{Yahoo Finance API}. A distribution of historical daily price changes was computed and used to estimate model parameters.
-				\newline
 			}
 		\resumeItemListEnd
 		
@@ -181,22 +180,13 @@
 	\resumeItemListStart
 	
 	\resumeItem{New York City FC Project}{}
-	{
-		
-%		This project was a complete mess. I had to work with people from NYCFC who didn't really know where the data was coming from. So I had to talk to uh some third party contractor. What were they called... ? I think they were called \texttt{KORE}.
-%		\newline
-%		They had all the Ticketmaster data. But we had been given access to one of their remote databases. For some reason, we were using \texttt{Informatica} to query this database, export to some flat file on an FTP and then execute a process (stored procedure) to import this file (spreadsheet) into some staging table in SQL where it was NOT transformed into relational tables.
-%		\newline
-%		Everything was just a god damn spreadsheet. I've never seen a more disturbing use of SQL in my life.
-%		\newline
-%		While there was nothing I could do about the structure of the database, I was able to replace the entire \texttt{Informatica} process with a single stored procedure that simply queryied the remote database with an \texttt{OPENQUERY} and a \texttt{MERGE}. Automating this would have been a matter of using \textit{SQL Sever Information Services} but for some reason it would just not work with SSMS 2008. By they time the database had been upgraded to a better version, I was long gone.
-		
+	{		
 		I took ownership of this project to integrate \textit{NYCFC's} transactional and demographic data with \textit{City Football Group's} data-warehouse. This six-month project involved many phases including: discovery, engineering, and analysis. Data came from multiple external sources each with unique schema: \textit{NYCFC}, \textit{Ticketmaster} \textit{Salesforce}, \textit{Major League Soccer}.		
 	\resumeItemListStart
 		
 		\resumeItem{Data Pipeline}{}
 		{
-			I implemented a data pipeline to ingress data from a number of distributed \textit{SQL} databases.
+			I implemented a data pipeline to ingress data from a number of remote \textit{SQL} databases.
 			This process was encapsulated in \textit{stored procedures} which used appropriate DML \& DDL (\texttt{OPENQUERY}, \texttt{MERGE}) for efficient ETL.
 			\newline
 			This pipeline replaced the slower and more complex \textit{Informatica} solution.
@@ -204,35 +194,27 @@
 		}	
 		\resumeItem{Data QA}{}
 		{
-			For QA I built an aggregated view to compare the distribution of \texttt{NULL} values. To store these analyses, I made use of \textit{Data Cubes} which minimised bandwidth across \textit{CFG's} distributed databases and improved user experience when exploring these datasets in a \textit{Tableau} front-end as all possible  aggregation had been performed up-stream.
+			For QA I built an aggregated dataset to compare the distribution of \texttt{NULL} values. These analyses were transformed to \textit{Data Cubes} for reduction and up-stream computation benefits. As such, bandwidth was minimised across our distributed servers and need for real-time computation in \textit{Tableau} front-end was eliminated, resulting in improved user-experience.
 			\newline
 		}
 		\resumeItem{Mentoring}{}
 		{
-			As part of this project, I was dedicated to mentoring a junior colleague remotely in New York. I organised weekly workshops to teach basic DML and more advanced DDL involving process encapsulation and automation. Additional material on my website helped supplement these workshops.
+			As part of this project, I was dedicated to mentoring a junior colleague remotely in New York. I organised weekly workshops to teach basic DML and more advanced DDL with a goal toward being self-sufficient in writing database queries and building stored procedures. Additional material on my website helped supplement these workshops.
 			\newline
-		}
-	
+		}	
 	\resumeItemListEnd		
 	}
 	\resumeItem{GDPR Preferences Integration}{}
-	{
-		In preparation for GDPR, this project involved the refactoring of several critical production processes to integrate a \textit{customer preference} .
-		I worked with developers to test and produce an automated process to merge customer preferences seamlessly into the analytical and CRM databases.
+	{	
+		I worked on the integration of a GDPR preference stream into our \textit{SQL} and \textit{Salesforce} databases. This required the creation of a new pipeline and the refactoring of numerous processes downstream.
+			
+		Working with the development team, I provided specification and UAT testing to ensure my process could merge any changes in the stream into our database almost immediately. Using primary key constraints, clustered indexes and \texttt{MERGE}, I was able to produce a highly efficient process.
+		\newline		
 	}
-	\resumeItem{Customer Lifetime Value}{}
+	\resumeItem{Customer Churn Model}{}
 	{
-		I provided data preparation (data extraction, feature selection) for modelling customer purchasing and drop-out behaviour. Model selection , \textit{logistic regression}, \textit{Beta-Geometric/Beta-Bernoulli}.	
-		
+		I worked on a model to predict customer propensity to churn. I contributed datasets and worked with Data Scientists on feature and model selection. In particular, looking at \textit{logistic regression} and \textit{Beta-Geometric/Beta-Bernoulli} in R Studio.
 	}
-%	\resumeItem{Tableau Dashboard Automation/Optimization}{}
-%	{
-%		Implemented \textit{Data Cubes} to pre-aggregate data along all combinations of categorical fields. That is, every possible drill-down and roll-up was computed in advance. As a result, \textit{Tableau} our users would not experience delays due to real-time aggregation.
-%	}
-%	\resumeItem{Guiding and Mentoring}{}
-%	{
-%		Instructing junior colleagues on SQL best practices and fundamentals. E.g. understanding DDL \& DML for writing SQL queries and creating database objects; when to return a \href{https://adrian.ng/SQL/joins/cartesian/}{\textit{product join}} vs \href{https://adrian.ng/SQL/joins/semi/}{\textit{semi-join}}; making use of \texttt{information\_schema}; utilizing \textit{SQL Agent} to schedule jobs. 
-%	}
 	\resumeItemListEnd
 	\resumeSubheading
 	{ITG Creator (Digital Marketing Agency)}{Westminster, London}
@@ -241,6 +223,8 @@
 	\resumeItem{Virgin Media Segmentation Process}{}
 	{
 %		Built a number of automated segmentation process using SQL stored procedures for team members to use. Recipient data were imported via \texttt{BULK INSERT}, stored in database tables and indexed (clustered). Segmentation data was output and linked to HTML content to be broadcast to recipients.
+	I built an end-to-end process for \textit{Virgin Media} segmentation jobs. This required the custom implementation of an import tool (SSMS import wizard was not sufficient)
+	
 	Built an end-to-end segmentation process (data ingress + config file = segmentation data). 
 	Close coordination with account executives
 	Innovative use of \texttt{XML} + dynamic SQL + \texttt{OPENQUERY} resulted in efficient data fetching from remote server.
