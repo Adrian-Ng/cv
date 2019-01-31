@@ -117,24 +117,29 @@ In my role as a Data Analyst at \textit{Manchester City FC}, I implemented end-t
 {
 	(\href{https://adrian.ng/java/var/}{https://adrian.ng/java/var/}) \quad (\href{https://github.com/Adrian-Ng/VaR}{https://github.com/Adrian-Ng/VaR})
 }
-{
-	This dissertation project implemented various approaches to estimating \textit{VaR}, a measure of risk: \textit{Model Building}, \textit{Historical Simulation}, and \textit{Monte Carlo Simulation}.
-	Approaches for variance/volatility estimates were also implemented: \textit{Equal Weighted}, \textit{Exponentially Weighted Moving Average}, and \textit{GARCH(1,1)}.
-}
-\resumeItemListStart
-\resumeItem{Object Oriented Design}{}
-{
-	As we have a number of approaches to estimating both \textit{VaR}, \textit{variance} and \textit{volatility}, object oriented techniques and patterns were implemented.
-}
-\resumeItem{Concurrency}{}
-{
-	The \textit{Monte Carlo} approach generates a large number of random walks, which can take a long time to fully execute in series. I used Java's concurrency API's to write a highly efficient solution.
-}
-\resumeItem{Data Ingress}{}
-{
-	To test a hypothetical investment portfolio (stocks, options, deltas), real-world market data was sourced using the \textit{Yahoo Finance API}. A distribution of historical daily price changes was computed and used to estimate model parameters.
-}
-\resumeItemListEnd
+
+\begin{itemize}
+	\item[]
+	{
+		This dissertation project implemented various approaches to estimating \textit{VaR}, a measure of risk: \textit{Model Building}, \textit{Historical Simulation}, and \textit{Monte Carlo Simulation}.
+		Approaches for variance/volatility estimates were also implemented: \textit{Equal Weighted}, \textit{Exponentially Weighted Moving Average}, and \textit{GARCH(1,1)}.
+	}
+	\item
+	      {
+	      \textbf{Object Oriented Design:}
+	      As we have a number of approaches to estimating both \textit{VaR}, \textit{variance} and \textit{volatility}, object oriented techniques and patterns were implemented.
+	      }
+	\item
+	      {
+	      \textbf{Concurrency:}
+	      The \textit{Monte Carlo} approach generates a large number of random walks, which can take a long time to fully execute in series. I used Java's concurrency API's to write a highly efficient solution.
+	      }
+	\item
+	      {
+	      \textbf{Data Ingress:}
+	      To test a hypothetical investment portfolio (stocks, options, deltas), real-world market data was sourced using the \textit{Yahoo Finance API}. A distribution of historical daily price changes was computed and used to estimate model parameters.
+	      }
+\end{itemize}
 
 \resumeSubItem{Option Pricing}
 {
@@ -208,41 +213,32 @@ In my role as a Data Analyst at \textit{Manchester City FC}, I implemented end-t
 }
 \resumeItem{Customer Churn Model}{}
 {
-	I contributed datasets and assisted Data Scientists on feature and model selection. In particular, looking at \textit{logistic regression} and \textit{Beta-Geometric/Beta-Bernoulli} model in R Studio.
+	I contributed datasets and collaborated on feature/model selection. In particular, looking at \textit{logistic regression} and \textit{Beta-Geometric/Beta-Bernoulli} models in R Studio.
 }
 \resumeItemListEnd
 \resumeSubheading
 {ITG Creator (Digital Marketing Agency)}{Westminster, London}
 {Senior CRM Campaign Executive -- SQL Development}{Dec. 2013 - Sept. 2016}
 
-The majority of my work in this role involved working with SQL processes which were used to transform customer data into CRM segmentations. As senior team member, I served as point of contact for clients and colleagues looking to resource our team. And on occasion, I held responsibility for resourcing and managing the team's workload using \textit{Jira}.
+The majority of my work in this role involved working with SQL processes which were used to transform customer data into CRM segmentations. As senior team member, I developed a number of these processes. On occasion, I held responsibility for resourcing and managing the team's workload using \textit{Jira}.
 
 \resumeItemListStart
 \resumeItem{Virgin Media Segmentation Process}{(\href{https://adrian.ng/SQL/cte/Recursion/}{https://adrian.ng/SQL/cte/Recursion/}
-\quad (\href{https://adrian.ng/SQL/misc/openquery-xml}{https://adrian.ng/SQL/misc/openquery-xml})}
+	\quad (\href{https://adrian.ng/SQL/misc/openquery-xml}{https://adrian.ng/SQL/misc/openquery-xml})}
 {
-	%		Built a number of automated segmentation process using SQL stored procedures for team members to use. Recipient data were imported via \texttt{BULK INSERT}, stored in database tables and indexed (clustered). Segmentation data was output and linked to HTML content to be broadcast to recipients.
-	I built an end-to-end segmentation process in \textit{SQL Server Management Studio}. This involved implementing a highly flexible and fast bespoke import tool around \texttt{BULK INSERT}. Remote server queries (\texttt{OPENQUERY}) made use of \texttt{XML} to effectively \texttt{INNER JOIN} local and remote tables resulting in speed and minimial resource use on a busy live server. Recursive queries were used to implement a solution (similar to \texttt{flatMap()} in \textit{Java 8}) for efficient \textit{regex}.
+	I built an end-to-end segmentation process in \textit{SQL}. This included building a fast, flexible, and bespoke import tool around \texttt{BULK INSERT}. Remote server queries (\texttt{OPENQUERY}) made use of \texttt{XML} to effectively \texttt{INNER JOIN} local and remote tables resulting in speed and minimial resource use on a busy live server. Recursive queries were used to implement a solution (similar to \texttt{flatMap} in \textit{Java 8}) for efficient \textit{regex}.
 	\newline
 }
 \resumeItem{Volkswagen Client Onboarding}{}
 {
-	I worked with \texttt{.NET} developers and project managers to bring Volkswagen on-board as a new client. This required implementing a new segmentation process for broadcasting email \textit{and} SMS. In addition, I provided schema specification to developers so that the output data could be ingested by their data warehouse.
+	I worked with \texttt{.NET} developers and project managers to bring Volkswagen on-board as a new client. This required implementing a new segmentation process for broadcasting email \textit{and} SMS. In addition, I provided specification to developers for their data warehousing/archiving ingress schema.
 	\newline
 }
 \resumeItem{TUI Mailing Redesign}{}
 {
-	I collaborated closely with the TUI client during a three-month project to redesign the existing \textit{Thomson} and \textit{First Choice} mailings.	\texttt{TCL} scripts were written to merge dynamic content into the \texttt{HTML} body. 
-	My efforts on this project were recognised by the client.
-	\newline
+	I collaborated closely with the TUI client during a three-month project to redesign the existing \textit{Thomson} and \textit{First Choice} mailings.	\texttt{TCL} scripting was used to merge dynamic content into the \texttt{HTML} body. My efforts on this project were recognised by the client.
 }
 
-% \resumeItem{Soft Skills}{}
-% {
-% 	- As senior team member, I served as point of contact for clients and colleagues looking to resource our team.
-% 	\newline
-% 	- On occasion I held responsibility for resourcing and managing the team's workload using \textit{Jira}.
-% }
 \resumeItemListEnd
 
 % seatwave stuff      
@@ -252,12 +248,16 @@ The majority of my work in this role involved working with SQL processes which w
 {Marketing Analyst Intern -- Commercial Team}{May 2013 - Dec. 2013}
 \resumeItemListStart
 
-\resumeItem{Basic SQL}{}
-{
-	{
-			In this position I gained my first experience writing database queries in \textit{SQL Server Management Studio}. With basic understanding of \textit{DML} and \textit{DDL}, I was able to query the ticketing and customer databases to extract data for warehousing, analysis, and CRM segmentation.
-		}
-}
+\item{
+            In this position I gained my first experience writing database queries in \textit{SQL Server Management Studio}. With basic understanding of \textit{DML} and \textit{DDL}, I was able to query the transactional/customer databases to return data for warehousing, reporting, and segmentation.
+      }
+
+% \resumeItem{Basic SQL}{}
+% {
+% 	{
+% 			In this position I gained my first experience writing database queries in \textit{SQL Server Management Studio}. With basic understanding of \textit{DML} and \textit{DDL}, I was able to query the transactional/customer databases to return data for warehousing, reporting, and segmentation.
+% 		}
+% }
 %	 \resumeItem{Pricing Analysis}{}
 %	 {
 %	   Looked at sales data to conduct price projections that, due to the volatility of the market, were otherwise unobtainable by the commercial team. This was done by attempting to model this data via exponential decay in \textit{Excel VBA}.
