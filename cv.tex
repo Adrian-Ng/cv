@@ -12,10 +12,10 @@
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
-\usepackage{enumitem}
+\usepackage[inline]{enumitem}
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
-
+\usepackage[symbol]{footmisc}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -35,6 +35,8 @@
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
+\linespread{0.97}
+
 
 % Sections formatting
 \titleformat{\section}{
@@ -66,6 +68,8 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
+
+	\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -79,12 +83,13 @@
 \end{tabular*}
 
 \section{Profile}
-I am a Computer Science graduate passionate about Data Engineering. I seek opportunities that further my growing experience in \textit{Java} -- which I have used in numerous academic projects ranging from the implementation of financial models to large-scale data processing with \textit{Apache Hadoop MapReduce}.
-\newline
-Prior to postgraduate study, my expertise was in \textit{SQL development} focusing on the implementation of CRM segmentation processes for a number of clients including: \textit{Virgin Media}, \textit{TUI}, \textit{UPC}, \textit{MSD}, \textit{Volkswagen}, \textit{KwikFit}.
-\newline
-In my role as a Data Analyst at \textit{Manchester City FC}, I implemented end-to-end data pipelines (ingress, ETL, data cubes) for use in reporting dashboards. My accomplishments in this role were actually more technical than analytical -- which leads me now to pursue a career in programming.
-
+\begin{paragraph}
+	I am a Computer Science graduate passionate about Data Engineering and I seek opportunities that meet my growing experience in \textit{Java} -- a language I have used in numerous academic projects ranging from the implementation of  models pulling real-world financial data to large-scale data processing with \textit{Apache Hadoop MapReduce}.
+	\par
+	Prior to postgraduate study, my expertise was in \textit{SQL development} focusing on the implementation of segmentation processes for a number of clients including: \textit{Virgin Media}, \textit{TUI}, \textit{UPC}, \textit{MSD}, \textit{Volkswagen}, \textit{KwikFit}.
+	\par
+	After graduation, my most recent accomplishments as a Data Analyst at \textit{Manchester City FC} were in the technical parts (e.g. pipelines, architecture) of the projects I worked on, which leads me now to pursue a career in Data Engineering.
+\end{paragraph}
 %-----------EDUCATION-----------------
 \section{Education}
 \resumeSubHeadingListStart
@@ -109,37 +114,79 @@ In my role as a Data Analyst at \textit{Manchester City FC}, I implemented end-t
 %		{Java, MATLAB}{}
 %	\resumeSubHeadingListEnd
 
+% \begin{itemize*}
+% 	\item bananas
+% 	\item apples
+% 	\item oranges and
+% 	\item lemons.
+% \end{itemize*}
+
 %-----------PROJECTS-----------------
 \section{Java Projects}
 \resumeSubHeadingListStart
 \resumeSubItem
 {Implementation of Value at Risk (VaR) measures in Java}
 {
-	(\href{https://adrian.ng/java/var/}{https://adrian.ng/java/var/}) \quad (\href{https://github.com/Adrian-Ng/VaR}{https://github.com/Adrian-Ng/VaR})
+	(\href{https://adrian.ng/java/var/}{https://adrian.ng/java/var/})
+	\quad
+	(\href{https://github.com/Adrian-Ng/VaR}{https://github.com/Adrian-Ng/VaR})
 }
-
-\begin{itemize}
-	\item[]
-	      {
-	      This dissertation project implemented various approaches to estimating \textit{VaR}, a measure of risk: \textit{Model Building}, \textit{Historical Simulation}, and \textit{Monte Carlo Simulation}.
-	      Approaches for variance/volatility estimates were also implemented: \textit{Equal Weighted}, \textit{Exponentially Weighted Moving Average}, and \textit{GARCH(1,1)}.
-	      }
-	\item
-	      {
-	      \textbf{Object Oriented Design:}
-	      As we have a number of approaches to estimating both \textit{VaR}, \textit{variance} and \textit{volatility}, object oriented techniques and patterns were implemented.
-	      }
-	\item
-	      {
-	      \textbf{Concurrency:}
-	      The \textit{Monte Carlo} approach generates a large number of random walks, which can take a long time to fully execute in series. I used Java's concurrency API's to write a highly efficient solution.
-	      }
-	\item
-	      {
-	      \textbf{Data Ingress:}
-	      To test a hypothetical investment portfolio (stocks, options, deltas), real-world market data was sourced using the \textit{Yahoo Finance API}. A distribution of historical daily price changes was computed and used to estimate model parameters.
-	      }
-\end{itemize}
+{
+	Assuming a number of hypothetical investment portfolios, my dissertation project implemented a number of approaches to estimating \textit{VaR}, a measure of risk, and variance/volatility (for model parameterization).
+	\begin{itemize}
+		\item {
+		      \textbf{VaR:}
+		      \begin{enumerate*}[label={\alph*)}]
+			      \item \textit{Model Building}
+			      \item \textit{Historical Simulation}
+			      \item \textit{Monte Carlo Simulation}.
+		      \end{enumerate*}
+		      }
+		\item {
+		      \textbf{Variance/Volatility:}
+		      \begin{enumerate*}[label={\alph*)}]
+			      \item \textit{Equal Weighted}
+			      \item \textit{Exponentially Weighted Moving Average}
+			      \item \textit{GARCH(1,1)}.
+		      \end{enumerate*}
+		      }
+	\end{itemize}
+	Because of these numerous approaches, object-oriented techniques and patterns were implemented.
+	In addition, I used Java's concurrency APIs to parallelize the 100,000+ random walks generated by \textit{Monte Carlo} for simulating stock prices.
+	Real world financial data was obtained via the Google Finance/Yahoo Finance APIs.
+}
+% \begin{itemize}
+% 	\item[]{
+% 	      This dissertation project implemented a number of approaches to estimating \textit{VaR}, a measure of risk, and variance/volatility (for model parameterization).
+% 	      \begin{itemize}
+% 		      \item {
+% 		            \textbf{VaR:}
+% 		            \begin{enumerate*}[label={\alph*)}]
+% 			            \item \textit{Model Building}
+% 			            \item \textit{Historical Simulation}
+% 			            \item \textit{Monte Carlo Simulation}.
+% 		            \end{enumerate*}
+% 		            }
+% 		      \item {
+% 		            \textbf{Variance/Volatility:}
+% 		            \begin{enumerate*}[label={\alph*)}]
+% 			            \item \textit{Equal Weighted}
+% 			            \item \textit{Exponentially Weighted Moving Average}
+% 			            \item \textit{GARCH(1,1)}.
+% 		            \end{enumerate*}
+% 		            }
+% 	      \end{itemize}
+% 	      }
+% 	\item {
+% 	      As we had a number of approaches to returning estimates, object oriented techniques and patterns were implemented.
+% 	      }
+% 	\item {
+% 	      The Monte Carlo approach generates the 100,000+ random walks used to simulate stock prices. I used Java's concurrency APIs resulting in a highly efficient solution.
+% 	      }
+% 	\item {
+% 	      To test a hypothetical investment portfolio (stocks, options, deltas), real-world market data was sourced using the \textit{Yahoo Finance API}. A distribution of historical daily price changes was computed and used to estimate model parameters.
+% 	      }
+% \end{itemize}
 
 \resumeSubItem{Option Pricing}
 {
@@ -190,92 +237,105 @@ In my role as a Data Analyst at \textit{Manchester City FC}, I implemented end-t
 \resumeSubheading
 {Manchester City Football Club}{Euston, London}
 {Data Analyst -- Fan Relationship Management}{Jan. - July 2018}
-\resumeItemListStart
+\begin{itemize}
+	\item
+	      {
+	      \textbf{New York City FC Project:}
+	      I took ownership of this project to integrate \textit{NYCFC's} transactional and demographic data with \textit{City Football Group's} data-warehouse. This six-month project involved many phases including: discovery, engineering, and analysis. Data came from multiple external sources each with differing schema: \textit{NYCFC}, \textit{Ticketmaster} \textit{Salesforce}, \textit{Major League Soccer}.
+	      \begin{itemize}
+		      \item
+		            {
+		            \textbf{Data Pipeline:}
+		            I implemented a data pipeline to ingress data from a number of remote \textit{SQL} databases.
+		            This process was encapsulated in \textit{stored procedures} which used appropriate DML \& DDL (\texttt{OPENQUERY}, \texttt{MERGE}) for efficient ETL.
+		            This pipeline replaced the slower front-end  \textit{Informatica} solution.
+		            }
+		      \item
+		            {
+		            \textbf{Data Cubes:}
+		            I used an aggregated dataset to compare the distribution of \texttt{NULL} values. These analyses were transformed to \textit{Data Cubes} to pre-compute every possible roll-up/drill-down. As such, bandwidth was minimised across our distributed servers and need for real-time computation in \textit{Tableau} front-end was eliminated, resulting in improved user-experience.
+		            }
+		      \item
+		            {
+		            \textbf{Mentoring:}
+		            As part of this project, I was dedicated to mentoring a junior colleague remotely in New York. I organised weekly workshops to teach basic DML and more advanced DDL with a goal toward self-sufficiency in writing database queries and working with stored procedures. Additional material on my website helped supplement these workshops.
+		            }
+	      \end{itemize}
+	      }
+	\item
+	      {
+	      \textbf{GDPR Stream Integration:}
+	      I worked on the integration of a GDPR preference stream into our data stores (\textit{SQL}, \textit{Salesforce}). I implemented a new pipeline and refactored numerous processes downstream .
+	      I worked with the development team to provided specification and UAT testing. I built an efficient, automated \texttt{MERGE} process using primary key constraints, clustered indexes, triggers.
+	      }
+	\item
+	      {
+	      \textbf{Customer Churn Model:}
+	      I contributed datasets and collaborated on feature/model selection. In particular, looking at \textit{logistic regression} and \textit{Beta-Geometric/Beta-Bernoulli} models in R Studio.
+	      }
+\end{itemize}
 
-\resumeItem{New York City FC Project}{}
-{
-	I took ownership of this project to integrate \textit{NYCFC's} transactional and demographic data with \textit{City Football Group's} data-warehouse. This six-month project involved many phases including: discovery, engineering, and analysis. Data came from multiple external sources each with differing schema: \textit{NYCFC}, \textit{Ticketmaster} \textit{Salesforce}, \textit{Major League Soccer}.
-	\begin{itemize}
-		\item
-		      {
-		      \textbf{Data Pipeline:}
-		      I implemented a data pipeline to ingress data from a number of remote \textit{SQL} databases.
-		      This process was encapsulated in \textit{stored procedures} which used appropriate DML \& DDL (\texttt{OPENQUERY}, \texttt{MERGE}) for efficient ETL.
-		      This pipeline replaced the slower front-end  \textit{Informatica} solution.
-		      }
-		\item
-		      {
-		      \textbf{Data Cubes:}
-		      I used an aggregated dataset to compare the distribution of \texttt{NULL} values. These analyses were transformed to \textit{Data Cubes} to pre-compute every possible roll-up/drill-down. As such, bandwidth was minimised across our distributed servers and need for real-time computation in \textit{Tableau} front-end was eliminated, resulting in improved user-experience.
-		      }
-		\item
-		      {
-		      \textbf{Mentoring:}
-		      As part of this project, I was dedicated to mentoring a junior colleague remotely in New York. I organised weekly workshops to teach basic DML and more advanced DDL with a goal toward self-sufficiency in writing database queries and working with stored procedures. Additional material on my website helped supplement these workshops.
-		      }
-	\end{itemize}
-}
-\resumeItem{GDPR Preferences Integration}{}
-{
-	I worked on the integration of a GDPR preference stream into our \textit{SQL} and \textit{Salesforce} databases. This required the creation of a new pipeline and the refactoring of numerous processes downstream. \newline
-	Working with the development team, I provided specification and UAT testing. Using primary key constraints, clustered indexes, triggers and \texttt{MERGE}, I was able to build an efficient, automated process with relational schema.
-}
-\resumeItem{Customer Churn Model}{}
-{
-	I contributed datasets and collaborated on feature/model selection. In particular, looking at \textit{logistic regression} and \textit{Beta-Geometric/Beta-Bernoulli} models in R Studio.
-}
-\resumeItemListEnd
 \resumeSubheading
 {ITG Creator (Digital Marketing Agency)}{Westminster, London}
 {Senior CRM Campaign Executive -- SQL Development}{Dec. 2013 - Sept. 2016}
 
-The majority of my work in this role involved working with SQL processes which were used to transform customer data into CRM segmentations. As senior team member, I developed a number of these processes. On occasion, I held responsibility for resourcing and managing the team's workload using \textit{Jira}.
+\begin{itemize}
 
-\resumeItemListStart
-\resumeItem{Virgin Media Segmentation Process}{(\href{https://adrian.ng/SQL/cte/Recursion/}{https://adrian.ng/SQL/cte/Recursion/}
-	\quad (\href{https://adrian.ng/SQL/misc/openquery-xml}{https://adrian.ng/SQL/misc/openquery-xml})}
-{
-	I built an end-to-end segmentation process in \textit{SQL}. This included building a fast, flexible, and bespoke import tool around \texttt{BULK INSERT}. Remote server queries (\texttt{OPENQUERY}) made use of \texttt{XML} to effectively \texttt{INNER JOIN} local and remote tables resulting in speed and minimial resource use on a busy live server. Recursive queries were used to implement a solution (similar to \texttt{flatMap} in \textit{Java 8}) for efficient \textit{regex}.
-	\newline
-}
-\resumeItem{Volkswagen Client Onboarding}{}
-{
-	I worked with \texttt{.NET} developers and project managers to bring Volkswagen on-board as a new client. This required implementing a new segmentation process for broadcasting email \textit{and} SMS. In addition, I provided specification to developers for their data warehousing/archiving ingress schema.
-	\newline
-}
-\resumeItem{TUI Mailing Redesign}{}
-{
-	I collaborated closely with the TUI client during a three-month project to redesign the existing \textit{Thomson} and \textit{First Choice} mailings.	\texttt{TCL} scripting was used to merge dynamic content into the \texttt{HTML} body. My efforts on this project were recognised by the client.
-}
-
-\resumeItemListEnd
+	\item[]{
+	      The majority of my work in this role involved working with SQL processes which were used to transform customer data into CRM segmentations. As senior team member, I developed a number of these processes. On occasion, I held responsibility for resourcing and managing the team's workload using \textit{Jira}.
+	      }
+	\item
+	      {
+	      \textbf{Virgin Media Segmentation Process}
+	      \hfill
+	      \tiny
+	      (\href{https://adrian.ng/SQL/cte/Recursion/}{https://adrian.ng/SQL/cte/Recursion/}
+	      \quad
+	      (\href{https://adrian.ng/SQL/misc/openquery-xml}{https://adrian.ng/SQL/misc/openquery-xml})
+	      \newline
+	      \small
+	      I built an end-to-end segmentation process in \textit{SQL}. This included building a fast, flexible, and bespoke import tool around \texttt{BULK INSERT}. Remote server queries (\texttt{OPENQUERY}) made use of \texttt{XML} to effectively \texttt{INNER JOIN} local and remote tables resulting in speed and minimial resource use on a busy live server. Recursive queries were used to implement a solution (similar to \texttt{flatMap} in \textit{Java 8}) for efficient \textit{regex}.
+	      }
+	\item
+	      {
+	      \textbf{Volkswagen Client Onboarding:}
+	      \quad
+	      I worked with \texttt{.NET} developers and project managers to bring Volkswagen on-board as a new client. This required implementing a new segmentation process for broadcasting email \textit{and} SMS. In addition, I provided specification to developers for their data warehousing/archiving ingress schema.
+	      }
+	\item
+	      {
+	      \textbf{TUI Mailing Redesign:}
+	      \quad
+	      I collaborated closely with the TUI client during a three-month project to redesign the existing \textit{Thomson} and \textit{First Choice} mailings.	\texttt{TCL} scripting was used to merge dynamic content into the \texttt{HTML} body. My efforts on this project were recognised by the client.
+	      }
+\end{itemize}
 
 % seatwave stuff      
 
 \resumeSubheading
 {Seatwave (now Ticketmaster)}{Moorgate, London}
 {Marketing Analyst Intern -- Commercial Team}{May 2013 - Dec. 2013}
-\resumeItemListStart
+\begin{itemize}
 
-\item{
-            In this position I gained my first experience writing database queries in \textit{SQL Server Management Studio}. With basic understanding of \textit{DML} and \textit{DDL}, I was able to query the transactional/customer databases to return data for warehousing, reporting, and segmentation.
-      }
+	\item[]{
+	      In this position I gained my first experience writing database queries in \textit{SQL Server Management Studio}. I wrote \textit{DML} and \textit{DDL} capable of querying the transactional/customer databases to return data for warehousing, reporting, and segmentation.
+	      }
 
-% \resumeItem{Basic SQL}{}
-% {
-% 	{
-% 			In this position I gained my first experience writing database queries in \textit{SQL Server Management Studio}. With basic understanding of \textit{DML} and \textit{DDL}, I was able to query the transactional/customer databases to return data for warehousing, reporting, and segmentation.
-% 		}
-% }
-%	 \resumeItem{Pricing Analysis}{}
-%	 {
-%	   Looked at sales data to conduct price projections that, due to the volatility of the market, were otherwise unobtainable by the commercial team. This was done by attempting to model this data via exponential decay in \textit{Excel VBA}.
-%	 }
-%	 \resumeItem{Spatial Analysis}{}
-%	 {
-%	   Conducted a spatial analysis of customer postcodes, which I used to provide visualisations in \textit{QGIS} of the areas where our customers lived in relation to the location of upcoming events. These visualisations enabled the commercial team to gain a better picture of where they needed to best target their marketing campaigns.
-%	 }
-\resumeItemListEnd
+	      % \resumeItem{Basic SQL}{}
+	      % {
+	      % 	{
+	      % 			In this position I gained my first experience writing database queries in \textit{SQL Server Management Studio}. With basic understanding of \textit{DML} and \textit{DDL}, I was able to query the transactional/customer databases to return data for warehousing, reporting, and segmentation.
+	      % 		}
+	      % }
+	      %	 \resumeItem{Pricing Analysis}{}
+	      %	 {
+	      %	   Looked at sales data to conduct price projections that, due to the volatility of the market, were otherwise unobtainable by the commercial team. This was done by attempting to model this data via exponential decay in \textit{Excel VBA}.
+	      %	 }
+	      %	 \resumeItem{Spatial Analysis}{}
+	      %	 {
+	      %	   Conducted a spatial analysis of customer postcodes, which I used to provide visualisations in \textit{QGIS} of the areas where our customers lived in relation to the location of upcoming events. These visualisations enabled the commercial team to gain a better picture of where they needed to best target their marketing campaigns.
+	      %	 }
+\end{itemize}
 % 
 % seatwave end      
 \resumeSubHeadingListEnd
