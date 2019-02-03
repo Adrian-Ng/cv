@@ -16,6 +16,7 @@
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[symbol]{footmisc}
+\usepackage{multicol}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -29,11 +30,11 @@
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
-
+% https://tex.stackexchange.com/questions/53962/why-are-urls-typeset-with-monospace-fonts-by-default
 \urlstyle{same}
 
-\raggedbottom
-\raggedright
+%%\raggedbottom
+%\raggedright
 \setlength{\tabcolsep}{0in}
 \linespread{0.97}
 
@@ -67,26 +68,29 @@
 	\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-
 	\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \begin{document}
 %----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-	\textbf{{\Large Adrian Ng MSc.}} & \textbf{Email:} \href{mailto:contact@adrian.ng}{contact@adrian.ng} \\
-	Seeking Junior-Level Data Engineering Opportunities & \textbf{Website}: \href{https://adrian.ng}{adrian.ng}
-\end{tabular*}
+\noindent
+\Large \textbf{Adrian Ng, MSc.}
+\newline
+\small
+Seeking Junior-Level Data Engineering Opportunities
+\hfill
+\begin{description*}
+	\item [Email] \href{mailto:contact@adrian.ng}{contact@adrian.ng}
+	\item [Website] \href{https://adrian.ng}{adrian.ng}
+\end{description*}
+%----------PROFILE-----------------
 \section{Profile}
 \begin{paragraph}
-	I am a Computer Science graduate passionate about Data Engineering and I seek opportunities that meet my growing experience in \textit{Java} -- a language I have used in numerous academic projects ranging from the implementation of financial models to large-scale data processing with \textit{Apache Hadoop MapReduce}.
+	I am a Computer Science graduate passionate about programming and a career in Data Engineering. I seek opportunities that meet my growing experience in \textit{Java} -- a language I have used in numerous academic projects ranging from the implementation of financial models to large-scale data processing with \textit{Apache Hadoop}.
 	\par
-	Prior to postgraduate study, my expertise was in \textit{SQL development} focusing on the implementation of segmentation processes for a number of clients including: \textit{Virgin Media}, \textit{TUI}, \textit{UPC}, \textit{MSD}, \textit{Volkswagen}, \textit{KwikFit}.
+	Prior to postgraduate study, my expertise was in \textit{SQL development} focusing on the implementation of segmentation processes for a number of clients including: \textit{Virgin Media}, \textit{TUI}, \textit{UPC}, \textit{MSD}, \textit{Volkswagen}, and \textit{KwikFit}.
 	\par
-	After graduation, my most recent accomplishments as a Data Analyst at \textit{Manchester City FC} were in the technical parts (e.g. pipelines, architecture) of the projects I worked on, which leads me now to pursue a career in Data Engineering.
+	After graduation, my recent accomplishments as a Data Analyst at \textit{Manchester City FC} learned more towards Data Engineering, which leads me now to pursue a career in this field.
 \end{paragraph}
 %-----------EDUCATION-----------------
 \section{Education}
@@ -95,13 +99,13 @@
 {Master of Science in Data Science and Analytics}{with Distinction}
 {Department of Computer Science, Royal Holloway}{Sept. 2016 -- Dec. 2017}
 
-\begin{itemize*}
-	\item[] \tiny \textbf{Java Modules:}
-	\item \tiny Programming for Data Analysis
-	\item \tiny Large Scale Data Storage and Processing
-	\item \tiny Methods of Computational Finance
-	\item \tiny Dissertation
-\end{itemize*}
+% \begin{itemize*}
+% 	\item[] \tiny \textbf{Java Modules:}
+% 	\item \tiny Programming for Data Analysis
+% 	\item \tiny Large Scale Data Storage and Processing
+% 	\item \tiny Methods of Computational Finance
+% 	\item \tiny Dissertation
+% \end{itemize*}
 \resumeSubheading
 {Bachelor of Engineering in Mechanical Engineering}{Upper Second Class with Honours}
 {School of Engineering, King's College London}{Sept. 2007 -- July 2010}
@@ -109,14 +113,14 @@
 
 %--------PROGRAMMING SKILLS------------
 \section{Technologies}
-\textbf{Languages}
+\textbf{Languages:}
 \hfill
 \begin{itemize*}
 	\item Java 8
 	\item SQL
 \end{itemize*}
-
-\textbf{Software}
+\newline
+\textbf{Software:}
 \hfill
 \begin{itemize*}
 	\item IntelliJ IDEA
@@ -128,89 +132,83 @@
 
 %-----------PROJECTS-----------------
 \section{Java Projects}
-\resumeSubHeadingListStart
-\resumeSubItem
-{Implementation of Value at Risk (VaR) measures in Java}
-{
-	(\href{https://adrian.ng/java/var/}{https://adrian.ng/java/var/})
-	\quad
-	(\href{https://github.com/Adrian-Ng/VaR}{https://github.com/Adrian-Ng/VaR})
-}
-{
-	Assuming a number of hypothetical investment portfolios, my dissertation project implemented a number of approaches to estimating \textit{VaR}, a measure of risk, and variance/volatility (for model parameterization).
-	\begin{itemize}
-		\item {
-		      \textbf{VaR:}
-		      \begin{enumerate*}[label={\alph*)}]
-			      \item \textit{Model Building}
-			      \item \textit{Historical Simulation}
-			      \item \textit{Monte Carlo Simulation}.
-		      \end{enumerate*}
-		      }
-		\item {
-		      \textbf{Variance/Volatility:}
-		      \begin{enumerate*}[label={\alph*)}]
+%\subsection{VaR}
+\begin{itemize}
+	\item {
+	      \textbf{Implementation of Value at Risk (VaR) measures in Java}
+	      \hfill
+	      \tiny
+	      (\href{https://adrian.ng/java/var/}{https://adrian.ng/java/var/})
+	      \hfill
+	      (\href{https://github.com/Adrian-Ng/VaR}{https://github.com/Adrian-Ng/VaR})
+	      \newline
+	      \small
+	      My dissertation project assumed a hypothetical investment portfolio (stocks, options, deltas) and implemented a number of approaches to estimating \textit{VaR}, a measure of risk, and sampling the parameters variance/volatility.
+	      %https://tex.stackexchange.com/questions/233780/two-itemized-lists-side-by-side
+	      \begin{multicols}{2}
+		      \textbf{VaR}
+		      \begin{itemize}
+			      \item Model Building
+			      \item Historical Simulation
+			      \item Monte Carlo Simulation.
+		      \end{itemize}
+		      \columnbreak
+		      \textbf{Variance/Volatility}
+		      \begin{itemize}
 			      \item \textit{Equal Weighted}
 			      \item \textit{Exponentially Weighted Moving Average (EWMA)}
-			      \item \textit{GARCH(1,1)}.
-		      \end{enumerate*}
-
-		      \begin{itemize*}
-			      \item \textit{EWMA} lambda parameter taken from J.P. Morgan's \textit{RiskMetrics}.
-			      \item \textit{GARCH(1,1)} parameters were found via \textit{Levenberg-Marquardt} optimisation.
-		      \end{itemize*}
-
-		      }
-	\end{itemize}
-	Because of these numerous approaches, object-oriented techniques and patterns were implemented.
-	In addition, I used Java's concurrency APIs to parallelize the 100,000+ random walks generated by \textit{Monte Carlo} for simulating stock prices.
-	Real world financial data was obtained via \textit{Google Finance} and \textit{Yahoo Finance APIs}.
-}
-
-\resumeSubItem{Option Pricing}
-{
-	(\href{https://adrian.ng/java/options/}{https://adrian.ng/java/options/}) \quad (\href{https://github.com/Adrian-Ng/OptionPricer}{https://github.com/Adrian-Ng/OptionPricer})
-}
-{
-	This project implements three approaches to estimating option prices in Java:
-	\newline
-	\begin{itemize*}
-		\item Monte Carlo Simulation
-		\item Black Scholes
-		\item Binomial Trees
-	\end{itemize*}
-	\newline
-	Apache Commons Math API was used to deal with some probabilistic assumptions.
-}
-
-\resumeSubItem{Data Mining with Hadoop MapReduce}
-{
-	(\href{https://github.com/Adrian-Ng/HadoopEnron}{https://github.com/Adrian-Ng/HadoopEnron})
-}
-{
-	I wrote a number of \textit{MapReduce} applications in Java including extracting the communications network from the \textit{Enron Corpus}, a large dataset of emails, or aggregation of Twitter data.
-	\newline
-	Applications were exported and executed on \textit{Hadoop} clusters (both single node and distributed). Input/Output datasets were stored in HDFS and accessed via \texttt{hadoop fs} commands.
-	\newline
-	A subsequent exercise was undertaken to minimise the verbosity of these \textit{Hadoop MapReduce} applications by translating them to \textit{Scala} for use in a \textit{Spark REPL}.
-}
-
-
-\item {
-	\textbf{Java 8 Streams with financial data}
-	\hfill
-	\tiny
-	(\href{https://adrian.ng/java/yahoofinance/\#stream}{https://adrian.ng/java/yahoofinance/\#stream})
-	\small
-	A small exercise involving the use of \textit{Java 8 Streams}. Processing real-world financial data to return \textit{mean} and \textit{variance} of some market asset.
-}
-
-
-%		 \resumeSubItem{Google PageRank}{}
-%		 {
-%		   This is the implementation of Google's \textit{PageRank} algorithm. I simulate the behaviour of someone browsing a series of webpages by computing a transition matrix from an input graph and mixing a Markov Chain.
-%		 }   
-\resumeSubHeadingListEnd
+			      \item \textit{GARCH(1,1)}
+		      \end{itemize}
+	      \end{multicols}
+	      Because of these numerous approaches, object-oriented techniques and patterns were implemented.
+	      In addition, I used Java's concurrency APIs to parallelize the 100,000+ random walks generated by \textit{Monte Carlo} to simulate stock prices.
+	      Real world financial data was obtained via \textit{Google Finance} and \textit{Yahoo Finance APIs}.
+	      }
+	\item
+	      {
+	      \textbf{Option Pricing}
+	      \hfill
+	      \tiny
+	      (\href{https://adrian.ng/java/options/}{https://adrian.ng/java/options/}) \quad (\href{https://github.com/Adrian-Ng/OptionPricer}{https://github.com/Adrian-Ng/OptionPricer})
+	      \newline
+	      \small
+	      Part of my \textit{Methods of Computational Fianance} postgraduate module, this project implements three approaches to estimating option prices in Java:
+	      \begin{itemize}
+		      \item Monte Carlo Simulation
+		      \item Black Scholes
+		      \item Binomial Trees
+	      \end{itemize}
+	      This assumes a given stock price, strike price, interest rate, volatility, and time to maturity.
+	      Apache Commons Math API was used to deal with some probabilistic assumptions.
+	      }
+	\item
+	      {
+	      \textbf{Data Mining with Hadoop MapReduce}
+	      \hfill
+	      \tiny
+	      (\href{https://github.com/Adrian-Ng/HadoopEnron}{https://github.com/Adrian-Ng/HadoopEnron})
+	      \small
+	      \newline
+	      As part of the postgraduate module \textit{Large Scale Data Storage and Processing}, I wrote a number of \textit{MapReduce} applications in Java including extracting the communications network from the \textit{Enron Corpus}, a large dataset of emails, or aggregation of Twitter data.
+	      \newline
+	      Applications were exported and executed on \textit{Hadoop} clusters (both single node and distributed). Input/Output datasets were stored in HDFS and accessed via \texttt{hadoop fs} commands.
+	      \newline
+	      A subsequent exercise was undertaken to minimise the verbosity of these \textit{Hadoop MapReduce} applications by translating them to \textit{Scala} for use in a \textit{Spark REPL}.
+	      }
+	\item {
+	      \textbf{Java 8 Streams with financial data}
+	      \hfill
+	      \tiny
+	      (\href{https://adrian.ng/java/yahoofinance/\#stream}{https://adrian.ng/java/yahoofinance/\#stream})
+	      \small
+	      \newline
+	      A small exercise involving the use of \textit{Java 8 Streams}. Processing real-world financial data to return \textit{mean} and \textit{variance} of some market asset.
+	      }
+	      %		 \resumeSubItem{Google PageRank}{}
+	      %		 {
+	      %		   This is the implementation of Google's \textit{PageRank} algorithm. I simulate the behaviour of someone browsing a series of webpages by computing a transition matrix from an input graph and mixing a Markov Chain.
+	      %		 }   
+\end{itemize}
 
 % %-----------COURSEWORK-----------------
 % \section{Machine Learning Algorithms Implemented}
@@ -230,8 +228,6 @@
 % 	\item Hidden Markov Models
 % 	\item Aggregating Algorithm
 % \end{itemize*}
-
-
 
 \newpage
 %-----------EXPERIENCE-----------------
@@ -283,11 +279,12 @@
 \hfill
 \textit{SQL Development}
 \hfill
-\textit{Dec. 2013 - Sept. 2016}
+\textit{Dec. 2013 - Sept. 2016\\}
+
+\noindent
+The majority of my work in this role involved working with SQL processes which were used to transform customer data into CRM segmentations. Having been promoted to the senior position, I developed a number of these processes. On occasion, I held responsibility for resourcing and managing the team's workload using \textit{Jira}.
+
 \begin{itemize}
-	\item[]{
-	      The majority of my work in this role involved working with SQL processes which were used to transform customer data into CRM segmentations. As senior team member, I developed a number of these processes. On occasion, I held responsibility for resourcing and managing the team's workload using \textit{Jira}.
-	      }
 	\item
 	      {
 	      \textbf{Virgin Media Segmentation}
@@ -316,10 +313,8 @@
 \hfill
 \textit{Commercial Team}
 \hfill
-\textit{May 2013 - Dec. 2013}
-\begin{itemize}
-	\item[]{
-	      Using \textit{SQL Server Management Studio} for the first time, I wrote \textit{DML} capable of querying the transactional/customer databases to return data for warehousing, reporting, and segmentation. I also worked on pricing and spatial analyses (QGIS).
-	      }
-\end{itemize}
+\textit{May 2013 - Dec. 2013\\}
+
+\noindent
+Using \textit{SQL Server Management Studio} for the first time, I wrote \textit{DML} capable of querying the transactional/customer databases to return data for warehousing, reporting, and segmentation. I also worked on pricing and spatial analyses, using \textit{QGIS} as a visualisation tool.
 \end{document}
