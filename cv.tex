@@ -140,7 +140,7 @@ Seeking Junior-Level Data Engineering Opportunities
 	      (\href{https://github.com/Adrian-Ng/VaR}{https://github.com/Adrian-Ng/VaR})
 	      \newline
 	      \small
-	      I implemented number of approaches to estimating \textit{VaR}, a measure of risk against a (hypothetical) investment portfolio (stocks, options, deltas). Various \textit{VaR} measures were implemented. A Normal Distribution $N(0, \sigma^2)$ was assumed for daily price changes. Therefore, a number of moving average processes were implemented for estimating variance $\sigma^2$.
+	      I implemented a number of approaches to estimating \textit{VaR}, a measure of risk, for a (hypothetical) investment portfolio (stocks, options, deltas). A Normal Distribution $N(0, \sigma^2)$ was assumed for daily price changes. Therefore, a number of moving average processes were implemented for estimating variance $\sigma^2$.
 	      In addition, an implementation of the \textit{Levenberg-Marquardt} algorithm was used for optimisation of \textit{GARCH(1,1)} parameters.
 	      %https://tex.stackexchange.com/questions/233780/two-itemized-lists-side-by-side
 	      \begin{multicols}{2}
@@ -188,8 +188,7 @@ Seeking Junior-Level Data Engineering Opportunities
 	      \small
 	      \newline
 	      During my postgraduate module \textit{Large Scale Data Storage and Processing}, I wrote a number of \textit{MapReduce} applications. These involved mapping the communications network from a large collection of emails from the \textit{Enron Corpus} and the aggregation of \textit{Twitter} data.
-	      \newline
-	      I ran my applications on a self-hosted, single-node cluster as well as the University distributed cluster and interfaced with \textit{HDFS} via \texttt{hdfs fs} commands.
+	      I ran my applications on a self-hosted, single-node cluster as well as on the university's distributed cluster. To load/extract data in \textit{HDFS}, I used \texttt{hdfs dfs} commands.
 	      \begin{itemize}
 		      \item
 		            \textbf{Apache Spark}
@@ -198,7 +197,7 @@ Seeking Junior-Level Data Engineering Opportunities
 		            (\href{https://adrian.ng/scala/spark/enron1}{https://adrian.ng/scala/spark/enron1})
 		            \small
 		            \newline
-		            In a subsequent exercise, I translated some of these \textit{MapReduce} applications to \texttt{Scala}  which ran in an \textit{Apache Spark REPL}. I was able to interface with \textit{HDFS} via \texttt{sparkcontext} and take advantage of these APIs to produce less verbose code.
+		            In a self-imposed exercise, I translated some of these \textit{MapReduce} applications to \texttt{Scala}. This code was less verbose and ran in an \textit{Apache Spark REPL}, which could still interface with \textit{HDFS} via \texttt{sparkcontext} APIs.
 	      \end{itemize}
 	      }
 	\item {
@@ -259,12 +258,12 @@ Seeking Junior-Level Data Engineering Opportunities
 		      \item
 		            {
 		            \textbf{Data Cubes:}
-		            I used an aggregated dataset to compare the distribution of \texttt{NULL} values. These analyses were transformed to \textit{Data Cubes} to pre-compute every possible roll-up/drill-down. As such, bandwidth was minimised across our distributed servers and need for real-time computation in \textit{Tableau} front-end was eliminated, resulting in improved user-experience.
+		            I used an aggregated dataset to compare the distribution of \texttt{NULL} values. These analyses were transformed to \textit{Data Cubes} to pre-compute every possible roll-up/drill-down. As such, bandwidth was minimised across our distributed servers and need for real-time computation in \textit{Tableau} front-end was eliminated, resulting in an improved user-experience.
 		            }
 		      \item
 		            {
 		            \textbf{Mentoring:}
-		            As part of this project, I dedicated time to mentoring a junior colleague remotely in New York. I organised weekly workshops to teach basic DML and more advanced DDL with a goal toward self-sufficiency in writing database queries and working with stored procedures. Additional material on my website helped supplement these workshops.
+		            As part of this project, I dedicated time to mentoring a junior colleague remotely in New York. I organised weekly workshops to teach basic DML and more advanced DDL with a goal toward self-sufficiency in writing database queries and stored procedure implementation/scheduling. Additional material on my website helped supplement these workshops.
 		            }
 	      \end{itemize}
 	      }
@@ -277,7 +276,7 @@ Seeking Junior-Level Data Engineering Opportunities
 	\item
 	      {
 	      \textbf{Customer Churn Model:}
-	      In an intra-team project to estimate each customer's (MCFC, NYCFC) propensity to churn in following seasons, I assisted with feature selection, contributing to data extraction, imputation, and normalisation. Model selection landed on \textit{logistic regression} but I also researched alternate models (involving more probabilistic assumptions) such as \textit{Beta-Geometric/Beta-Bernoulli}: looking at corresponding academic papers and implementation in \texttt{R Studio}.
+	      In an intra-team project to estimate each customer's (MCFC, NYCFC) propensity to churn in following seasons, I assisted with feature selection, contributing to data extraction, imputation, and normalisation. Model selection landed on \textit{logistic regression} but I also researched alternate models (involving more probabilistic assumptions) such as \textit{Beta-Geometric/Beta-Bernoulli}; for which I looked at corresponding academic papers and implementation in \texttt{R Studio}.
 	      }
 \end{itemize}
 \section{Creator (now Inspired Thinking Group)}
@@ -288,7 +287,7 @@ Seeking Junior-Level Data Engineering Opportunities
 \textit{Dec. 2013 - Sept. 2016\\}
 
 \noindent
-The majority of my work in this role involved working with SQL processes which were used to transform customer data into CRM segmentations. Having been promoted to the senior position, I developed a number of these processes. On occasion, I held responsibility for resourcing and managing the team's workload using \textit{Jira}.
+The majority of my work in this role involved working with \texttt{SQL} processes which were used to transform customer data into CRM segmentations. Having been promoted to the senior position, I developed a number of these processes. On occasion, I held responsibility for resourcing and managing the team's workload using \textit{Jira}.
 
 \begin{itemize}
 	\item
@@ -301,7 +300,7 @@ The majority of my work in this role involved working with SQL processes which w
 	      (\href{https://adrian.ng/SQL/misc/openquery-xml}{https://adrian.ng/SQL/misc/openquery-xml})
 	      \newline
 	      \small
-	      I built an end-to-end segmentation process in \textit{SQL}. This included building a fast, flexible, and bespoke import tool around \texttt{BULK INSERT}. Remote server queries (\texttt{OPENQUERY}) made use of \texttt{XML} to effectively \texttt{INNER JOIN} local and remote tables resulting in speed and minimial resource use on a busy live server. Recursive queries were used to implement a solution (similar to \texttt{flatMap} in \textit{Java 8}) for efficient \textit{regex}.
+	      I built an end-to-end segmentation process in \texttt{SQL}. This included building a fast, flexible, and bespoke import tool around \texttt{BULK INSERT}. Remote server queries (\texttt{OPENQUERY}) made use of \texttt{XML} to effectively \texttt{INNER JOIN} local and remote tables resulting in speed and minimial resource use on a busy live server. Recursive queries were used to implement a solution (similar to \texttt{flatMap} in \texttt{Java 8} or \texttt{Scala}) for efficient regex.
 	      }
 	\item
 	      {
@@ -311,7 +310,7 @@ The majority of my work in this role involved working with SQL processes which w
 	\item
 	      {
 	      \textbf{TUI Redesign:}
-	      I collaborated closely with the TUI client to redesign the existing \textit{Thomson} and \textit{First Choice} mailings. \texttt{TCL} scripts were developed to dynamically merge fields into the \texttt{HTML} body.  For my efforts on this three-month project I gained recognition with the client.
+	      I collaborated closely with the TUI client to redesign the existing \textit{Thomson} and \textit{First Choice} mailings. \texttt{TCL} scripts were developed to dynamically merge fields into the \texttt{HTML} body.  For my efforts on this three-month project I gained recognition with the client and was rewarded.
 	      }
 \end{itemize}
 \section{Seatwave (now Ticketmaster)}
@@ -322,5 +321,5 @@ The majority of my work in this role involved working with SQL processes which w
 \textit{May 2013 - Dec. 2013\\}
 
 \noindent
-Using \textit{SQL Server Management Studio} for the first time, I wrote \textit{DML} capable of querying the transactional/customer databases to return data for warehousing, reporting, and segmentation. I also worked on pricing and spatial analyses, using \textit{QGIS} as a visualisation tool.
+Using \textit{SQL Server Management Studio} for the first time, I wrote DML capable of querying the transactional/customer databases to return data for warehousing, reporting, and segmentation. I also worked on pricing and spatial analyses, using \textit{QGIS} as a visualisation tool.
 \end{document}
