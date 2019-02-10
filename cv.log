@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.18)  5 FEB 2019 10:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.7)  7 FEB 2019 10:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/carly-rae-jepsen/cv/cv.tex
-(/home/carly-rae-jepsen/cv/cv.tex
+**/home/omg-becky/cv/cv.tex
+(/home/omg-becky/cv/cv.tex
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -238,7 +238,7 @@ Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
 \mult@nat@firstbox=\box52
 \colbreak@box=\box53
 \mc@col@check@num=\count107
-) (/home/carly-rae-jepsen/cv/cv.aux)
+) (/home/omg-becky/cv/cv.aux)
 \openout1 = `cv.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
@@ -281,7 +281,7 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 74.
 LaTeX Info: Redefining \pageref on input line 74.
 LaTeX Info: Redefining \nameref on input line 74.
- (/home/carly-rae-jepsen/cv/cv.out) (/home/carly-rae-jepsen/cv/cv.out)
+ (/home/omg-becky/cv/cv.out) (/home/omg-becky/cv/cv.out)
 \@outlinefile=\write3
 \openout3 = `cv.out'.
 
@@ -313,23 +313,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 313--318
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 321.
 [2]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 321.
- (/home/carly-rae-jepsen/cv/cv.aux)
+ (/home/omg-becky/cv/cv.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 321.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 321.
 Package rerunfilecheck Info: File `cv.out' has not changed.
-(rerunfilecheck)             Checksum: 7499E0FBA18C2A3161BF3386D65D1DC7;355.
+(rerunfilecheck)             Checksum: FCF861B8CAD55F0E3508E6EE1F1C2315;383.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 321.
  ) 
 Here is how much of TeX's memory you used:
  6232 strings out of 492982
- 91597 string characters out of 6134896
- 184939 words of memory out of 5000000
+ 91506 string characters out of 6134897
+ 184936 words of memory out of 5000000
  9753 multiletter control sequences out of 15000+600000
  6896 words of font info for 27 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,11n,43p,537b,354s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,11n,43p,530b,354s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on /home/carly-rae-jepsen/cv/cv.pdf (2 pages, 149065 bytes).
+Output written on /home/omg-becky/cv/cv.pdf (2 pages, 149266 bytes).
 PDF statistics:
  99 PDF objects out of 1000 (max. 8388607)
  84 compressed objects within 1 object stream
