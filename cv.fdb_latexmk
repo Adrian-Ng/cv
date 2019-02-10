@@ -1,8 +1,15 @@
 # Fdb version 3
+<<<<<<< HEAD
 ["pdflatex"] 1549819816 "/home/carly-rae-jepsen/cv/cv.tex" "/home/carly-rae-jepsen/cv/cv.pdf" "cv" 1549820091
   "/etc/texmf/web2c/texmf.cnf" 1547836149 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/carly-rae-jepsen/cv/cv.aux" 1549819817 1371 7c28ab4bf160b399bd0e783c94389dc8 ""
   "/home/carly-rae-jepsen/cv/cv.tex" 1549820091 14819 3461693b163a51f30545e5ef8e2aa23c ""
+=======
+["pdflatex"] 1549536419 "/home/omg-becky/cv/cv.tex" "/home/omg-becky/cv/cv.pdf" "cv" 1549536420
+  "/etc/texmf/web2c/texmf.cnf" 1549502034 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/home/omg-becky/cv/cv.aux" 1549536420 1371 7c28ab4bf160b399bd0e783c94389dc8 ""
+  "/home/omg-becky/cv/cv.tex" 1549536418 14412 e61fb611f535338cdca406986e066efc ""
+>>>>>>> 0df838ac21a25687628fb3aaa36ff88c3a1a6fca
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1480098701 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1480098701 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -59,15 +66,32 @@
   "/usr/share/texlive/texmf-dist/tex/latex/url/url.sty" 1480098842 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1520210507 32485 c64754543d8ac501bea6e75e209ea521 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1520210507 32485 c64754543d8ac501bea6e75e209ea521 ""
+<<<<<<< HEAD
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1547842389 2700761 ac0584cc9514ab21918550a6948c4ee2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1547842422 4129967 47171690a3a256d50fc0a9578aa0a067 ""
   "cv.aux" 1549819817 1371 7c28ab4bf160b399bd0e783c94389dc8 ""
   "cv.out" 1549819817 383 fcf861b8cad55f0e3508e6ee1f1c2315 ""
   "cv.tex" 1549820091 14819 3461693b163a51f30545e5ef8e2aa23c ""
+=======
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1549502255 2700761 ac0584cc9514ab21918550a6948c4ee2 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1549502298 4127991 22ec94fe7d2109772c95dfcab45d672e ""
+  "cv.aux" 1549536420 1371 7c28ab4bf160b399bd0e783c94389dc8 ""
+  "cv.out" 1549536420 383 fcf861b8cad55f0e3508e6ee1f1c2315 ""
+  "cv.tex" 1549536418 14412 e61fb611f535338cdca406986e066efc ""
+>>>>>>> 0df838ac21a25687628fb3aaa36ff88c3a1a6fca
   (generated)
   "/home/carly-rae-jepsen/cv/cv.log"
   "cv.log"
   "/home/carly-rae-jepsen/cv/cv.pdf"
+<<<<<<< HEAD
   "cv.out"
   "cv.aux"
+=======
+  "/home/omg-becky/cv/cv.log"
+  "cv.out"
+  "/home/carly-rae-jepsen/cv/cv.log"
+  "cv.aux"
+  "cv.log"
+  "/home/omg-becky/cv/cv.pdf"
+>>>>>>> 0df838ac21a25687628fb3aaa36ff88c3a1a6fca
   "cv.pdf"
