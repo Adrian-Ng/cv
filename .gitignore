@@ -4,4 +4,9 @@ cv.fls
 cv.log
 cv.out
 cv.synctex.gz
+cv-verbose.aux
+cv-verbose.fdb_latexmk
+cv-verbose.fls
+cv-verbose.log
+cv-verbose.out
 cv-verbose.synctex
