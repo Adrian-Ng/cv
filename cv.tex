@@ -17,6 +17,7 @@
 \usepackage{fancyhdr}
 \usepackage[symbol]{footmisc}
 \usepackage{multicol}
+% \usepackage{minipage}
 
 
 \pagestyle{fancy}
@@ -73,63 +74,156 @@
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-%----------HEADING-----------------
-\noindent
-\Large \textbf{Adrian Ng, MSc.}
-\newline
-\small
-Seeking Junior-Level Data Engineering Opportunities
-\hfill
-\begin{description*}
-	\item [Email:] \href{mailto:contact@adrian.ng}{contact@adrian.ng}
-	\item [Website:] \href{https://adrian.ng}{adrian.ng}
-\end{description*}
-%----------PROFILE-----------------
-\section{Profile}
-\begin{paragraph}
-	I am a Computer Science graduate passionate about programming and a career in Data Engineering. I seek opportunities that meet my growing experience in \textit{Java} -- a language I have used in numerous academic projects ranging from the implementation of financial models to large-scale data processing with \textit{Apache Hadoop} and more.
-	%In addition, \texttt{R} and \texttt{MATLAB} were used to implement various machine learning algorithms.
-	\noindent
-	\newline
-	Prior to postgraduate study, my expertise in \textit{SQL development} focused on the implementation of segmentation processes for a number of clients including: \textit{Virgin Media}, \textit{TUI}, \textit{UPC}, \textit{MSD}, \textit{Volkswagen}, and \textit{KwikFit}.
-	\noindent
-	\newline
-	After graduation, my accomplishments as a Data Analyst at \textit{Manchester City FC} leaned more towards Data Engineering, which leads me now to pursue a career in this field.
-\end{paragraph}
+
+% \hfill
+% \begin{description*}
+% 	\item [Email:] \href{mailto:contact@adrian.ng}{contact@adrian.ng}
+% 	\item [Website:] \href{https://adrian.ng}{adrian.ng}
+% \end{description*}
+% \vspace{0.5cm}
+% 
+% \section{Profile}
+% \vspace{-0.5cm}
+% \begin{multicols}{2}
+% 	I am a Computer Science graduate passionate about programming and a career in Data Engineering. I seek opportunities that meet my growing experience in \textit{Java} -- a language I have used in numerous academic projects ranging from the implementation of financial models to large-scale data processing with \textit{Apache Hadoop} and more.
+% 	%In addition, \texttt{R} and \texttt{MATLAB} were used to implement various machine learning algorithms.
+
+% 	Prior to postgraduate study, my expertise in \textit{SQL development} focused on the implementation of segmentation processes for a number of clients including: \textit{Virgin Media}, \textit{TUI}, \textit{UPC}, \textit{MSD}, \textit{Volkswagen}, and \textit{KwikFit}.
+
+% 	Futhermore, with my recent technical accomplishments at \textit{Manchester City FC} I now strive to pursue a career in Data Engineering.
+% \end{multicols}
+% \section{Profile}
+% \begin{paragraph}
+% 	I am a Computer Science graduate passionate about programming and a career in Data Engineering. I seek opportunities that meet my growing experience in \textit{Java} -- a language I have used in numerous academic projects ranging from the implementation of financial models to large-scale data processing with \textit{Apache Hadoop} and more.
+% 	%In addition, \texttt{R} and \texttt{MATLAB} were used to implement various machine learning algorithms.
+% 	\noindent
+% 	\newline
+% 	Prior to postgraduate study, my expertise in \textit{SQL development} focused on the implementation of segmentation processes for a number of clients including: \textit{Virgin Media}, \textit{TUI}, \textit{UPC}, \textit{MSD}, \textit{Volkswagen}, and \textit{KwikFit}.
+% 	\noindent
+% 	\newline
+% 	After graduation, my accomplishments as a Data Analyst at \textit{Manchester City FC} leaned more towards Data Engineering, which leads me now to pursue a career in this field.
+% \end{paragraph}
 %-----------EDUCATION-----------------
-\section{Education}
-\resumeSubHeadingListStart
 
-\resumeSubheading
-{Royal Holloway -- Department of Computer Science}{Sept. 2016 -- Dec. 2017}
-{Master of Science in Data Science and Analytics}{with Distinction}
+% \begin{multicols}{2}
+% 	\section{Tech}
+% 	\textbf{Languages}
+% 	\begin{itemize}
+% 		\item Java 8
+% 		\item T-SQL
+% 		      %\item \LaTeX
+% 	\end{itemize}
+% 	\textbf{Software}
+% 	\begin{itemize}
+% 		\item IntelliJ IDEA
+% 		\item SQL Server Management Studio
+% 		\item Git
+% 		\item VS Code
+% 		\item Jira
+% 		\item Maven
+% 	\end{itemize}
+% 	\columnbreak
+% 	\section{Education}
+% \end{multicols}
+\noindent
+\begin{minipage}[c]{0.8\linewidth}
+	%----------HEADING-----------------
+	\noindent
+	\Large \textbf{Adrian Ng, MSc.}
+	\newline
+	\small
+	Seeking Junior-Level Data Engineering Opportunities
+	%----------PROFILE-----------------
+	\section{Profile}
+	\vspace{-0.5cm}
+	\begin{multicols}{2}
+		I am a Computer Science graduate passionate about programming and a career in Data Engineering. I seek opportunities that meet my growing experience in \textit{Java} -- a language I have used in numerous academic projects ranging from the implementation of financial models to large-scale data processing with \textit{Apache Hadoop} and more.
+		%In addition, \texttt{R} and \texttt{MATLAB} were used to implement various machine learning algorithms.
 
-\resumeSubheading
-{King's College London -- School of Engineering}{Sept. 2007 -- July 2010}
-{Bachelor of Engineering in Mechanical Engineering}{Upper Second Class with Honours}
+		Prior to postgraduate study, my expertise in \textit{SQL development} focused on the implementation of segmentation processes for a number of clients including: \textit{Virgin Media}, \textit{TUI}, \textit{UPC}, \textit{MSD}, \textit{Volkswagen}, and \textit{KwikFit}.
 
-\resumeSubHeadingListEnd
+		Futhermore, with my recent technical accomplishments at \textit{Manchester City FC} I now strive to pursue a career in Data Engineering.
+	\end{multicols}
+	% \vspace{0.5cm}
+	\section{Education}
+	\resumeSubHeadingListStart
 
-%--------PROGRAMMING SKILLS------------
-\section{Technologies}
-\begin{description}[style=multiline,leftmargin=3cm]
-	\item[Languages]
-	      \begin{itemize*}
-		      \item Java 8
-		      \item T-SQL
-		      %\item \LaTeX
-	      \end{itemize*}
-	\item[Software]
-	      \begin{itemize*}
-		      \item IntelliJ IDEA
-		      \item SQL Server Management Studio
-		      \item Git
-		      \item VS Code
-		      \item Jira
-		      \item Maven
-	      \end{itemize*}
-	      % \item[Packages]
-\end{description}
+	\resumeSubheading
+	{Royal Holloway -- Department of Computer Science}{Sept. 2016 -- Dec. 2017}
+	{Master of Science in Data Science and Analytics}{with Distinction}
+
+	\resumeSubheading
+	{King's College London -- School of Engineering}{Sept. 2007 -- July 2010}
+	{Bachelor of Engineering in Mechanical Engineering}{Upper Second Class with Honours}
+
+	\resumeSubHeadingListEnd
+\end{minipage} % no space if you would like to put them side by side
+\hspace{0.2cm}
+\begin{minipage}[c]{0.4\linewidth}
+	% \begin{description}[leftmargin=0cm]
+	% 	\item[Email]
+	% 	      \begin{itemize}
+	% 		      \item \href{mailto:contact@adrian.ng}{contact@adrian.ng}
+	% 	      \end{itemize}
+	% 	\item [Website] \href{https://adrian.ng}{adrian.ng}
+	% \end{description}
+	% \section{contact}
+	% \section{Tech}
+	\begin{description}[style=nextline]
+		\item[Email]
+		      \href{mailto:contact@adrian.ng}{contact@adrian.ng}
+		\item[Website]
+		\item[Languages]
+		      \begin{itemize}
+			      \item Java 8
+			      \item T-SQL
+			            %\item \LaTeX
+		      \end{itemize}
+		\item[Software]
+		      \begin{itemize}
+			      \item IntelliJ IDEA
+			      \item SQL Server Management Studio
+			      \item Git
+			      \item VS Code
+			      \item Jira
+			      \item Maven
+		      \end{itemize}
+	\end{description}
+\end{minipage}
+
+% \section{Education}
+% \resumeSubHeadingListStart
+
+% \resumeSubheading
+% {Royal Holloway -- Department of Computer Science}{Sept. 2016 -- Dec. 2017}
+% {Master of Science in Data Science and Analytics}{with Distinction}
+
+% \resumeSubheading
+% {King's College London -- School of Engineering}{Sept. 2007 -- July 2010}
+% {Bachelor of Engineering in Mechanical Engineering}{Upper Second Class with Honours}
+
+% \resumeSubHeadingListEnd
+
+% %--------PROGRAMMING SKILLS------------
+% \section{Technologies}
+% \begin{description}[style=multiline,leftmargin=3cm]
+% 	\item[Languages]
+% 	      \begin{itemize*}
+% 		      \item Java 8
+% 		      \item T-SQL
+% 		      %\item \LaTeX
+% 	      \end{itemize*}
+% 	\item[Software]
+% 	      \begin{itemize*}
+% 		      \item IntelliJ IDEA
+% 		      \item SQL Server Management Studio
+% 		      \item Git
+% 		      \item VS Code
+% 		      \item Jira
+% 		      \item Maven
+% 	      \end{itemize*}
+% 	      % \item[Packages]
+% \end{description}
 
 %-----------PROJECTS-----------------
 \section{Java Projects}
@@ -220,16 +314,16 @@ Seeking Junior-Level Data Engineering Opportunities
 \textit{Jan. - July 2018}
 
 \begin{description}[style=multiline,leftmargin=3cm]
-	\item[New York City FC Project]
+	\item[NYCFC Data Integration \textnormal{Project Owner}]
 
-	      I took ownership of this project to integrate \textit{NYCFC's} transactional and demographic data with \textit{City Football Group's} data-warehouse. This six-month project involved many phases including: discovery, engineering, and analysis. Data came from multiple external sources:
+	      Integrated New York City FC  data into our analytical warehouse.
+	      Six-month project involving data discovery, analysis, engineering. Liaised with NY stakeholders.
 	      \begin{itemize*}
 		      \item NYCFC
 		      \item Ticketmaster
 		      \item Salesforce
 		      \item Major League Soccer
 	      \end{itemize*}
-
 	      \begin{description}[style=multiline,leftmargin=2.5cm]
 		      \item[Data Pipeline]
 		            {
