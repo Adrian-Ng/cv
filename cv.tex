@@ -17,8 +17,6 @@
 \usepackage{fancyhdr}
 \usepackage[symbol]{footmisc}
 \usepackage{multicol}
-% \usepackage{minipage}
-
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -67,20 +65,25 @@
 \renewcommand{\labelitemii}{$\circ$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-	\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+		\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-	\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+		\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-
+%----------HEADING-----------------
+\noindent
+\Large \textbf{Adrian Ng, MSc.}
+\newline
+\small
+Seeking Junior-Level Data Engineering Opportunities
 % \hfill
 % \begin{description*}
 % 	\item [Email:] \href{mailto:contact@adrian.ng}{contact@adrian.ng}
 % 	\item [Website:] \href{https://adrian.ng}{adrian.ng}
 % \end{description*}
-% \vspace{0.5cm}
+\vspace{0.5cm}
 % 
 % \section{Profile}
 % \vspace{-0.5cm}
@@ -124,27 +127,33 @@
 % 	\end{itemize}
 % 	\columnbreak
 % 	\section{Education}
-% \end{multicols}
+% % \end{multicols}
 \noindent
 \begin{minipage}[c]{0.8\linewidth}
-	%----------HEADING-----------------
-	\noindent
-	\Large \textbf{Adrian Ng, MSc.}
-	\newline
-	\small
-	Seeking Junior-Level Data Engineering Opportunities
+	% %----------HEADING-----------------
+	% \noindent
+	% \Large \textbf{Adrian Ng, MSc.}
+	% \newline
+	% \small
+	% Seeking Junior-Level Data Engineering Opportunities
 	%----------PROFILE-----------------
 	\section{Profile}
-	\vspace{-0.5cm}
+	% \vspace{-0.5cm}
 	\begin{multicols}{2}
-		I am a Computer Science graduate passionate about programming and a career in Data Engineering. I seek opportunities that meet my growing experience in \textit{Java} -- a language I have used in numerous academic projects ranging from the implementation of financial models to large-scale data processing with \textit{Apache Hadoop} and more.
+		\quad
+		I am a Computer Science graduate passionate about programming and a career in Data Engineering.
+		\par\quad
+		I seek opportunities that meet my growing experience in \textit{Java} -- a language I have used in numerous academic projects ranging from the implementation of financial models to large-scale data processing with \textit{Apache Hadoop} and more.
 		%In addition, \texttt{R} and \texttt{MATLAB} were used to implement various machine learning algorithms.
 
-		Prior to postgraduate study, my expertise in \textit{SQL development} focused on the implementation of segmentation processes for a number of clients including: \textit{Virgin Media}, \textit{TUI}, \textit{UPC}, \textit{MSD}, \textit{Volkswagen}, and \textit{KwikFit}.
+		\columnbreak
+		\par\quad
+		My professional expertise in \textit{SQL development} focuses on the implementation of segmentation processes for a number of clients including: \textit{Virgin Media}, \textit{TUI}, \textit{UPC}, \textit{MSD}, \textit{Volkswagen}, and \textit{KwikFit}.
+		\par\quad
+		And with my technical and data-oriented accomplishments at \textit{Manchester City FC}, I now pursue a career in the field of Data Engineering.
 
-		Futhermore, with my recent technical accomplishments at \textit{Manchester City FC} I now strive to pursue a career in Data Engineering.
 	\end{multicols}
-	% \vspace{0.5cm}
+	\vspace{0.5cm}
 	\section{Education}
 	\resumeSubHeadingListStart
 
@@ -160,35 +169,31 @@
 \end{minipage} % no space if you would like to put them side by side
 \hspace{0.2cm}
 \begin{minipage}[c]{0.4\linewidth}
-	% \begin{description}[leftmargin=0cm]
-	% 	\item[Email]
-	% 	      \begin{itemize}
-	% 		      \item \href{mailto:contact@adrian.ng}{contact@adrian.ng}
-	% 	      \end{itemize}
-	% 	\item [Website] \href{https://adrian.ng}{adrian.ng}
-	% \end{description}
-	% \section{contact}
-	% \section{Tech}
-	\begin{description}[style=nextline]
-		\item[Email]
-		      \href{mailto:contact@adrian.ng}{contact@adrian.ng}
-		\item[Website]
-		\item[Languages]
-		      \begin{itemize}
-			      \item Java 8
-			      \item T-SQL
-			            %\item \LaTeX
-		      \end{itemize}
-		\item[Software]
-		      \begin{itemize}
-			      \item IntelliJ IDEA
-			      \item SQL Server Management Studio
-			      \item Git
-			      \item VS Code
-			      \item Jira
-			      \item Maven
-		      \end{itemize}
+	\textbf{Contact}
+	\begin{description}[style=multiline,leftmargin=1.5cm]
+		\tiny
+		\item[Email] \href{mailto:contact@adrian.ng}{contact@adrian.ng}
+		\item[Website] \href{https://adrian.ng}{adrian.ng}
+		\item[Location] London
 	\end{description}
+	\textbf{Languages}
+	\begin{itemize}[leftmargin=*]
+		\tiny
+		\item Java 8
+		\item T-SQL
+
+		      %\item \LaTeX
+	\end{itemize}
+	\textbf{Software}
+	\begin{itemize}[leftmargin=*]
+		\tiny
+		\item IntelliJ IDEA
+		\item SQL Server\\Management Studio
+		\item Git
+		\item VS Code
+		\item Jira
+		\item Maven
+	\end{itemize}
 \end{minipage}
 
 % \section{Education}
@@ -227,31 +232,45 @@
 
 %-----------PROJECTS-----------------
 \section{Java Projects}
-\begin{description}[style=multiline,leftmargin=3cm]
+%DISSERTATION
+\begin{description}[style=multiline,leftmargin=4cm]
+
 	\item[Value at Risk \textnormal{Dissertation} \textnormal{\tiny
 		      \href{https://adrian.ng/java/var/}{adrian.ng/java/var/}}]
-	      Estimating \textit{VaR}, a measure of risk, for an investment portfolio containing stocks, options, and deltas. Implemented these VaR measures and time-series volatility estimates:
+	      Estimating \textit{VaR}, a measure of risk, for an investment portfolio containing stocks, options, and deltas.
 
-	      \begin{description}[style=multiline,leftmargin=4cm]
-		      \item[VaR Measures]
-		            \begin{itemize*}
-			            \item Model Building
-			            \item Historical Simulation
-			            \item Monte Carlo Simulation.
-		            \end{itemize*}
-		      \item[Volatility Estimates]
-		            \begin{itemize*}
-			            \item \textit{Equal Weighted}
-			            \item \textit{EWMA}
-			            \item \textit{GARCH(1,1)}
-		            \end{itemize*}
-	      \end{description}
-	      \begin{itemize}
-		      \item implemented \textit{Levenberg-Marquardt} algorithm for optimisation of \textit{GARCH(1,1)} parameters
-		      \item made use of object-oriented techniques and patterns to accommodate these numerous approaches
-		      \item gained efficiencies by using Java's \texttt{concurrency} APIs to parallelize the 100,000+ random walks generated by \textit{Monte Carlo} when simulating stock price movements
-		      \item utilised \textit{Google Finance}/\textit{Yahoo Finance} APIs to source time-series financial data
-	      \end{itemize}
+	      \begin{minipage}[b]{0.2\textwidth}
+		      \vspace{0.5cm}
+		      %   \begin{description}[style=multiline,leftmargin=4cm]
+		      \textbf{VaR Measures}
+		      \begin{itemize}[leftmargin=*]
+			      \tiny
+			      \item Model Building
+			      \item Historical Simulation
+			      \item Monte Carlo Simulation.
+		      \end{itemize}
+		      \textbf{Volatility Estimates}
+		      \begin{itemize}[leftmargin=*]
+			      \tiny
+			      \item \textit{Equal Weighted}
+			      \item \textit{Equal Weighted Moving Average (EWMA)}
+			      \item \textit{GARCH(1,1)}
+		      \end{itemize}
+		      %   \end{description}
+		      %   \vspace{0.25cm}
+	      \end{minipage}
+	      \hspace{0.25cm}
+	      \begin{minipage}[b]{0.55\textwidth}
+
+		      \begin{itemize}[leftmargin=*]
+			      \item implemented \textit{Levenberg-Marquardt} algorithm for optimisation of \textit{GARCH(1,1)} parameters
+			      \item made use of object-oriented techniques and patterns
+			      \item gained efficiencies using Java's \texttt{concurrency} APIs to parallelize the 100,000+ random walks generated by \textit{Monte Carlo} when simulating stock price movements
+			      \item utilised \textit{Google Finance}/\textit{Yahoo Finance} APIs to source time-series financial data
+		      \end{itemize}
+	      \end{minipage}
+	      %BIG DATA
+	      \vspace{0.25cm}
 	\item[Data Mining \textnormal{Large-Scale Data Storage \& Processing} \textnormal{\tiny\href{https://github.com/Adrian-Ng/HadoopEnron}{adrian.ng/java/enron}} \textnormal{\tiny
 		      \href{https://adrian.ng/scala/enron1}{adrian.ng/scala/enron1}}]
 	      %   Wrote \textit{MapReduce} applications for large scale data mining and processing.
@@ -263,18 +282,20 @@
 			            \item scraping a large collection of emails in the \textit{Enron Corpus}
 			            \item extraction of communications graph consisting of nodes/edges
 		            \end{itemize}
-		      \item[Hadoop] Applications ran on single-node/distributed clusters
+		      \item[Hadoop]
 		            \begin{itemize}
-			            \item Self-hosted the single-node cluster
-			            \item ETL via \textit{HDFS} utilised \texttt{hdfs dfs} commands
+			            \item Applications ran on both single-node (self-hosted)/ distributed-node clusters
+			            \item Interfaced with \textit{HDFS} via terminal command-line
 		            \end{itemize}
-		      \item[Spark] Utilsing the \textit{Apache Spark REPL} to achieve:
+		      \item[Spark] Utilised an \textit{Apache Spark REPL} to achieve:
 		            \begin{itemize}
 			            \item translation of \textit{MapReduce} applications to \texttt{Scala}
 			            \item reduced code verbosity
 			            \item ETL via \textit{HDFS} using \texttt{sparkcontext} API
 		            \end{itemize}
 	      \end{description}
+
+	      \vspace{0.25cm}
 	\item[Option Pricing \textnormal{Methods of Computational Finance} \textnormal{\tiny\href{https://adrian.ng/java/options/}{adrian.ng/java/options/}}]
 	      Implemented numerous approaches to pricing options and calculating payoff:
 	      \begin{description}[style=multiline,leftmargin=2.85cm]
@@ -292,15 +313,19 @@
 		            \end{itemize*}
 	      \end{description}
 	      These approaches made probabilistic assumptions, so \textit{Apache Commons Math} API was used.
-	\item[Summarizing financial data \textnormal{\tiny
-		      \href{https://adrian.ng/java/yahoofinance/\#stream}{adrian.ng/java/yahoofinance/\#stream}}]
-	      A self-taught exercise to gain familiarity with Java 8's \texttt{Stream} API. I was able to implement approaches to computing mean and variance estimates from an immutable collection of time-series financial data.
-\end{description}
+	      \vspace{0.25cm}
+	\item[Summarizing financial data \newline \textnormal{\tiny
+		      \href{https://adrian.ng/java/yahoofinance/}{adrian.ng/java/yahoofinance/}}]
+	      An exercise in using Java 8's \texttt{Stream} API.
+	      I was able to implement approaches to computing mean and variance estimates from an immutable collection of time-series financial data.
 
-%		 \resumeSubItem{Google PageRank}{}
-%		 {
-%		   This is the implementation of Google's \textit{PageRank} algorithm. I simulate the behaviour of someone browsing a series of webpages by computing a transition matrix from an input graph and mixing a Markov Chain.
-%		 }   
+	      %   \begin{itemize}
+	      %       \item implmented approaches to computing statistics (mean, variance) on time-series financial data
+	      %   \end{itemize}
+	      %       \vspace{0.5cm}
+	      % \item[Google PageRank]
+	      %       Implementation of Google's \textit{PageRank} algorithm. I simulate the behaviour of someone browsing a series of webpages by computing a transition matrix from an input graph and mixing a Markov Chain.
+\end{description}
 
 
 
@@ -317,7 +342,8 @@
 	\item[NYCFC Data Integration \textnormal{Project Owner}]
 
 	      Integrated New York City FC  data into our analytical warehouse.
-	      Six-month project involving data discovery, analysis, engineering. Liaised with NY stakeholders.
+	      Six-month project involving data discovery, analysis, engineering.
+	      Multiple data sources were involved:
 	      \begin{itemize*}
 		      \item NYCFC
 		      \item Ticketmaster
@@ -336,7 +362,7 @@
 		            Storing analytical datasets in \textit{Data Cubes} achieved
 		            \begin{itemize}
 			            \item up-stream computation of all drill-down/roll-up levels and \texttt{GROUP BY} permutations
-			            \item reduction in size of data set, minimising bandwidth across distributed servers
+			            \item reduction in size of dataset, minimising bandwidth across distributed servers
 			            \item improved user-experience in \textit{Tableau} front-end
 		            \end{itemize}
 
@@ -349,17 +375,25 @@
 		            \end{itemize}
 
 	      \end{description}
-	\item[GDPR Pipeline]
+	\item[GDPR Pipeline \textnormal{Technical Lead}]
 	      \begin{itemize}
 		      \item integrated new GDPR schema into existing datastores (\textit{SQL}, \textit{Salesforce})
-		      \item worked with SQL developers to provide schema specification and UAT testing on new processes
+		      \item provide schema specification to \texttt{SQL} developers, advocating for indexable data types
 		      \item built efficient \texttt{MERGE} process featuring relational database design
+		      \item implemented a process to wipe personalised data belonging to any non-consenting individual stored in our data-warehouse
 	      \end{itemize}
 	\item[Customer Churn Model]
 	      Modelling MCFC/NYCFC customers' future propensity to churn via \textit{logistic regression}.
 	      \begin{itemize}
-		      \item contributed to feature selection involving: data extraction, imputation, and normalisation
-		      \item researched other models (e.g. \textit{Beta-Geometric/Beta-Bernoulli}), academic papers, \texttt{R Studio} API
+		      \item contributed to feature selection via:
+		            \begin{itemize*}
+			            \item data extraction
+			            \item imputation
+			            \item normalisation
+			            \item \texttt{R} modelling
+		            \end{itemize*}
+
+		      \item researched alternate models (e.g. \textit{Beta-Geometric/Beta-Bernoulli}), academic papers, \texttt{R} APIs
 	      \end{itemize}
 \end{description}
 \section{Creator (now Inspired Thinking Group)}
@@ -382,11 +416,11 @@
 	\item[Volkswagen Onboarding]
 	      Worked with \texttt{.NET} developers and project managers to on-board a new client.
 	      \begin{itemize}
-		      \item built and tested a new process for segmenting email \textit{and} SMS.
+		      \item built and tested a new process for segmenting email \textit{and} SMS
 		      \item provided schema specification to developers for data warehousing
 	      \end{itemize}
 	\item[TUI Redesign]
-	      Collaborated with TUI to integrate a new, responsive design of their \textit{Thomson} and \textit{First Choice} large deployment broadcasts (5M+ recipients)
+	      Collaborated with TUI to integrate a new, responsive design for \textit{Thomson} and \textit{First Choice} large deployment broadcasts (5M+ recipients)
 	      \begin{itemize}
 		      \item wrote \texttt{TCL} scripts for dynamic \texttt{HTML} merges and gained efficiencies by moving expensive operations upstream
 		      \item provided testing; gave feedback; managed expectations on technical feasibilites
