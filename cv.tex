@@ -11,6 +11,7 @@
 \usepackage{fancyhdr}
 \usepackage[symbol]{footmisc}
 \usepackage{multicol}
+\usepackage[mark]{gitinfo2}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -38,6 +39,18 @@
 	\vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
+
+
+% gitinfo2
+
+\renewcommand{\gitMark}{
+Branch: \gitBranch\,@\,\gitAbbrevHash{}
+\textbullet{}
+Release:\gitReln{}(\gitAuthorDate)
+\textbullet{}
+Latest: \href{https://adrian.ng/cv}{adrian.ng/cv}
+}
+
 %-------------------------
 
 %-------------------------------------------
@@ -58,6 +71,7 @@ Seeking Junior-Level Data Engineering Opportunities
 \end{description*}
 \hfill
 \vspace{0.25cm}
+
 
 \noindent
 \begin{minipage}[t]{0.5\linewidth}
@@ -126,10 +140,10 @@ Seeking Junior-Level Data Engineering Opportunities
 
 	\item[Value at Risk \textnormal{Dissertation} \textnormal{\tiny
 		      \href{https://adrian.ng/java/var/}{adrian.ng/java/var/}}]
-	      Estimating \textit{VaR}, a measure of risk, for an investment portfolio containing stocks, options, and deltas.
+	      Estimating \textit{VaR}, a measure of risk, for an investment portfolio containing stocks, options, deltas.
 
 	      \begin{minipage}[b]{0.2\textwidth}
-		      \vspace{0.5cm}
+		      \vspace{0.25cm}
 		      %   \begin{description}[style=multiline,leftmargin=4cm]
 		      \textbf{VaR Measures}
 		      \begin{itemize}[leftmargin=*]
