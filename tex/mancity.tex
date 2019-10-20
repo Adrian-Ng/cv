@@ -1,0 +1,69 @@
+\documentclass[../cv.tex]{subfiles}
+\begin{document}
+\section{Manchester City Football Club}
+\textit{Data Analyst}
+\hfill
+\textit{Fan Relationship Management}
+\hfill
+\textit{Jan. - July 2018}
+
+\begin{description}[style=multiline,leftmargin=3cm]
+	\item[NYCFC Data Integration \textnormal{Project Owner}]
+
+	      Integrated New York City FC  data into our analytical warehouse.
+	      Six-month project involving data discovery, analysis, engineering.
+	      Multiple data sources were involved:
+	      \begin{itemize*}
+		      \item NYCFC
+		      \item Ticketmaster
+		      \item Salesforce
+		      \item Major League Soccer
+	      \end{itemize*}
+	      \begin{description}[style=multiline,leftmargin=2.5cm]
+		      \item[Data Pipeline]
+		            {
+		            \begin{itemize}
+			            \item built pipeline ingesting data from multiple databases, replacing \textit{Informatica} solution
+			            \item achieved speed improvements using efficient DML \& DDL (\texttt{OPENQUERY}, \texttt{MERGE})
+		            \end{itemize}
+		            }
+
+		      \item[Data Cubes]
+		            Storing analytical datasets in \textit{Data Cubes} achieved
+		            \begin{itemize}
+			            \item up-stream computation of all drill-down/roll-up levels and \texttt{GROUP BY} permutations
+			            \item reduction in size of dataset, minimising bandwidth across distributed servers
+			            \item improved user-experience in \textit{Tableau} front-end
+		            \end{itemize}
+
+		      \item[Mentoring]
+		            Dedicating time to mentoring junior colleagues remotely in Manchester/New York
+		            \begin{itemize}
+			            \item organised weekly workshops teaching basic DML and advanced DDL
+			            \item developed additional material on my website to supplement these workshops
+			            \item aimed towards self-sufficiency in writing database queries/stored procedures
+		            \end{itemize}
+
+	      \end{description}
+	\item[GDPR Pipeline \textnormal{Technical Lead}]
+	      \begin{itemize}
+		      \item integrated new GDPR schema into existing datastores (\textit{SQL}, \textit{Salesforce})
+		      \item provide schema specification to \texttt{SQL} developers, advocating for indexable data types
+		      \item built efficient \texttt{MERGE} process featuring relational database design
+		      \item implemented a process to wipe personalised data belonging to any non-consenting individual stored in our data-warehouse
+	      \end{itemize}
+	\item[Customer Churn Model]
+	      Modelling MCFC/NYCFC customers' future propensity to churn via \textit{logistic regression}.
+	      \begin{itemize}
+		      \item contributed to feature selection via:
+		            \begin{itemize*}
+			            \item data extraction
+			            \item imputation
+			            \item normalisation
+			            \item \texttt{R} modelling
+		            \end{itemize*}
+		      \item researched alternate models (e.g. \textit{Beta-Geometric/Beta-Bernoulli}), academic papers, \texttt{R} APIs
+	      \end{itemize}
+\end{description}
+
+\end{document}
