@@ -7,15 +7,45 @@
 \hfill
 \textit{June 2019 - Present}
 \begin{description}[style=multiline, leftmargin=3.5cm]
-	\item[Prototype Implementation]
-		  Responsible for the implementation into production of Alteryx prototypes designed by Data Analysts.\\
-		  Designed standards for prototypes to adhere to for implementation (documentation, UAT evidence).\\
-		  One project made use of recursion to reduce the time complexity of building parent/child relationships in a network graph from hours to minutes.
+	\item[Prototype Implementation\\\textnormal{PL/SQL}] Implemented data processes originally prototyped by Data Exploitation team in Alteryx/Tableau
+	      \begin{itemize}
+		      \item Achieved computational efficiencies where possible:
+		            \begin{itemize}
+			            \item Computed \textit{directed network graphs} using \texttt{CROSS JOIN} and recursive in-line queries.
+			            \item Made use of \textit{materialized views} and \textit{global temp tables} to cache datasets
+			            \item Utilized PL/SQL as a functional language with table-valued functions.
+		            \end{itemize}
+		      \item Specified standards for Data Exploitation team to follow (documentation, UAT evidence, naming conventions, ownership)
+	      \end{itemize}
 	\item[Self-Service Data Ingestion\\\textnormal{Python, Powershell}]
-	      Built a self-service, \texttt{yaml}-configured import process for users of the Oracle DB. Used by the team across many projects. As of writing, has imported 600 files over 10 projects. \\
-	\item[Sales relational model \textnormal{Oracle}] Created a relational model for capturing our \textit{Sales Reference} data. Serves as a single source of truth for the business. Features ETL processes and auditing tables. Data is maintained by Business Managers using the aforementioned import process.
-	\item[Metadata Management] I am producing the vision for our Metadata Management solution. That is, \textit{what do we want our solution to look like?} This involves researching and interviewing subject matter experts to populate a Data Glossary, creating policies and rules, visualising  Data Lineage in the Metadata Repository (Atlas, Collibra, Watson Data Catalog)
-	\item[Mentoring \textnormal{moving-ahead.org}] As part of a British Airways's initiative, I am voluntarily mentoring a colleague. This remote engagement will continue over a 9 month period.
-	\item[Vizualizations\\\textnormal{Tableau}] Visualized the time-series variances in percentage changes for each data ingestion. Assuming log-normal distribution, allowing us to visualize desirable and undesirable variances away from the mean.\\\
+	      Built an automated data ingestion service enabling Data Analysts to set up their own data pipelines.
+		  \begin{itemize}
+			\item Utilized by Data Exploitation team across numerous projects.
+		      \item Time-series analysis used to visualize undesirably large or small imports in Tableau.
+		      \item Provided documentation on:
+		            \begin{itemize*}
+			            \item local/remote(RDP) installation
+			            \item \texttt{yaml} configuration
+		            \end{itemize*}
+	      \end{itemize}
+	\item[Sales Relational Model\\ \textnormal{Oracle}]
+	      Modelled the relationship between entities: sales agent/customer/location
+	      \begin{itemize}
+		      \item Established pipeline between Business Managers (upserts) and Data Analysts (dashboards)
+		      \item Relational design enabled efficient ETL automation, constant uptime and immediate retrieval.
+	      \end{itemize}
+	\item[Training \& Documentation \\ \textnormal{Markdown}]
+		\begin{itemize}
+		\item Prepared training materials and hosted workshops for analysts on SQL fundamentals
+		\item Part of editorial committee to establish an internal Wiki. Conducted interviews for content.
+		\item Produced documentation on edge-case and greenfield subject matter:
+	      \begin{itemize}
+		      \item XML parsing in Oracle
+		      \item SSHing to remote Python environment
+		      \item Metadata Management (for non-technical C-level audience)
+		  \end{itemize}
+		\end{itemize}
+	      %\item[Metadata Management] I am producing the vision for our Metadata Management solution. That is, \textit{what do we want our solution to look like?} This involves researching and interviewing subject matter experts to populate a Data Glossary, creating policies and rules, visualising  Data Lineage in the Metadata Repository (Atlas, Collibra, Watson Data Catalog)
+	      %\item[Mentoring \textnormal{moving-ahead.org}] As part of a British Airways's initiative, I am voluntarily mentoring a colleague. This remote engagement will continue over a 9 month period.
 \end{description}
 \end{document}
