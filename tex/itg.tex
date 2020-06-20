@@ -6,16 +6,16 @@
 \textit{SQL Development}
 \hfill
 \textit{Dec. 2013 - Sept. 2016}
-\begin{paragraph}
-	I developed a number of \texttt{SQL} processes to transform customer data into CRM segments. On occasion, I took responsibility for resourcing and managing the team's workload in \textit{Jira}.
-\end{paragraph}
+%\begin{paragraph}
+%	I developed a number of \texttt{SQL} processes to %transform customer data into CRM segments. On %occasion, I took responsibility for resourcing %and managing the team's workload in \textit{Jira}.
+%\end{paragraph}
 \begin{description}[style=multiline,leftmargin=3cm]
-	\item[Virgin Media Segmentation \tiny\textnormal{\href{https://adrian.ng/SQL/recursion}{adrian.ng/SQL/recursion}} \textnormal{\href{https://adrian.ng/openquery-xml}{adrian.ng/openquery-xml}}]
-	      Built a flexible segmentation process able to accommodate the numerous VM mailings and myriad ad-hoc configurations.
+	\item[ETL Process for CRM Broadcasts \tiny\textnormal{\href{https://adrian.ng/SQL/recursion}{adrian.ng/SQL/recursion}} \textnormal{\href{https://adrian.ng/openquery-xml}{adrian.ng/openquery-xml}}]
+	      Built a configurable ETL process to ingest (via \texttt{BULK INSERT}), transform into CRM segments, and load into broadcast service (\textit{Lyris}). 
 	      \begin{itemize}
-		      \item wrote a flexible import process to efficiently ingest millions of tuples distributed across multiple flat-files, gaining time-savings over the built-in import wizard
-		      \item achieved efficient joining of local and remote tables via use of \texttt{OPENQUERY}, \texttt{XML}, dynamic \texttt{SQL}
-		      \item implemented efficient regex parsing via recursion, producing a one-to-many tuple mapping
+		      \item capable of multiple file ingestion, gained time-savings over the \textit{SQL Server} import wizard
+		      \item achieved efficient joining of local and remote tables, using dynamic SQL to embed \texttt{XML} in \texttt{OPENQUERY}
+		      \item implemented efficient regex parsing with recursive CTEs, mapping delimited strings to rows
 	      \end{itemize}
 	%\item[Volkswagen Onboarding]
 	%      Worked with \texttt{.NET} developers and project managers to on-board a new client.
