@@ -7,45 +7,32 @@
 \hfill
 \textit{June 2019 - Present}
 \begin{description}[style=multiline, leftmargin=3.5cm]
-	\item[Prototype Implementation\\\textnormal{PL/SQL}] Implemented data processes originally prototyped by Data Exploitation team in Alteryx/Tableau
+	\item[Prototype Implementation\\\textnormal{PL/SQL}] Implemented data processes originally prototyped by Data Exploitation team in \textit{Alteryx}/\textit{Tableau}
 	      \begin{itemize}
-		      \item Achieved computational efficiencies where possible:
+		      \item Achieved efficiencies where possible:
 		            \begin{itemize}
-			            \item Computed \textit{directed network graphs} using \texttt{CROSS JOIN} and recursive in-line queries.
-			            \item Made use of \textit{materialized views} and \textit{global temp tables} to cache datasets
-			            \item Utilized PL/SQL as a functional language with table-valued functions.
+			            \item Computed \textit{directed network graphs} with set-based iteration (\texttt{CROSS JOIN}, inline recursion)
+			            \item Cached remote/computationally expensive datasets in \textit{global temp tables}, \textit{materialized views}
+			            \item Utilized PL/SQL like a functional language with table-valued functions.
 		            \end{itemize}
-		      \item Specified standards for Data Exploitation team to follow (documentation, UAT evidence, naming conventions, ownership)
+		      \item Established standards for Data Exploitation prototypes to follow (documentation, UAT evidence)
 	      \end{itemize}
-	\item[Self-Service Data Ingestion\\\textnormal{Python, Powershell}]
-	      Built an automated data ingestion service enabling Data Analysts to set up their own data pipelines.
-		  \begin{itemize}
-			\item Utilized by Data Exploitation team across numerous projects.
-		      \item Time-series analysis used to visualize undesirably large or small imports in Tableau.
-		      \item Provided documentation on:
-		            \begin{itemize*}
-			            \item local/remote(RDP) installation
-			            \item \texttt{yaml} configuration
-		            \end{itemize*}
+	\item[Self-Service Pipeline Creation\\\textnormal{Python, Powershell}]
+	      Built an automated service enabling Data Exploitation team to set up their own data pipelines.
+	      \begin{itemize}
+			  \item Adopting \texttt{yaml} for user-friendly configuration resulted in utilization across multiple projects
+			  \item Underlying code (Python, Powershell) made use of object-oriented patterns and practices
+		      \item Visualized unusually large/small imports in \textit{Tableau} with time-series analysis (differencing)
+		     \item Clear documentation (installation, configuration) ensured continued use throughout Lockdown
 	      \end{itemize}
 	\item[Sales Relational Model\\ \textnormal{Oracle}]
-	      Modelled the relationship between entities: sales agent/customer/location
-	      \begin{itemize}
-		      \item Established pipeline between Business Managers (upserts) and Data Analysts (dashboards)
-		      \item Relational design enabled efficient ETL automation, constant uptime and immediate retrieval.
+	      Modelled the relationships between entities: sales agent/customer/location
+	      \begin{itemize}		      
+		      \item Relational design resulted in efficient ETL, constant uptime, and immediate retrieval
+		      \item Co-opted \textit{Sharepoint} as ETL interface, facilitating data ownership for non-technical stakeholders
 	      \end{itemize}
-	\item[Training \& Documentation \\ \textnormal{Markdown}]
-		\begin{itemize}
-		\item Prepared training materials and hosted workshops for analysts on SQL fundamentals
-		\item Part of editorial committee to establish an internal Wiki. Conducted interviews for content.
-		\item Produced documentation on edge-case and greenfield subject matter:
-	      \begin{itemize}
-		      \item XML parsing in Oracle
-		      \item SSHing to remote Python environment
-		      \item Metadata Management (for non-technical C-level audience)
-		  \end{itemize}
-		\end{itemize}
-	      %\item[Metadata Management] I am producing the vision for our Metadata Management solution. That is, \textit{what do we want our solution to look like?} This involves researching and interviewing subject matter experts to populate a Data Glossary, creating policies and rules, visualising  Data Lineage in the Metadata Repository (Atlas, Collibra, Watson Data Catalog)
-	      %\item[Mentoring \textnormal{moving-ahead.org}] As part of a British Airways's initiative, I am voluntarily mentoring a colleague. This remote engagement will continue over a 9 month period.
+	\item[Training] Prepared training materials and hosted workshops (SQL fundamentals, Markdown)
+	\item[Data Glossary] Established editorial guidelines for internal Wiki/Data Glossary. Interviewed others for content.
+	\item[Mentorship] Mentored a colleague (\textit{moving-ahead.org}). Listened to issues, asked questions. Provided guidance.
 \end{description}
 \end{document}
