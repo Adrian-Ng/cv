@@ -7,45 +7,26 @@
 \hfill
 \textit{Jan. - July 2018}
 \begin{description}[style=multiline,leftmargin=3cm]
-	\item[NYCFC ETL \textnormal{\\Project Owner}]
-	      Integrated New York City FC data into our analytical warehouse.
-	      Six-month project covering data discovery, analysis, engineering.
-	      Multiple data sources:
-	      \begin{itemize*}
-		      \item NYCFC
-		      \item Ticketmaster
-		      \item Salesforce
-		      %\item Major League Soccer
-	      \end{itemize*}
-	      \begin{description}[style=multiline,leftmargin=2cm]
-		      \item[Pipeline]
-		            {
-		            \begin{itemize}
-			            \item built pipeline ingesting data from multiple databases%, replacing \textit{Informatica} solution
-			            \item achieved speed improvements using efficient DML \& DDL (\texttt{OPENQUERY}, \texttt{MERGE})
-		            \end{itemize}
-		            }
-		      \item[Cubes]
-		            Storing analytical datasets in \textit{Data Cubes} achieved:
-		            \begin{itemize}
-			            \item up-stream computation of all drill-down/roll-up levels and \texttt{GROUP BY} permutations
-			            \item reduction in size of dataset, increasing bandwidth across servers
-			            \item improved user-experience in \textit{Tableau} front-end
-		            \end{itemize}
+	\item[New York City FC Integration \textnormal{\\Project Owner}]
+	      Greenfield project integrating data from NYCFC into analytical warehouse over six months.
+		  \begin{itemize}
+			\item Liased with NYCFC stakeholders to evaluate business metadata
+			\item Established pipelines integrating data from multiple sources: (NYCFC, Ticketmaster, Salesforce)
+			%\item achieved speed improvements using efficient DML \& DDL (\texttt{OPENQUERY}, \texttt{MERGE})		
+			\item Utilized \textit{Data Cubes} at Tableau end-point to cache computation, shrink dataset, improve UX	
+		\end{itemize}
 		      %\item[Training]
 		        %    Dedicating time to training junior colleagues remotely in Manchester/New York
 		        %    \begin{itemize}
 			    %        \item organised weekly workshops teaching basic DML and advanced DDL
 			    %        \item developed additional material on my website to supplement these workshops
 			    %        \item aimed towards self-sufficiency in writing database queries/stored procedures
-		        %    \end{itemize}
-	      \end{description}
-	\item[GDPR Pipeline \textnormal{Technical Lead}]
+				%    \end{itemize}
+	%\item[Data Cubes] 
+	\item[GDPR PII Obfuscation \textnormal{Technical Lead}] Integrated new GDPR schema into existing datastores (\textit{SQL Server}, \textit{Salesforce})
 	      \begin{itemize}
-		      \item integrated new GDPR schema into existing datastores (\textit{SQL}, \textit{Salesforce})
-		      \item provide schema specification to \texttt{SQL} developers, advocating for indexable data types
-		      \item built efficient \texttt{MERGE} process featuring relational database design
-		      \item implemented a process to wipe personally identifiable data for opted-out individuals
+		    \item Working with DBAs, advocated for indexable types and identity fields for customers
+		    \item Made use of these objects to implement process for obfuscating and auditing customer PII
 	      \end{itemize}
 	%\item[Customer Churn Model]
 	%      Modelling MCFC/NYCFC customers' future propensity to churn via \textit{logistic regression}.
