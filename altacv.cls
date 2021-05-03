@@ -238,8 +238,8 @@
     \altacv@left@photos\hfill%
     \begin{minipage}{\dimexpr\linewidth-\altacv@photos@width}%
     \raggedright%
-    {\namefont\color{name}\MakeUppercase{\@name}\par}
-    \medskip
+    %{\namefont\color{name}\MakeUppercase{\@name}\par}
+    %\medskip
     {\taglinefont\color{tagline}\@tagline\par}
     \medskip
     {\personalinfofont\@personalinfo\par}
