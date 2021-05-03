@@ -1,0 +1,225 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% CV Jakša Tomović 06/2019 %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\documentclass[10pt,a4paper]{altacv}
+
+%Layout
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm,footskip=2\baselineskip}
+
+%Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage{hyperref}
+
+
+%Colors
+
+\definecolor{accent}{HTML}{000e17}
+\definecolor{heading}{HTML}{000e17}
+\definecolor{emphasis}{HTML}{696969}
+\definecolor{body}{HTML}{01415f}
+
+\colorlet{heading}{heading}
+\colorlet{accent}{accent}
+\colorlet{emphasis}{emphasis}
+\colorlet{body}{body}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%
+
+\begin{document}
+\name{Adrian Ng}
+\tagline{}
+%\photo{2.5cm}{BrunoAlves}
+\personalinfo{
+   % \printinfo{\faBirthdayCake}{23th Nov 1992}
+    \email{contact@adrian.ng}
+   % \phone{+385 98 998 8971}
+%    \mailaddress{SR Njemačke 6, 10000}
+    \location{Harrow, NW London}
+    \linkedin{linkedin.com/in/adrian-ng-2a2aa62b}
+    \homepage{adrian.ng}
+    \github{github.com/Adrian-Ng}
+}
+
+%
+
+\begin{fullwidth}
+%\makecvheader
+\namefont\color{name}\MakeUppercase{Adrian Ng}\par
+\end{fullwidth}
+
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Experience %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cvsection[page1sidebar]{Experience}
+
+%%%%%%%%%%%%%
+%Experience 1
+%%%%%%%%%%%%%
+
+\cvevent{Data Quality Analyst}{IAG Cargo}{October 2020 -- Ongoing}{Aviation}
+
+\begin{itemize}
+    \setlength{\itemindent}{0.5em}
+    \item[--]   \small{Investigated Data Quality issues building bitmaps and using dashboards}
+    \item[--]   \small{Lead the initiative to bring GitHub to the team}
+    \item[--]   \small{Data Issues Management using Kanban for brokering information between business and suppliers}
+    \item[--]   \small{Coached others on Markdown, Git, SQL best practices (indexing, recursion)}
+    \item[--]   \small{Unit testing in Python using UnitTest} 
+    \item[--]   \small{A/B testing with statistical analysis and experimental design}  
+\end{itemize}
+
+\medskip
+
+%%%%%%%%%%%%%
+%Experience 2
+%%%%%%%%%%%%%
+
+\cvevent{Junior Data Engineer}{IAG Cargo}{June 2019 -- October 2020}{Aviation}
+
+%\begin{itemize}
+%    \item Fullstack JAVA developer
+%\end{itemize}
+
+\begin{itemize}
+    \setlength{\itemindent}{0.5em}
+    \item[--]   \small{Developed data transformation processes in Oracle}
+    \item[--]   \small{Developed data ingestion microservices using PnP PowerShell}
+    \item[--]   \small{Version control using Git}
+\end{itemize}
+
+\medskip
+
+%%%%%%%%%%%%%
+%Experience 3
+%%%%%%%%%%%%%
+
+\cvevent{Data Insight Analyst}{Manchester City FC}{January 2018 -- June 2018}{Football}
+
+%\begin{itemize}
+%    \item Fullstack JAVA developer
+%\end{itemize}
+
+\begin{itemize}
+    \setlength{\itemindent}{0.5em}
+    \item[--]   \small{Performed Data Quality investigation for New York City FC with Ticketmaster datasets}
+    \item[--]   \small{Built customer segmentation and data quality reports in Tableau on Experian, Salesforce datasets}
+\end{itemize}
+
+\medskip
+
+%%%%%%%%%%%%%
+%Experience 4
+%%%%%%%%%%%%%
+
+\cvevent{Senior CRM Campaign Executive}{Creator}{December 2013 -- September 2016}{Marketing}
+
+%\begin{itemize}
+%    \item Fullstack JAVA developer
+%\end{itemize}
+
+\begin{itemize}
+    \setlength{\itemindent}{0.5em}
+    \item[--]   \small{Developed ingestion and transformation processes in SQL Server}
+    \item[--]   \small{Task management using JIRA}
+\end{itemize}
+
+\medskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Projects %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cvsection{Projects}
+
+%\cvsection[page2sidebar]{Projects}
+
+%%%%%%%%%%%%%
+%Project 1
+%%%%%%%%%%%%%
+
+\cvevent{Modeling Flights with Directed Acyclic Graphs in Oracle}{IAG Cargo}{January 2020 -- April 2021}{}
+
+\begin{itemize}
+  \item \small{SQL Development project to construct flight models in Oracle database, achieving efficiencies with recursive approaches}
+  \item Techs: Alteryx, Oracle, project management in GitHub
+\end{itemize}
+
+\divider
+%%%%%%%%%%%%%
+%Project 2
+%%%%%%%%%%%%%
+
+\cvevent{User Configured Data Ingestion Service}{IAG Cargo}{October 2019 -- January 2020}{}
+
+\begin{itemize}
+  \item \small{Data Engineering project to allow users to create configurable ingestion pipelines between Sharepoint filesystem and Oracle database.}
+  \item Techs: Python, Powershell 5.1, Sharepoint PnP, yaml, SQL*Loader, Oracle
+\end{itemize}
+
+
+
+
+%\divider
+%
+%\cvevent{New York City
+%FC Integration}{Manchester City FC}{January 2018 -- June %2018}{}
+%
+%\begin{itemize}
+%  \item \small{Description -- Greenfield project integrating %data from NYCFC into analytical warehouse}
+%  \item Techs: Tableau and SQL Server
+%\end{itemize}
+%
+%\divider
+
+%
+
+%%%%%%%%%%%%%
+%Project 2
+%%%%%%%%%%%%%
+
+%\cvevent{Virgin Media Segmentation Process}{Creator}{March %2016 -- August 2016}{}
+%
+%\begin{itemize}
+%  \item Description -- Built a configurable ETL process to %ingest (via BULK INSERT), transform into CRM segments, and %load into broadcast service (Lyris).
+%  \item Techs: SQL Server, T-SQL 
+%\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Certificates %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cvsection{Certificates}
+
+%%%%%%%%%%%%%
+%Certificate 1
+%%%%%%%%%%%%%
+
+\cvevent{Functional Programming Principles in Scala}{École Polytechnique Fédérale de Lausanne}{August 2020}{https://www.coursera.org/account/accomplishments/verify/CVTBRL4T32UJ}
+%\divider
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Interests %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \cvsection{Interests}
+
+% \wheelchart{1.5cm}{0.5cm}{%
+%   10/10em/accent!30/Electronics,
+%   25/9em/accent!60/Science,
+%   5/13em/accent!10/Movies,
+%   20/15em/accent!40/Sport,
+%   30/9em/accent/Technology,
+%   5/8em/accent!20/Literature
+% }
+
+
+%%New Page
+% \clearpage
+
+
+
+
+\end{document}
