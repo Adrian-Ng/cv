@@ -37,21 +37,21 @@
 \tagline{}
 %\photo{2.5cm}{BrunoAlves}
 \personalinfo{
-   % \printinfo{\faBirthdayCake}{23th Nov 1992}
-    \email{contact@adrian.ng}
-   % \phone{+385 98 998 8971}
-%    \mailaddress{SR Njemačke 6, 10000}
-    \location{Harrow, NW London}
-    \linkedin{linkedin.com/in/adrian-ng-2a2aa62b}
-    \homepage{adrian.ng}
-    \github{github.com/Adrian-Ng}
+  % \printinfo{\faBirthdayCake}{23th Nov 1992}
+  \email{contact@adrian.ng}
+  % \phone{+385 98 998 8971}
+  %    \mailaddress{SR Njemačke 6, 10000}
+  \location{Harrow, NW London}
+  \linkedin{linkedin.com/in/adrian-ng-2a2aa62b}
+  \homepage{adrian.ng}
+  \github{github.com/Adrian-Ng}
 }
 
 %
 
 \begin{fullwidth}
-%\makecvheader
-\namefont\color{name}\MakeUppercase{Adrian Ng}\par
+  %\makecvheader
+  \namefont\color{name}\MakeUppercase{Adrian Ng}\par
 \end{fullwidth}
 
 %
@@ -60,7 +60,7 @@
 
 \cvsection[page1sidebar]{Summary}
 
-\small{A data engineering professional with expertise in SQL; competencies in programming. Academic background in Engineering, Data Science.}
+\small{Data Engineer with strong Operational and Practice Development skills. SQL, Java. Masters in Data Science \& Analytics.}
 
 \cvsection{Experience}
 
@@ -68,37 +68,46 @@
 %Experience 1
 %%%%%%%%%%%%%
 
-\cvevent{IAG Cargo}{ Data Engineer/SQL Developer/Data Management/Data Scientist}{June 2019 -- Present}{Data Management Team}
-\textbf{Data Engineering}
-\begin{itemize}
-  \setlength{\itemindent}{0.5em}  
-  \item[--]   \small{Sharepoint to Oracle Pipeline: Developed a service enabling Analytics users to deploy and configure pipelines. Techs: Powershell, Python. }
-    \item[--]   \small{Developed Java User Defined Functions, deployed into Oracle db. \texttt{JUnit} for unit tests} 
-    \item[--]   \small{Import Billings Recovery: Wrote Python scripts for data ingestion preparation;  tested with \texttt{UnitTest}, yielded millions in billings.} 
-    \item[--]   \small{Graph DB: explored feasibility of interogating our network with graph tools: \texttt{Neo4j/Spark-Graphframes}} 
-\end{itemize}
-\textbf{SQL Developer}
-\begin{itemize}
-  \item[--]   \small{Flight Data process: developed an in-db process to provide recursive route generation and revenue proration metrics. Oracle db, Java UDFs} 
-  \item[--]   \small{Implemented regression testing infrastructure for testing differences between result-sets. Utilised \textit{Tableau} visualization for monitoring progress .} 
-  \item[--]   \small{Engineered database objects for Data Quality projects: bitmaps, analytical, and audit layers}
-  \item[--]   \small{Sales Reference: Data Warehousing of customer and account manager schemas. Achieved: constant availability, upsert capability, speed} 
-  \item[--]   \small{Upheld SQL standards: indexing (b-tree, bitmap), statistics gathering, hashing, caching. Member of the intra-group \textit{SQL Skills Champions}} 
-\end{itemize}
+\cvevent{IAG Cargo}{Data Engineer/Data Manager}{June 2019 -- Present}{Data Insights and Operational Research}
+\textbf{Data Engineering \& SQL Development}
+\\\smallskip
+\small
+Working with \textit{Oracle 11g}, established pipelines, deployed UDFs and developed processes for warehousing, ETL, regression testing.
+\\\smallskip
+\cvachievement{--}{Configurable Data Ingestion Service}{Developed service enabling users to easily configure, deploy \texttt{csv} pipelines from Sharepoint into Oracle. Techs: \texttt{Python, Sharepoint API, yaml}}
+
+\cvachievement{--}{ETL Process: Flight-Shipment-Revenue}{Implemented an Oracle ETL process to recursively generate routes, derive revenue metrics from flight and shipment data}
+
+\cvachievement{--}{Regression Testing: Flight-Shipment-Revenue}{Implemented infrastructure for regression tests in Oracle. Provided specifications for creation of \textit{Tableau} dashboard to view results}
+
+\cvachievement{--}{Data Modelling and Warehousing: Customer-Account Manager}{Modelled customer-account manager relationships, warehoused in Oracle. Achieved: constant availability, upsert capability, speed}
+
+\cvachievement{--}{Development of Regex Tooling with Java and Python}{Deployed user defined functions into Oracle; unit testing APIs}
+\normalsize
 \textbf{Data Management}
-\begin{itemize}
-  \item[--]   \small{Data Issues Management: Adopted Kanban to track high number of IT tickets/Project Briefs along resolution lifecycle}
-  \item[--]   \small{Supplier Management: Chaired a weekly call with suppliers to track progress in terms of timelines and actions}  
-  \item[--]   \small{Data Access Management: conducted audits to reconcile irregularities, monitor access, maintain/review standards}
-  \item[--]   \small{GitHub onboarding: Achivieved team buy-in to adopt version control. Prepared workshops for demonstrations and coaching.} 
-\end{itemize}
-\textbf{Data Quality Improvement} (subset of Data Management)
-\begin{itemize}
-  \item[--]   \small{Data Science: used linear regression to model relationship between cargo volume and weight.  Python: \texttt{sklearn, pandas, numpy}} 
-  \item[--]   \small{Jobs Operations optimisation: explored dependencies between jobs and visualised their behaviour to identify problem areas. Viz: Cleveland dotplots, ridgeplots}
+\\\smallskip
+\small
+\cvachievement{--}{Lead the Team on Github Onboarding and Adoption}{Introduced team to Git/GitHub. Provided coaching, established processes}
+\cvachievement{--}{Data Issues Management}{Utilized Kanban to manage high number of issues along resolution lifecycle. Chaired calls with suppliers/stakeholders to track and report progress}
+%\cvachievement{--}{Data Access Audits}{Conducted audits to reconcile irregularities, monitor access}
+\normalsize
+\textbf{Data Quality Analysis}
+\\\smallskip
+\small
+\cvachievement{--}{Statistical Modelling with Linear Regression}{Modelled the cargo weight/volume relationship for identifying outliers. Python: \texttt{sklearn, pandas, numpy}}
+\cvachievement{--}{Data Operations Optimisation}{Explored dependencies between jobs and visualised their behaviour in Tableau. Identified problem areas. Viz: Cleveland dotplots, ridgeplot}
 
-\end{itemize}
+\medskip
 
+%%%%%%%%%%%%%
+%Experience 2
+%%%%%%%%%%%%%
+
+\cvevent{Manchester City FC}{SQL Developer}{January 2018 -- July 2018}{Analytics}
+\small
+\cvachievement{--}{New York City FC Warehousing}{\small{Connected data from multiple sources: (NYCFC, Ticketmaster, Salesforce)}}
+\cvachievement{--}{GDPR Schema Implementation}{Per EU directive, implemented GDPR schema into \textit{SQL Server}, \textit{Salesforce}}
+\cvachievement{--}{Tableau Efficiencies and Improved UX}{Utilized \textit{Data Cubes} to shink dataset and move computation upstream}
 
 \medskip
 
@@ -106,28 +115,12 @@
 %Experience 3
 %%%%%%%%%%%%%
 
-\cvevent{Manchester City FC}{Data Insight Analyst}{January 2018 -- July 2018}{Analytics}
-
-\begin{itemize}
-    \setlength{\itemindent}{0.5em}
-    \item[--]   \small{Data Quality investigation for New York City FC with Ticketmaster datasets}
-    \item[--]   \small{Built customer segmentation and data quality reports in Tableau on Experian, Salesforce datasets, cubes}
-    \item[--]   \small{GDPR engineering using informatica and SQL Server}
-\end{itemize}
+\cvevent{Inspired Thinking Group}{CRM Developer }{Dec 2013 -- Aug 2016}{SQL Development}
+\small
+At this marketing agency, worked on CRM segmentation processes for clients.
+\\\smallskip
+\cvachievement{--}{Parameterized Segmentation Process}{Developed T-SQL process to ingest \texttt{csv}, transform into CRM segments}
+\cvachievement{--}{Improved Syncronisation of Customer Data with Live Server}{Realised feasible and efficient ways of joining remote and local tables without bandwidth cost. Utilised \textit{dynamic SQL}, \texttt{xml}, and \texttt{openquery}}
 
 \medskip
-
-%%%%%%%%%%%%%
-%Project 2
-%%%%%%%%%%%%%
-
-\cvevent{Implementing Value at Risk (VaR) Measures in Java}{Data Science \& Analytics MSc, Royal Holloway}{March 2016 -- August 2016}{Postgraduate}
-
-\begin{itemize}
-  \item[--]   \small{Dissertation: Estimating \textit{VaR}, a measure of risk, for an investment portfolio containing stocks, options, deltas. Data sourced from financial APIs.}
-\end{itemize}
-
-
-
-
 \end{document}
