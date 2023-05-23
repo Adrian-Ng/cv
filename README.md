@@ -4,7 +4,7 @@ This is my cv as of May 2023, it's written in LaTeX and version controlled.
 
 ## Download
 
-Download it [here](https://github.com/Adrian-Ng/cv/releases/download/v2.2022.5/cv.pdf). 
+Download it [here](https://github.com/Adrian-Ng/cv/releases/download/v2.2023.5/cv.pdf). 
 
 Ignore the below.
 
