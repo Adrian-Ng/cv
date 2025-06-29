@@ -14,7 +14,9 @@ jobs:
         id: cache-latex
         uses: actions/cache@v4
         with:
-          path: /usr/share/texlive/
+          path: |
+            /usr/
+            /var/
           key: texlive        
       - name: Install LaTeX dependencies
         if: steps.cache-latex.outputs.cache-hit != 'true'
