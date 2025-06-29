@@ -1,9 +1,5 @@
 name: Build LaTeX document
 on:
-  push:
-  pull_request:
-    branches:
-    - main
   release:
       types: [published]
 jobs:
@@ -40,5 +36,5 @@ jobs:
         with:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: ./cv.pdf
-          asset_name: ./cv.pdf
+          asset_name: cv.pdf
           asset_content_type: pdf
