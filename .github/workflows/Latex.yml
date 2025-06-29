@@ -32,4 +32,3 @@ jobs:
         with:
           name: cv
           path: cv.pdf
-          compression-level: 0
