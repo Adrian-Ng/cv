@@ -16,10 +16,12 @@ jobs:
         with:
           path: |
             /usr/share/texlive/        
-          key: texlive        
-      - name: Install LaTeX dependencies
+          key: texlive   
+      - name: Update Package Index
         run: |
-          sudo apt-get update
+          sudo apt-get update           
+      - name: Install LaTeX dependencies
+        run: |          
           sudo xargs -a requirements.txt sudo apt install -y
       - name: Compile LaTeX document
         run: |
