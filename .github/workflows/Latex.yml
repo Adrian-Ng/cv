@@ -1,15 +1,24 @@
 name: Build LaTeX document
-on: [push]
+on:
+  push:
+  pull_request:
+    branches:
+    - main
 jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
+      - name: Install Latex dependencies
+        run: |
+          sudo apt-get update
+          sudo xargs -a requirements.txt sudo apt install -y
       - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v2
-        with:
-          root_file: cv.tex
+        run: |
+          pdflatex cv.tex
+          bibtex cv
+          pdflatex cv.tex
       - uses: actions/upload-artifact@v2
         with:
           name: PDF
