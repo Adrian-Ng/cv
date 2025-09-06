@@ -37,20 +37,10 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
-      - name: Cache LaTeX
-        id: cache-latex
-        uses: actions/cache@v4
+      - name: Install texlive Apt dependencies
+        uses: Eeems-Org/apt-cache-action@v1
         with:
-          path: |
-            /var/cache/apt   
-          key: ${{ runner.os }}-apt-get-${{ hashFiles('**/requirements.txt') }}   
-      - name: Update Package Index
-        run: |
-          sudo apt-get update           
-      - name: Install LaTeX dependencies
-        if: steps.cache-latex.outputs.cache-hit != 'true'
-        run: |          
-          sudo xargs -a requirements.txt sudo apt install -y
+          packages: texlive-latex-base texlive-latex-extra texlive-fonts-extra texlive-bibtex-extra
       - name: Compile LaTeX document
         run: |
           pdflatex cv.tex
