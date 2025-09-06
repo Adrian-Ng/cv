@@ -42,12 +42,13 @@ jobs:
         uses: actions/cache@v4
         with:
           path: |
-            /usr/share/texlive/        
-          key: texlive   
+            /var/cache/apt   
+          key: ${{ runner.os }}-apt-get-${{ hashFiles('**/requirements.txt') }}   
       - name: Update Package Index
         run: |
           sudo apt-get update           
       - name: Install LaTeX dependencies
+        if: steps.cache-latex.outputs.cache-hit != 'true'
         run: |          
           sudo xargs -a requirements.txt sudo apt install -y
       - name: Compile LaTeX document
