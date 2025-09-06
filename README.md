@@ -1,38 +1,18 @@
-# Adrian Ng: Data Engineer
+# Adrian Ng: CV
 
-This is my cv as of May 2023, it's written in LaTeX and version controlled.
+This is my cv:
+- written in LaTeX
+- version controlled
+- deployed and built via CICD
 
-## Download
-
-Download it [here](https://github.com/Adrian-Ng/cv/releases/download/v2.2023.5/cv.pdf). 
-
-Ignore the below.
+Get the latest version [here](https://github.com/Adrian-Ng/cv/releases/latest/cv.pdf). 
 
 
-## Build
 
-pdflatex + bibtex + pdflatex:
 
-```bash
-pdflatex cv.tex
-bibtex cv
-pdflatex cv.tex
-```
 
-### Dependencies:
 
-- fontawesome5
-- etc
 
-### Environment
-
-#### Linux
-
-Use TexLive but don't use the ubuntu vendor distribution - it's several years out of date and it's really hard to update itself and packages via *tlmgr*.
-
-#### Windows
-
-Just use MikTex 
 
 
 
