@@ -57,7 +57,7 @@
 
 \cvsection[page1sidebar]{Summary}
 
-\small{Data Engineer with strong DevOps skills. SQL expert. Proficient in Java, python. An interest in functional programming. Masters in Data Science \& Analytics.}
+\small{Data Engineer in the business intelligence space. Coding away with Snowflake \& AWS stack in the aviation industry. Masters in Data Science \& Analytics.}
 
 \cvsection{Experience}
 
@@ -65,9 +65,18 @@
 %Experience 1
 %%%%%%%%%%%%%
 
-\cvevent{IAG Cargo}{Data Engineer}{June 2019 -- Present}{Data \& Analytics}
-\cvachievement{--}{Role Based Access Control for Snowflake}{Implemented RBAC to deploy and manage roles, users, and their grants across 5 Snowflake accounts. Techs: \texttt{Terraform, GitHub Workflows AWS S3}}
-\cvachievement{--}{data build tool}{Implemented dbt core in dev and prod environments, facilitated training, achieved buy-in with senior team members}
+\cvevent{IAG Cargo}{Data Engineer}{August 2023 -- Present}{Data \& Analytics}
+\small
+\cvachievement{--}{Role Based Access Control for Snowflake}{Implemented RBAC to deploy and manage roles, users, and their grants in multiple databases and accounts from a single codebase. Techs: \texttt{Terraform for IaC, GitHub Workflows for CICD, AWS S3 for state}}
+\cvachievement{--}{Strategic enhancements to team process}{Explored new tech, facilitated training, negotiated buy-in with senior team members. Then implemented version control, CICD, and \texttt{dbt} in the Analytics space to achieve a more mature product delivery process}
+
+\cvevent{IAG Cargo}{Data Quality Analyst}{October 2020 -- August 2023}{Data \& Analytics}
+\small
+\cvachievement{--}{Flight Airwaybill Revenue model}{Implemented a complex data model in Oracle 11g pulling data across several data domains, recursing the journey of a shipment across multiple legs and apportioning revenue}
+\cvachievement{--}{Data Quality Bitmaps}{Created a bitmap representation of data quality for manifest messages which had a tendency of going missing sometimes, allowing for semantic root cause analysis}
+\cvevent{IAG Cargo}{Junior Metadata Engineer}{June 2019 -- October 2020}{Data \& Analytics}
+\small
+\cvachievement{--}{Idempotent Import Process}{Created a checksum based, configurable process for quickly establishing data pipelines between business and BI team}
 
 \medskip
 
@@ -77,6 +86,8 @@
 
 \cvevent{Manchester City FC}{SQL Developer}{January 2018 -- July 2018}{Analytics}
 \small
+Working here was an interesting challenge because I don't know football
+\\\smallskip
 \cvachievement{--}{New York City FC Warehousing}{\small{Connected data from multiple sources: (NYCFC, Ticketmaster, Salesforce)}}
 \cvachievement{--}{GDPR Schema Implementation}{Per EU directive, implemented GDPR policies into \textit{SQL Server}, \textit{Salesforce}}
 \cvachievement{--}{Tableau Efficiencies and Improved UX}{Utilised \textit{Data Cubes} to shink dataset and move computation upstream}
@@ -89,10 +100,10 @@
 
 \cvevent{Inspired Thinking Group}{CRM Developer }{Dec 2013 -- Aug 2016}{SQL Development}
 \small
-At this marketing agency, worked on CRM segmentation processes for clients.
+At this marketing agency, worked on CRM segmentation processes for clients
 \\\smallskip
 \cvachievement{--}{Parameterised Segmentation Process}{Developed T-SQL process to ingest \texttt{csv}, transform into CRM segments}
-\cvachievement{--}{Improved Syncronisation of Customer Data with Live Server}{Realised feasible and efficient ways of joining remote and local tables without bandwidth cost. Utilised \textit{dynamic SQL}, \texttt{xml}, and \texttt{openquery}}
+\cvachievement{--}{Improved Syncronisation of Customer Data with Live Server}{Realised feasible and efficient ways of joining remote and local tables without bandwidth cost - just send your subset upstream! Utilised \textit{dynamic SQL}, \texttt{xml}, and \texttt{openquery}}
 
 \medskip
 \end{document}
