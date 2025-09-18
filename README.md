@@ -73,4 +73,4 @@ This project is licensed under the MIT License.
 
 ## 📬 Contact
 
-Find me on [GitHub](https://github.com/Adrian-Ng) or via [LinkedIn](https://www.linkedin.com/in/adrian-ng/).
+Find me on [GitHub](https://github.com/Adrian-Ng) or via [LinkedIn](https://www.linkedin.com/in/adrian-ng-2a2aa62b/).
