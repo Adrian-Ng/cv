@@ -7,23 +7,27 @@ You can fork, clone, and customize it for your own use—with no need to install
 
 ## 🚀 Quick Start
 
-1. **Clone the repository:**
+1. **Fork the repository:**  
+   Click the "Fork" button at the top-right of this page to create a copy under your GitHub account.
+
+2. **Clone your forked repository:**  
+   Replace `<YOUR-USERNAME>` with your GitHub username:
    ```bash
-   git clone https://github.com/Adrian-Ng/cv.git
+   git clone https://github.com/<YOUR-USERNAME>/cv.git
    cd cv
    ```
 
-2. **Make your changes:**  
+3. **Make your changes:**  
    Edit the LaTeX or other source files (e.g. `cv.tex`, `page1sidebar.tex`, etc.) as needed.
 
-3. **Push your changes:**  
+4. **Push your changes:**  
    ```bash
    git add .
    git commit -m "Update CV"
    git push
    ```
 
-4. **Automatic PDF Generation:**  
+5. **Automatic PDF Generation:**  
    After you push, GitHub Actions will automatically build and generate a new PDF of your CV.
    Check the [Actions tab](https://github.com/Adrian-Ng/cv/actions) for build status.
 
