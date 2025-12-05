@@ -31,6 +31,37 @@ You can fork, clone, and customize it for your own use—with no need to install
    After you push, GitHub Actions will automatically build and generate a new PDF of your CV.
    Check the [Actions tab](https://github.com/Adrian-Ng/cv/actions) for build status.
 
+
+## 🧹 Pre-commit Framework Setup
+
+This repository uses [pre-commit](https://pre-commit.com/) to automate code quality checks before each commit. Follow these steps to set it up:
+
+### 1. Install pre-commit
+
+If you have Python installed, run:
+```powershell
+pip install pre-commit
+```
+
+### 2. Set up pre-commit hooks
+
+Run the following command in the repository root:
+```powershell
+pre-commit install
+```
+This will install the hooks so they run automatically on `git commit`.
+
+### 3. Run pre-commit manually (optional)
+
+To check all files at any time, run:
+```powershell
+pre-commit run --all-files
+```
+
+### 4. Customizing Hooks
+
+Edit the `.pre-commit-config.yaml` file to add or modify hooks as needed. See [pre-commit documentation](https://pre-commit.com/hooks.html) for available hooks.
+
 ---
 
 ## 📦 Releases & PDF Generation
