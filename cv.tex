@@ -1,20 +1,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% CV Adrian Ng %%%%%%
+%%% CV Adrian Ng — One Page %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \PassOptionsToPackage{dvipsnames}{xcolor}
 \documentclass[10pt,a4paper]{altacv}
 
-%Layout
 \geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm,footskip=2\baselineskip}
 
-%Packages
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[default]{lato}
 \usepackage{hyperref}
-
-%Colors
 
 \definecolor{accent}{HTML}{000e17}
 \definecolor{heading}{HTML}{000e17}
@@ -31,84 +27,116 @@
 
 \begin{document}
 \name{Adrian Ng}
-\tagline{}
-%\photo{2.5cm}{BrunoAlves}
 \personalinfo{
-  % \printinfo{\faBirthdayCake}{23th Nov 1992}
   \linkedin{linkedin.com/in/adrian-ng-2a2aa62b}
   \github{github.com/Adrian-Ng}
   \email{cv@adrian.ng}
   \location{W7 London}
-  \homepage{https://github.com/Adrian-Ng/cv/}
-  % \phone{+385 98 998 8971}
-  %    \mailaddress{SR Njemačke 6, 10000}
+  \homepage{github.com/Adrian-Ng/cv}
 }
 
-%
-
 \begin{fullwidth}
-  %\makecvheader
-  \namefont\color{name}\MakeUppercase{Adrian Ng}\par
+  \namefont\MakeUppercase{Adrian Ng}\par
 \end{fullwidth}
 
-%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Experience %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Summary %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \cvsection[page1sidebar]{Summary}
 
-\small{Data Engineer specialising in Data Platform, DataOps, and Analytics Engineering enablement. Experienced in Terraform-managed Snowflake Infrastructure, CI/CD, dbt Core, and building reproducible, scalable analytics environments. Known for shaping team behaviour through clear, friction-reducing engineering practices, training, and platform-first workflows. I favour engineering that reduces friction, builds trust, and makes good behaviour the natural path.}
+\small{
+Data Engineer specialising in Data Platform, DataOps, and Analytics Engineering enablement, with a long background in SQL-based data modelling, warehousing, and ingestion pipelines. Experienced in Terraform-managed Snowflake Infrastructure, CI/CD, dbt Core, and building reproducible, scalable analytics environments. I favour engineering that reduces friction, builds trust, and makes good behaviour the natural path.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Experience %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \cvsection{Experience}
 
-%%%%%%%%%%%%%
-%Experience 1
-%%%%%%%%%%%%%
-
-\cvevent{IAG Cargo}{Data Engineer}{August 2023 -- Present}{Data \& Analytics}
+\cvevent{IAG Cargo}{Data Engineer}{Aug 2023 -- Present}{Data \& Analytics}
 \small
+\cvachievement{--}{Snowflake Platform Engineering}{Implemented Terraform-managed RBAC across multiple Snowflake accounts, with GitHub Actions CI/CD and S3-backed state for reproducible, auditable deployments.}
+\cvachievement{--}{Analytics Platform Modernisation}{Rolled out version-controlled dbt Core workflows with CI/CD, automated deployments, and structured development standards. Authored the “New Ways of Working for Analysts” framework.}
+\cvachievement{--}{Enablement \& Ways of Working}{Delivered hands-on dbt training, authored 25+ wiki pages, mentored colleagues, and shaped platform-first engineering practices.}
+\cvachievement{--}{DataOps, Automation \& Governance}{Automated RBAC lifecycle with Git + Terraform, introduced pre-commit hooks, implemented data quality monitoring, and audited 12 repos + 70 Airflow DAGs for compliance.}
 
-\cvachievement{--}{Snowflake Platform Engineering}{Implemented Terraform-managed RBAC across multiple Snowflake accounts, enabling reproducible, auditable role, user, and grant management from a single codebase. Built GitHub Actions CI/CD pipelines and S3-backed Terraform state to enforce version control and eliminate console drift.}
+\divider
 
-\cvachievement{--}{Analytics Platform Modernisation}{Designed and rolled out version-controlled, dual-environment dbt Core workflows, introducing CI/CD, automated deployments, and structured development practices for analysts. Authored the "New Ways of Working for Analysts" framework, covering standards, environments, metadata capture (Atlan), and automated Snowflake deployments.}
-
-\cvachievement{--}{Training \& Enablement}{Delivered 4+ hands-on dbt training sessions and created 25+ wiki pages, significantly increasing analytics engineering capability and receiving exceptional feedback. Mentored colleagues and championed modern data practices through internal guides and technical blogs.}
-
-\cvachievement{--}{DataOps \& Automation}{Automated Snowflake RBAC lifecycle with Git + Terraform. Implemented scheduled data quality monitoring workflows and introduced pre-commit DevOps hooks to improve code hygiene and consistency.}
-
-\cvachievement{--}{Governance \& Compliance}{Audited 12 repositories and 70+ Airflow DAGs, identifying security gaps and establishing a compliance scoring framework with a clear remediation roadmap.}
-
-\cvachievement{--}{Process \& Collaboration}{Identified BAU pain points and drove cross-team modernisation initiatives, improving developer experience and reducing operational friction.}
-
-\cvevent{IAG Cargo}{Data Quality Analyst}{October 2020 -- August 2023}{Data \& Analytics}
+\cvevent{IAG Cargo}{Data Quality Analyst}{Oct 2020 -- Aug 2023}{Data \& Analytics}
 \small
-\cvachievement{--}{Flight Airwaybill Revenue model}{Implemented a complex data model in Oracle 11g pulling data across several data domains, recursing the journey of a shipment across multiple legs and apportioning revenue}
-\cvachievement{--}{Data Quality Bitmaps}{Created a bitmap representation of data quality for manifest messages which had a tendency of going missing sometimes, allowing for semantic root cause analysis}
-\cvevent{IAG Cargo}{Junior Metadata Engineer}{June 2019 -- October 2020}{Data \& Analytics}
-\small
-\cvachievement{--}{Idempotent Import Process}{Created a checksum based, configurable process for quickly establishing data pipelines between business and BI team}
+\cvachievement{--}{Flight Airwaybill Revenue Model}{Built a complex Oracle 11g model tracing multi-leg shipment journeys and apportioning revenue across domains.}
+\cvachievement{--}{Data Quality Bitmaps}{Created a bitmap representation of manifest message quality to support semantic root-cause analysis.}
 
-%%%%%%%%%%%%%
-%Experience 2
-%%%%%%%%%%%%%
+\divider
+
+\cvevent{IAG Cargo}{Junior Metadata Engineer}{Jun 2019 -- Oct 2020}{Data \& Analytics}
+\small
+\cvachievement{--}{Idempotent Import Process}{Developed a checksum-based, configurable import process for establishing reliable pipelines between business and BI teams.}
+
+\divider
 
 \cvevent{Manchester City FC}{SQL Developer}{Jan 2018 -- Jul 2018}{Analytics}
 \small
-\cvachievement{--}{Cross-System Data Integration}{Developed SQL Server pipelines to integrate data from NYCFC, Ticketmaster, and Salesforce into a unified warehouse, enabling consistent analytics across multiple domains.}
-\cvachievement{--}{GDPR Schema Implementation}{Implemented GDPR-compliant schemas and retention logic across SQL Server and Salesforce following EU regulatory requirements.}
-\cvachievement{--}{Analytics Performance Improvements}{Optimised Tableau dashboards by upstreaming computation into SQL Server data cubes, reducing load times and improving analyst experience.}
+\cvachievement{--}{Cross-System Data Integration}{Integrated NYCFC, Ticketmaster, and Salesforce data into a unified SQL Server warehouse.}
+\cvachievement{--}{GDPR Schema Implementation}{Implemented GDPR-compliant schemas and retention logic across SQL Server and Salesforce.}
 
-%%%%%%%%%%%%%
-%Experience 3
-%%%%%%%%%%%%%
+\divider
 
 \cvevent{Inspired Thinking Group}{SQL Developer / CRM Data Engineer}{Dec 2013 -- Aug 2016}{Marketing Technology}
 \small
-\cvachievement{--}{Custom Data Ingestion Pipelines}{Designed SQL-based ingestion pipelines to parse and normalise complex delimited payloads into structured CRM datasets using recursive CTEs and schema-on-read transformations.}
-\cvachievement{--}{Cross-Server Data Synchronisation}{Engineered high-performance synchronisation between isolated SQL Server instances using XML serialization, dynamic SQL, and OPENQUERY to minimise network load and avoid full table transfers.}
-\cvachievement{--}{Operational Reliability}{Added structured logging, run-ID tracking, and TRY/CATCH error handling to long-running CRM processes, improving observability and operational stability.}
-\cvachievement{--}{Segmentation Automation}{Developed parameterised segmentation workflows to ingest CSV-like inputs, map them to CRM segment definitions, and generate downstream targeting datasets.}
+\cvachievement{--}{Custom Data Ingestion Pipelines}{Designed SQL-based ingestion pipelines using recursive CTEs and schema-on-read transformations.}
+\cvachievement{--}{Cross-Server Data Synchronisation}{Engineered XML + dynamic SQL synchronisation between isolated SQL Server instances.}
+\cvachievement{--}{Segmentation Automation}{Developed parameterised workflows to ingest CSV-like inputs and generate CRM targeting datasets.}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sidebar %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\medskip
+\cvsection{Languages}
+\small
+SQL (Expert)\\
+dbt (Advanced)\\
+Terraform (Advanced)\\
+YAML (Advanced)
+
+\divider
+
+\cvsection{Technologies}
+
+\textbf{Infrastructure \& Automation}\\
+\cvtag{Terraform}
+\cvtag{AWS S3}
+\cvtag{GitHub Actions}
+
+\divider
+
+\textbf{Data Platform}\\
+\cvtag{Snowflake}
+\cvtag{Oracle 11g}
+\cvtag{SQL Server}
+
+\divider
+
+\textbf{Analytics Engineering}\\
+\cvtag{dbt Core}
+\cvtag{Airflow}
+\cvtag{Atlan}
+
+\divider
+
+\textbf{Engineering Practices}\\
+\small{RBAC, CI/CD, DevOps automation, data quality monitoring}
+
+\divider
+
+\cvsection{Education}
+\cvevent{MSc.\ Data Science \& Analytics}{Royal Holloway}{2016 -- 2017}{}
+\small{Dissertation on VaR estimation using financial APIs.}
+
+\divider
+
+\cvevent{BEng.\ Mechanical Engineering}{King's College London}{2007 -- 2010}{}
+
+\divider
+
+\cvsection{Certificates}
+\small Functional Programming Principles in Scala\\
+\small École Polytechnique Fédérale de Lausanne (2020)
+
 \end{document}
